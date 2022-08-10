@@ -3,7 +3,7 @@ import "./css/App.scss";
 import { Header } from "./Header";
 import { About } from "./About";
 // import { Donate } from "./Donate";
-import { SpeakerRegister } from "./SpeakerRegister";
+import { CallForSpeaker } from "./CallForSpeaker";
 import { Agenda } from "./Agenda";
 import { Speaker } from "./Speaker";
 import { Sponsor } from "./Sponsor";
@@ -27,7 +27,7 @@ function App() {
               <>
                 <Header />
                 <CountDownTimer />
-                <SpeakerRegister />
+                <CallForSpeaker />
                 <About />
                 <Agenda />
                 {/* <KeyNoteSpeaker /> */}
