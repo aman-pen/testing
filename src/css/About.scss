@@ -62,10 +62,11 @@ $base-color-blue: #68b993;
       border-radius: 40px;
       text-decoration: none;
       display: inline-block;
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
-      }
+      // Remove comment below after enabling button
+      // &:hover {
+      //   transform: scale(1.05);
+      //   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+      // }
       p {
         color: white;
         font-size: 2rem;
