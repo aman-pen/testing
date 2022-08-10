@@ -1,0 +1,44 @@
+[
+    {
+        "sponsorId": "1",
+        "sponsorImage": "./images/website/PentharaLogo.png",
+        "sponsorAltText": "Penthara Technologies",
+        "sponsorName": "Penthara Technologies",
+        "sponsorUrl": "https://www.penthara.com"
+    },
+    {
+        "sponsorId": "2",
+        "sponsorImage": "./images/website/microsoftLogo.png",
+        "sponsorAltText": "Microsoft",
+        "sponsorName": "Microsoft",
+        "sponsorUrl": "https://www.microsoft.com"
+    },
+    {
+        "sponsorId": "3",
+        "sponsorImage": "./images/website/Ossistologo.png",
+        "sponsorAltText": "Ossisto Technologies",
+        "sponsorName": "Ossisto Technologies",
+        "sponsorUrl": "https://ossisto.com/"
+    },
+    {
+        "sponsorId": "4",
+        "sponsorImage": "./images/website/techPlatformLogo.png",
+        "sponsorAltText": "The Tech Platform",
+        "sponsorName": "The Tech Platform",
+        "sponsorUrl": "https://www.thetechplatform.com/"
+    },
+    {
+        "sponsorId": "5",
+        "sponsorImage": "./images/website/kwizlogo.png",
+        "sponsorAltText": "KWizCom",
+        "sponsorName": "KWizCom",
+        "sponsorUrl": "https://kwizcom.com/"
+    },
+    {
+        "sponsorId": "6",
+        "sponsorImage": "./images/website/Hubfly-Logo.png",
+        "sponsorAltText": "HUBFLY",
+        "sponsorName": "HUBFLY",
+        "sponsorUrl": "https://www.hubfly.com/"
+    }
+]

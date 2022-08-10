@@ -1,0 +1,91 @@
+$base-color-blue: #68b993;
+
+.oct2022-about {
+  text-align: center;
+  padding: 0 1rem 4rem 1rem;
+  background-color: rgba(245, 246, 246, 0.56);
+  .oct2022-about-heading {
+    padding-top: 4rem;
+    font-size: 40px;
+    color: #636363;
+    position: relative;
+    // padding-bottom: 15px;
+    // border-bottom-style: solid;
+    // border-bottom-width: 3.oct2022-1px;
+    // width: fit-content;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      bottom: -40px;
+      width: 80px;
+      height: 2px;
+      background-color: #68b993;
+    }
+  }
+  .oct2022-one-day-event {
+    font-size: 2.8125rem;
+    padding-top: 5rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      bottom: -40px;
+      width: 80px;
+      height: 2px;
+      background-color: #68b993;
+    }
+    span {
+      color: $base-color-blue;
+    }
+  }
+  .oct2022-about-para-text {
+    padding-top: 5rem;
+    line-height: 1.9rem;
+    font-size: 1.3rem;
+    span {
+      a {
+        color: $base-color-blue;
+      }
+    }
+  }
+  .oct2022-registration-text {
+    padding-top: 5rem;
+
+    .oct2022-registration-button {
+      padding: 15px 5%;
+      // background-color: $base-color-blue;
+      background-color: rgb(39, 93, 93);
+      border-radius: 40px;
+      text-decoration: none;
+      display: inline-block;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+      p {
+        color: white;
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+  }
+}
+@keyframes background1 {
+  from {
+    background-color: $base-color-blue;
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
+// for only Desktop
+@media only screen and (min-width: 1025px) {
+  .oct2022-about {
+    padding: 0 15% 4rem 15%;
+  }
+}

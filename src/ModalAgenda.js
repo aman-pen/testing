@@ -2,41 +2,43 @@
 
 import React from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
-import "./Modal.scss";
-import speaker1 from "./images/speakers/Speaker1.png";
+import "./css/Modal.scss";
+// import speaker1 from "./images/speakers/Speaker1.png";
 import Speakers from "./content/SpeakersData.json";
 
 const ModalAgenda = ({ modal, toggle, data }) => {
-  const closeBtn = <button className="close" onClick={toggle}></button>;
+  const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
   return (
     <div>
-      <Modal className="agenda-dialog" isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle} close={closeBtn}>
-          {data.sessionTime}
-        </ModalHeader>
+      <Modal className="oct2022-agenda-dialog" isOpen={modal} toggle={toggle}>
+        <div className="oct2022-modalHeader">
+          <ModalHeader toggle={toggle} close={closeBtn}>
+            {data.sessionTime}
+          </ModalHeader>
+        </div>
         <ModalBody>
-          <div className="session-Title pb-5">
+          <div className="oct2022-session-Title pb-5">
             <span>{data.sessionTitle}</span>
           </div>
-          <div className="session-introtext">
+          <div className="oct2022-session-introtext">
             <span>{data.sessionDescription}</span>
           </div>
-          <div className="divider"></div>
+          <div className="oct2022-divider"></div>
           <h2 className="text-center py-4">Speakers</h2>
-          <div className="speaker-array row">
+          <div className="oct2022-speaker-array row">
             {data.speaker1Id != null ? (
               <div className="col">
                 <img
                   src={`${
-                    Speakers.filter((s) => s.speakerId == data.speaker1Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker1Id)[0]
                       .speakerImage
                   }`}
-                  className="speaker-img mb-3"
-                  alt="speaker image"
+                  className="oct2022-speaker-img mb-3"
+                  alt="speaker"
                 />
-                <p className="speaker-name">
+                <p className="oct2022-speaker-name">
                   {
-                    Speakers.filter((s) => s.speakerId == data.speaker1Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker1Id)[0]
                       .speakerName
                   }
                 </p>
@@ -47,15 +49,15 @@ const ModalAgenda = ({ modal, toggle, data }) => {
               <div className="col">
                 <img
                   src={`${
-                    Speakers.filter((s) => s.speakerId == data.speaker2Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker2Id)[0]
                       .speakerImage
                   }`}
-                  className="speaker-img mb-3"
-                  alt="speaker image"
+                  className="oct2022-speaker-img mb-3"
+                  alt="speaker"
                 />
-                <p className="speaker-name">
+                <p className="oct2022-speaker-name">
                   {
-                    Speakers.filter((s) => s.speakerId == data.speaker2Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker2Id)[0]
                       .speakerName
                   }
                 </p>
@@ -66,15 +68,15 @@ const ModalAgenda = ({ modal, toggle, data }) => {
               <div className="col">
                 <img
                   src={`${
-                    Speakers.filter((s) => s.speakerId == data.speaker3Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker3Id)[0]
                       .speakerImage
                   }`}
-                  className="speaker-img mb-3"
-                  alt="speaker image"
+                  className="oct2022-speaker-img mb-3"
+                  alt="speaker"
                 />
-                <p className="speaker-name">
+                <p className="oct2022-speaker-name">
                   {
-                    Speakers.filter((s) => s.speakerId == data.speaker3Id)[0]
+                    Speakers.filter((s) => s.speakerId === data.speaker3Id)[0]
                       .speakerName
                   }
                 </p>

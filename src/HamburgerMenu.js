@@ -26,7 +26,7 @@ export const HamburgerMenu = () => {
               xs={12}
               className="text-center leftBar NoPad open"
             >
-              <nav id="sidebar">dfghjkl</nav>
+              <nav id="sidebar"></nav>
             </Col>
           </Menu>
         </Col>

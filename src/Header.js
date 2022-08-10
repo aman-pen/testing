@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import "./Header.scss";
+import "./css/Header.scss";
 import Sponsors from "./content/SponsorData.json";
 import Speakers from "./content/SpeakersData.json";
 import Sessions from "./content/Sessions.json";
-import NavbarData from "./content/NavbarData.json";
+// import NavbarData from "./content/NavbarData.json";
+import NavbarData from "./content/NavbarDataWithoutSpeaker.json";
 import HeaderData from "./content/HeaderData.json";
 // import bgImg from "./images/website/bg-img.png";
 import logo from "./images/website/transparentLogo.png";
 import twitterLogo from "./images/website/twittericon.png";
 import { Navbar, Nav, NavItem, NavLink, Row, Col } from "reactstrap";
-import { isDesktop, isMobile } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import { slide as Menu } from "react-burger-menu";
+import { ComingSoon } from "./ComingSoon";
 import hamburgerclose from "./images/website/close.png";
 
 export const Header = () => {
@@ -25,10 +27,11 @@ export const Header = () => {
     setHamburgerOpen({ menuOpen: !HamburgerOpen.menuOpen });
   };
   return (
-    <div className="header" id="header">
-      <Row className="head-nav">
+    // <div className="oct2022-header" id="header">
+    <div className="oct2022-header" id="header">
+      <Row className="oct2022-head-nav">
         <Col xs={3}>
-          <img src={logo} alt="ICSS-logo" className="nav-bar-logo" />
+          <img src={logo} alt="ICSS-logo" className="oct2022-nav-bar-logo" />
         </Col>
         {isMobile ? (
           <>
@@ -39,6 +42,7 @@ export const Header = () => {
                 onStateChange={(state) => handleHambugerMenuStateChange(state)}
                 right
                 width={"100%"}
+                className={"oct2022-sidebar"}
                 customCrossIcon={
                   <img
                     src={hamburgerclose}
@@ -62,16 +66,13 @@ export const Header = () => {
             </Col>
           </>
         ) : (
-          <Col xs={9} className="nav-items">
+          <Col xs={9} className="oct2022-nav-item">
             <Navbar>
               <Nav navbar>
                 {NavbarData.map((data) => {
                   return (
                     <NavItem>
-                      <NavLink href={encodeURI(data.url)}>
-                        {" "}
-                        {data.title}
-                      </NavLink>
+                      <NavLink href={encodeURI(data.url)}>{data.title}</NavLink>
                     </NavItem>
                   );
                 })}
@@ -80,38 +81,49 @@ export const Header = () => {
           </Col>
         )}
       </Row>
-      <Row className="head-data">
+      <Row className="oct2022-head-data">
         {HeaderData.map((data) => {
           return (
             <>
-              <Col md={12} xl={6} className=" content-left row">
-                <Row className="siteTitle">
+              <Col md={12} xl={6} className="oct2022-content-left row">
+                <Row className="oct2022-siteTitle">
                   <Col>
                     <span>{data.presentedUserGroup}</span>
                     <h1>{data.siteTitle}</h1>
                   </Col>
                 </Row>
-                <Row className="subTitle">
+                <Row className="oct2022-subTitle">
                   <Col>
                     <span>{data.subTitle}</span>
                   </Col>
                 </Row>
-                <Row className="registrationBtn">
+                <Row className="oct2022-registrationBtn">
                   <Col>
-                    <button className="register-btn">
-                      <a
-                        href={data.registrationLink}
-                        target="_blank"
-                        rel="noreferrer"
+                    {/* <a
+                      href={data.registrationLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button
+                        className="oct2022-register-btn"
+                        formTarget="_blank"
                       >
-                        {data.registrationBtn}
-                      </a>
+                        <span>{data.registrationBtn}</span>
+                      </button>
+                    </a> */}
+                    {/* ------------------------------------------ */}
+
+                    <button
+                      className="oct2022-register-btn"
+                      formTarget="_blank"
+                    >
+                      <span>COMING SOON</span>
                     </button>
                   </Col>
                 </Row>
               </Col>
-              <Col md={12} xl={6} className="row content-right">
-                <Row className="handles col-7">
+              <Col md={12} xl={6} className="row oct2022-content-right">
+                <Row className="oct2022-handles col-7">
                   <Col>
                     <a
                       href={
@@ -122,7 +134,7 @@ export const Header = () => {
                       rel="noreferrer"
                     >
                       <img alt="Twitter logo" src={twitterLogo} />
-                      <span className="twitterHashTag">
+                      <span className="oct2022-twitterHashTag">
                         {data.twitterHashTag}
                       </span>
                     </a>
@@ -134,34 +146,44 @@ export const Header = () => {
                       rel="noreferrer"
                     >
                       <img alt="Twitter logo" src={twitterLogo} />
-                      <span className="twitterHandle">
+                      <span className="oct2022-twitterHandle">
                         {data.twitterHandle}
                       </span>
                     </a>
                   </Col>
                 </Row>
-                <Row className="eventDate">
-                  <Col md={5} className="eventData-border">
+                <Row className="oct2022-eventDate">
+                  <Col md={5} className="oct2022-eventData-border">
                     <span>{data.eventDate}</span>
                   </Col>
                 </Row>
-                <Row className="fields">
+                <Row className="oct2022-fields">
                   <Col>
-                    <span className="eventTitle">{data.eventTitle}</span>
-                    <Row className="fields-row">
-                      <Col className="sessionNumber">
+                    <span className="oct2022-eventTitle">
+                      {data.eventTitle}
+                    </span>
+                    <div
+                      className={
+                        isMobile
+                          ? "oct2022-fields-row"
+                          : "oct2022-fields-row row"
+                      }
+                    >
+                      <ComingSoon />
+
+                      {/* <Col className="oct2022-sessionNumber">
                         <span>{Speakers.length}</span>
                         <span>SPEAKERS</span>
                       </Col>
-                      <Col className="trackNumber">
+                      <Col className="oct2022-trackNumber">
                         <span>{Sessions.length}</span>
                         <span>SESSIONS</span>
                       </Col>
-                      <Col className="sponserNumber">
+                      <Col className="oct2022-sponserNumber">
                         <span>{Sponsors.length}</span>
                         <span>SPONSORS</span>
-                      </Col>
-                    </Row>
+                      </Col> */}
+                    </div>
                   </Col>
                 </Row>
               </Col>

@@ -1,0 +1,72 @@
+[
+  {
+    "userGroupId": "1",
+    "groupImage": "./images/website/ms-az-bangalore-user-group.png",
+    "groupAltText": "Microsoft Azure Bangalore",
+    "groupName": "Microsoft Azure Bangalore",
+    "groupUrl": "https://www.meetup.com/Microsoft-Azure-Bangalore/"
+  },
+  {
+    "userGroupId": "2",
+    "groupImage": "./images/website/ms-azure-user-groups.png",
+    "groupAltText": "Microsoft Azure User Group - Chennai",
+    "groupName": "Microsoft Azure User Group - Chennai",
+    "groupUrl": "https://www.meetup.com/Chennai-Microsoft-Azure-User-Group/"
+  },
+  {
+    "userGroupId": "3",
+    "groupImage": "./images/website/ms-365-uk-user-group.png",
+    "groupAltText": "Microsoft 365 UK (M365UK) User Group",
+    "groupName": "Microsoft 365 UK (M365UK) User Group",
+    "groupUrl": "https://www.meetup.com/m365uk/"
+  },
+  {
+    "userGroupId": "4",
+    "groupImage": "./images/website/MS-security-compliance-user-group.png",
+    "groupAltText": "Microsoft 365 Security & Compliance User Group",
+    "groupName": "Microsoft 365 Security & Compliance User Group",
+    "groupUrl": "https://www.meetup.com/m365sandcug/"
+  },
+  {
+    "userGroupId": "5",
+    "groupImage": "./images/website/ams-community.png",
+    "groupAltText": "AMS Community (Azure - Microsoft 365 -SharePoint) Meetup",
+    "groupName": "AMS Community (Azure - Microsoft 365 -SharePoint) Meetup",
+    "groupUrl": "https://www.meetup.com/Communaute-aOS-Azure-Office-365-SharePoint-Meetup/"
+  },
+  {
+    "userGroupId": "6",
+    "groupImage": "./images/website/ms-user-group.png",
+    "groupAltText": "Microsoft User Group - Chandigarh",
+    "groupName": "Microsoft User Group - Chandigarh",
+    "groupUrl": "https://www.meetup.com/Microsoft-User-Group-Chandigarh/"
+  },
+  {
+    "userGroupId": "7",
+    "groupImage": "./images/website/Dot_Net_Learners_House.jpg",
+    "groupAltText": "Dot Net Learners House",
+    "groupName": "Dot Net Learners House",
+    "groupUrl": "https://www.meetup.com/dot-net-learners-house-hyderabad/"
+  },
+  {
+    "userGroupId": "8",
+    "groupImage": "./images/website/Pune_Tech_community.jpg",
+    "groupAltText": "Pune Tech Community",
+    "groupName": "Pune Tech Community",
+    "groupUrl": "https://www.meetup.com/Pune-Tech-Community/"
+  },
+  {
+    "userGroupId": "9",
+    "groupImage": "./images/website/365_Ahmedabad.jpeg",
+    "groupAltText": "M365 Ahmedabad User Group",
+    "groupName": "M365 Ahmedabad User Group",
+    "groupUrl": "https://www.meetup.com/m365ahmedabad/"
+  },
+  {
+    "userGroupId": "10",
+    "groupImage": "./images/website/Dear_Azure.jpg",
+    "groupAltText": "Dear Azure - Azure INDIA (az-india)",
+    "groupName": "Dear Azure - Azure INDIA (az-india)",
+    "groupUrl": "https://www.linkedin.com/company/dearazure/"
+  }
+]

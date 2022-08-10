@@ -1,0 +1,373 @@
+$White: #ffffff;
+$havlock-blue: #479cda;
+body::-webkit-scrollbar {
+  display: none;
+}
+.aug2021-header {
+  background: linear-gradient(
+      rgba(0, 150, 234, 0.7) 100%,
+      rgba(0, 150, 234, 0.7) 100%
+    ),
+    url("../images/website/BG\ Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  .aug2021-head-nav {
+    min-height: 110px;
+  }
+  .aug2021-nav-bar-logo {
+    padding-left: 80px;
+  }
+  .aug2021-bg-img {
+    width: 100%;
+  }
+  .aug2021-nav-bar {
+    &-logo {
+      height: 10%;
+    }
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .nav-item {
+    padding: 0 30px;
+    .nav-link:hover {
+      color: #fff;
+    }
+  }
+  a {
+    color: #ffffff;
+    font-size: 22px;
+  }
+}
+
+.aug2021-navbar-expand-md {
+  justify-content: flex-end !important;
+}
+.aug2021-content-left {
+  flex-direction: column;
+  justify-content: center;
+}
+.aug2021-head-nav {
+  min-height: 110px;
+}
+
+.aug2021-head-data {
+  min-height: 70vh;
+  padding: 0 5% 2% 5%;
+
+  .aug2021-siteTitle {
+    color: #fff;
+
+    span {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-wrap;
+    }
+    h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      max-width: 570px;
+      padding-top: 30px;
+    }
+  }
+  .aug2021-subTitle {
+    color: #fff;
+    font-size: 25px;
+    padding-top: 5rem;
+    width: 570px;
+    max-width: 570px;
+  }
+  .aug2021-registrationBtn {
+    padding-top: 5rem;
+    .aug2021-register-btn {
+      background-color: #fff;
+      border-radius: 40px;
+      border: none;
+
+      padding: 15px 70px;
+      a {
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #479cda !important;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+  .aug2021-content-right {
+    padding-top: 80px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .aug2021-handles {
+    margin: 0 auto;
+    &:first-child {
+      a {
+        padding-bottom: 15px;
+      }
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    img {
+      width: 32px;
+      padding: 0;
+    }
+    .aug2021-twitterHashTag {
+      color: #fff;
+      font-size: 22px;
+    }
+    .aug2021-twitterHandle {
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+  .aug2021-eventDate {
+    padding-top: 5rem;
+    justify-content: center;
+    text-align: center;
+    .aug2021-eventData-border {
+      border: 6px solid #ffffff;
+      width: auto;
+      padding: 20px;
+      background-color: #41b2f1;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
+  .aug2021-fields {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5rem;
+    .aug2021-col:nth-child(1) {
+      max-width: 70%;
+      margin: auto;
+    }
+    .aug2021-eventTitle {
+      font-size: 30px;
+    }
+    .aug2021-fields-row {
+      // padding: 35px 140px 0 140px;
+      padding-top: 40px;
+      flex-wrap: nowrap;
+      .aug2021-sessionNumber,
+      .aug2021-sponserNumber,
+      .aug2021-trackNumber {
+        span {
+          display: block;
+        }
+        span:nth-child(1) {
+          background-color: #fff;
+          // padding: 19px;
+          color: #f66d10;
+          font-size: 50px;
+          font-weight: 600;
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+          border-radius: 7px;
+          margin: auto;
+        }
+        span:nth-child(2) {
+          padding-top: 20px;
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+      .aug2021-trackNumber {
+        span:nth-child(1) {
+          display: block;
+          color: #ffbb00;
+          font-size: 50px;
+          font-weight: 600;
+        }
+      }
+      .aug2021-sponserNumber {
+        span:nth-child(1) {
+          display: block;
+          color: #7cbb00;
+          font-size: 50px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.aug2021-nav-bar-logo {
+  height: 100px !important;
+}
+
+// hamburger menu css
+.bm-burger-button {
+  // position: absolute !important;
+  span:nth-child(1) {
+    top: 24% !important;
+    height: 4% !important;
+    width: 100%;
+  }
+  span:nth-child(2) {
+    top: 37% !important;
+    height: 4% !important;
+    width: 100%;
+  }
+  span:nth-child(3) {
+    top: 51% !important;
+    height: 4% !important;
+    width: 100%;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 50px;
+  height: 110px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #fff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  width: 30px !important;
+  height: 30px !important;
+  right: 30px !important;
+  top: 25px !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: transparent;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.aug2021-slidebar {
+  background: #00a1f1;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: transparent;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 60px 10px 10px 10px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    padding-bottom: 20px;
+  }
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  border: none;
+}
+.bm-item:active {
+  border: none;
+}
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+  .aug2021-header .aug2021-nav-bar-logo {
+    padding-left: 0px;
+    height: 70px;
+  }
+  .aug2021-fields {
+    .aug2021-col:nth-child(1) {
+      max-width: 100% !important;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .aug2021-content-left {
+    text-align: center;
+    .aug2021-siteTitle {
+      h1 {
+        font-size: 40px;
+        max-width: none;
+      }
+    }
+    .aug2021-subTitle {
+      width: auto;
+      max-width: none;
+    }
+  }
+  .aug2021-head-data {
+    padding: 10% 5%;
+    .aug2021-eventDate {
+      span {
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+// for tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+  .bm-burger-button {
+    span:nth-child(1) {
+      width: 35%;
+    }
+    span:nth-child(2) {
+      width: 35%;
+    }
+    span:nth-child(3) {
+      width: 35%;
+    }
+  }
+  .bm-cross-button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .bm-item-list {
+    padding: 80px 10px 10px 10px;
+    a {
+      padding-bottom: 60px;
+    }
+  }
+}

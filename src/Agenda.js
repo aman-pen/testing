@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import "./Agenda.scss";
+import React, { useState } from "react";
+import "./css/Agenda.scss";
 import { ShowSessionData } from "./ShowSessionData";
-import Sessions from "./content/Sessions.json";
+// import Sessions from "./content/Sessions.json";
 import TrackDetails from "./content/TrackDetails.json";
-import { Container, Row, Col } from "reactstrap";
+import { ComingSoon } from "./ComingSoon";
+
+import { Col } from "reactstrap";
 
 export const Agenda = () => {
   const trackfunc = (trackValue) => {
@@ -24,40 +26,44 @@ export const Agenda = () => {
 
   const [trackDetailsState, setTrackDetails] = useState(TrackDetails);
   return (
-    <div className="agenda" id="agenda">
-      <h1 className="agenda-heading"> AGENDA </h1>
-      <div className="agenda-para-text-1">
+    <div className="oct2022-agenda" id="agenda">
+      <h1 className="oct2022-agenda-heading"> AGENDA </h1>
+      <div className="mt-4">
+        <ComingSoon />
+      </div>
+      {/* <div className="oct2022-agenda-para-text-1">
         Check out the agenda and the sessions for the India Cloud Security
         Summit 2021 event.
       </div>
-      <div className="agenda-para-text-2">
+      <div className="oct2022-agenda-para-text-2">
         This event has an ensemble of amazing workshops and seminars by
         professionals.
       </div>
-      <div className="container-fluid track-list">
-        <div className="row track-row">
+      <div className="container-fluid oct2022-track-list">
+        <div className="row oct2022-track-row">
           {trackDetailsState.map((data) => {
             return (
               <Col
                 xs="4"
-                className="tracks"
+                className="oct2022-tracks"
                 key={data.trackId}
                 onClick={() => trackfunc(data.trackId)}
               >
                 {data.isActive === true ? (
-                  <div
-                    className="track-data"
-                    style={{ backgroundColor: "#41b2f1", color: "#fff" }}
-                  >
-                    <div className="track-head"> {data.trackTitle} </div>
-                    <span className="track-span"> {data.trackSubTitle}</span>
-                    <span className="track-date"> {data.trackDate}</span>
+                  <div className="oct2022-track-data oct2022-selected-track">
+                    <div className="oct2022-track-head">{data.trackTitle}</div>
+                    <span className="oct2022-track-span">
+                      {data.trackSubTitle}
+                    </span>
+                    <span className="oct2022-track-date">{data.trackDate}</span>
                   </div>
                 ) : (
-                  <div className="track-data">
-                    <div className="track-head"> {data.trackTitle} </div>
-                    <span className="track-span"> {data.trackSubTitle}</span>
-                    <span className="track-date"> {data.trackDate}</span>
+                  <div className="oct2022-track-data">
+                    <div className="oct2022-track-head">{data.trackTitle} </div>
+                    <span className="oct2022-track-span">
+                      {data.trackSubTitle}
+                    </span>
+                    <span className="oct2022-track-date">{data.trackDate}</span>
                   </div>
                 )}
               </Col>
@@ -65,7 +71,7 @@ export const Agenda = () => {
           })}
         </div>
       </div>
-      <ShowSessionData CurrentTrackID={track} />
+      <ShowSessionData CurrentTrackID={track} /> */}
     </div>
   );
 };

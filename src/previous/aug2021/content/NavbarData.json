@@ -1,0 +1,27 @@
+ [
+  {
+    "title": "HOME",
+    "url": "#header",
+    "target": "_self"
+  },
+  {
+    "title": "AGENDA",
+    "url": "#agenda",
+    "target": "_self"
+  },
+  {
+    "title": "SPEAKERS",
+    "url": "#speakers",
+    "target": "_self"
+  },
+  {
+    "title": "SPONSORS",
+    "url": "#sponsors",
+    "target": "_self"
+  },
+  {
+    "title": "CONTACT US",
+    "url": "#footer",
+    "target": "_self"
+  }
+]

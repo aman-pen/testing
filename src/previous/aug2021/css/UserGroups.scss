@@ -1,0 +1,126 @@
+.aug2021-user-groups {
+  background-color: rgba($color: #f5f6f6, $alpha: 0.56);
+  &-heading {
+    position: relative;
+    font-size: 40px;
+    color: #636363;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      bottom: -40px;
+      width: 80px;
+      height: 2px;
+      background-color: #00a1f1;
+    }
+  }
+  .aug2021-group-wrapper {
+    padding-top: 6rem;
+    justify-content: center;
+    .aug2021-group-card {
+      padding: 20px;
+      .aug2021-group-border {
+        text-decoration: none;
+        min-height: 140px;
+        box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.25);
+        padding: 10px;
+        border-radius: 7px;
+        .aug2021-group-img {
+          padding: 5px 0;
+          border-right: 1px solid #00a1f1;
+          img {
+            height: 80px;
+            width: 100px;
+            object-fit: contain;
+          }
+        }
+        .aug2021-group-name {
+          padding: 25px 0 25px 20px;
+          span {
+            color: #000;
+            font-size: 1.25rem;
+            // position: relative;
+            //     &::before{
+            //         content: "";
+            //         position: absolute;
+            //         left: 0;
+            //         margin-left: 20px;
+            //         width: 2px;
+            //         height: 50px;
+            //         background-color: #00A1F1;
+            //     }
+          }
+        }
+        .aug2021-group-arrow img {
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+// for only Desktop
+@media only screen and (min-width: 1025px) {
+  .aug2021-user-groups {
+    padding: 5rem 8%;
+  }
+}
+
+// for tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .aug2021-user-groups {
+    padding: 3rem 2%;
+  }
+  .aug2021-group-wrapper {
+    padding: 6rem 0rem;
+    .aug2021-group-card .aug2021-group-border {
+      .aug2021-group-arrow img {
+        height: 30px;
+      }
+    }
+  }
+  .aug2021-user-groups
+    .aug2021-group-wrapper
+    .aug2021-group-card
+    .aug2021-group-border
+    .aug2021-group-img
+    img {
+    height: 42px;
+  }
+  .aug2021-user-groups
+    .aug2021-group-wrapper
+    .aug2021-group-card
+    .aug2021-group-border {
+    min-height: 162px;
+  }
+}
+
+// // for ipad pro
+// @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+//   .aug2021-user-groups .aug2021-group-wrapper .aug2021-group-card .aug2021-group-border {
+//     min-height: 170px;
+//   }
+// }
+
+// for mobile
+@media only screen and (max-width: 768px) {
+  .aug2021-user-groups {
+    padding-top: 30px;
+
+    .aug2021-group-wrapper .aug2021-group-card .aug2021-group-border {
+      .aug2021-group-img {
+        padding: 5px 0 5px 0px;
+        img {
+          height: 40px;
+          width: 80px;
+        }
+      }
+      .aug2021-group-arrow {
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+}

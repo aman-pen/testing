@@ -1,79 +1,82 @@
 import React from "react";
-import HeaderData from "./content/HeaderData.json";
-import "./EventTeam.scss";
-import EventTeams from "./content/EventTeam.json";
+// import HeaderData from "./content/HeaderData.json";
+import "./css/EventTeam.scss";
+// import EventTeams from "./content/EventTeam.json";
+import Organizers from "./content/Organizers.json";
 import LinkedInlogo from "./images/website/LinkedInlogo.png";
 
 export const EventTeam = () => {
   return (
-    <div className="eventTeam" id="eventTeam">
-      <h1 className="eventTeam-heading">EVENT TEAM</h1>
-      <h2 className="event-organizers">Organizers</h2>
+    <div className="oct2022-eventTeam" id="eventTeam">
+      <h1 className="oct2022-eventTeam-heading">EVENT TEAM</h1>
+      <h2 className="oct2022-event-organizers">Organizers</h2>
       <div className="row">
-        {EventTeams.map((data) => {
+        {Organizers.map((data) => {
           return (
             <>
-              {data.isVolunteer == "false" ? (
-                <div className="col">
+              <div className="col">
+                <img
+                  src={data.OrganizerImage}
+                  className="oct2022-organizer-image"
+                  alt="organizer"
+                />
+                <h4 className="oct2022-organizer-name">
+                  <span>{data.OrganizerName}</span>
+                </h4>
+                <a
+                  href={data.speakerLinkedIn}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="col-2 nopadding"
+                >
                   <img
-                    src={`${data.OrganizerImage}`}
-                    className="organizer-image"
+                    src={LinkedInlogo}
+                    alt="LinkedIn"
+                    className="oct2022-card-linkedIn align-self-start"
                   />
-                  <h4 className="organizer-name">
-                    <span>{data.OrganizerName}</span>
-                  </h4>
-                  <a
-                    href={data.speakerLinkedIn}
-                    target="_blank"
-                    className="col-2 nopadding"
-                  >
-                    <img
-                      src={LinkedInlogo}
-                      alt="LinkedIn"
-                      className="card-linkedIn align-self-start"
-                    />
-                  </a>
-                </div>
-              ) : null}
+                </a>
+              </div>
             </>
           );
         })}
       </div>
-      {EventTeams.filter((et) => et.isVolunteer == "true").length > 0 ? (
+      {/* {EventTeams.filter((et) => et.isVolunteer === "true").length > 0 ? (
         <>
-          <h2 className="event-organizers">Volunteers</h2>
+          <h2 className="oct2022-event-organizers">Volunteers</h2>
           <div className="row">
             {EventTeams.map((data) => {
               return (
                 <>
-                  {data.isVolunteer == "true" ? (
+                  {data.isVolunteer === "true" ? (
                     <div className="col">
                       <img
                         src={`${data.OrganizerImage}`}
-                        className="organizer-image"
+                        className="oct2022-organizer-image"
+                        alt="organizer"
                       />
-                      <h4 className="organizer-name">
+                      <h4 className="oct2022-organizer-name">
                         <span>{data.OrganizerName}</span>
                       </h4>
                       <a
                         href={data.speakerLinkedIn}
                         target="_blank"
                         className="col-2 nopadding"
+                        rel="noreferrer"
                       >
                         <img
                           src={LinkedInlogo}
                           alt="LinkedIn"
-                          className="card-linkedIn align-self-start"
+                          className="oct2022-card-linkedIn align-self-start"
                         />
                       </a>
                     </div>
-                  ) : null}
+                  ) : null} 
                 </>
               );
             })}
           </div>
         </>
-      ) : null}
+      ) : null}*/}
     </div>
   );
 };

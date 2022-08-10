@@ -11,8 +11,8 @@ class ImageLoader extends React.Component {
   //define our loading and loaded image classes
   static defaultProps = {
     className: "",
-    loadingClassName: "img-loading",
-    loadedClassName: "img-loaded",
+    loadingClassName: "oct2022-img-loading",
+    loadedClassName: "oct2022-img-loaded",
   };
 
   //image onLoad handler to update state to loaded
@@ -22,20 +22,20 @@ class ImageLoader extends React.Component {
   };
 
   render() {
-    let { className, loadedClassName, loadingClassName, ...props } = this.props;
+    let { className, loadedClassName, loadingClassName } = this.props;
 
     className = `${className} ${
       this.state.loaded ? loadedClassName : loadingClassName
     }`;
 
     return (
-      
-        <img
-          src={this.props.src}
-          onClick={this.props.onClick}
-          className={className}
-          onLoad={this.onLoad}
-        />
+      <img
+        src={this.props.src}
+        onClick={this.props.onClick}
+        className={className}
+        onLoad={this.onLoad}
+        alt=""
+      />
     );
   }
 }

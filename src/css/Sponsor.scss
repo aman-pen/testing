@@ -1,0 +1,43 @@
+.oct2022-sponsor {
+  .oct2022-sponsor-heading {
+    position: relative;
+    font-size: 40px;
+    color: #636363;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      bottom: -40px;
+      width: 80px;
+      height: 2px;
+      background-color: #68b993;
+    }
+  }
+  .oct2022-sponsor-wrapper {
+    width: 80%;
+    margin: 1.25rem auto;
+    .oct2022-sponsor-card {
+      padding: 40px;
+      &:hover {
+        transform: scale(1.05);
+      }
+      .oct2022-sponsor-border {
+        display: block;
+        box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.25);
+        padding: 15%;
+        border-radius: 7px;
+      }
+    }
+    .oct2022-sponsor-img {
+      width: 70%;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .oct2022-sponsor-wrapper {
+    width: 100% !important;
+  }
+}

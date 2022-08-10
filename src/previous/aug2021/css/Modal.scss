@@ -1,0 +1,160 @@
+$base-color-blue: #41b2f1;
+
+.aug2021-modalHeader {
+  background-color: $base-color-blue;
+}
+
+.modal-header {
+  background-color: transparent;
+  padding: 20px 40px;
+  color: #fff;
+  position: relative;
+  .modal-title {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .aug2021-close {
+    margin: 0px !important;
+  }
+}
+/** overriding reactstrap **/
+.aug2021-agenda-dialog {
+  width: auto;
+  margin: 0.5rem;
+  .aug2021-modal-body {
+    padding: 30px 30px;
+  }
+}
+
+.modal-body {
+  padding: 30px 60px;
+  .aug2021-session-Title {
+    span {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+  .aug2021-speaker-array {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .aug2021-speaker-img {
+    width: 115px;
+    height: 130px;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top;
+  }
+  .aug2021-speaker-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+.aug2021-session-introtext {
+  font-size: 1rem;
+  text-align: justify;
+  span {
+    white-space: pre-line;
+  }
+}
+.aug2021-bg-grey {
+  background-color: #f8f8f8;
+}
+// .aug2021-modal-header .aug2021-close{
+//   display: none !important;
+// }
+.aug2021-speaker-details {
+  padding: 50px 10%;
+}
+.aug2021-modal-image {
+  width: 90%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+.aug2021-speaker-information {
+  text-align: justify;
+  white-space: pre-line;
+}
+.aug2021-close {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-image: url("../images/website/close.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+}
+.aug2021-image-array img {
+  height: 40px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.aug2021-divider {
+  height: 3px;
+  background-color: #60606033;
+  margin: 20px auto;
+}
+.aug2021-speaker-session {
+  color: #41b2f1;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.aug2021-speaker-session-details {
+  .aug2021-divider {
+    margin: 20px auto;
+  }
+  .aug2021-row {
+    padding-bottom: 15px;
+    .aug2021-modal-track-num {
+      background-color: $base-color-blue;
+      padding: 5px 0;
+      color: #fff;
+      justify-content: center;
+      font-weight: 500;
+      border-radius: 20px;
+    }
+    .aug2021-speaker-session-time {
+      span {
+        background-color: rgba(65, 178, 241, 0.1);
+        padding: 5px 15px;
+        color: #000;
+        justify-content: center;
+        font-weight: 400;
+        border-radius: 20px;
+      }
+    }
+    div {
+      display: flex;
+    }
+  }
+  .aug2021-speaker-session-title {
+    color: $base-color-blue;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .aug2021-agenda-dialog {
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .aug2021-agenda-dialog {
+    max-width: 700px;
+    margin: 1.75rem auto;
+    .aug2021-modal-body {
+      padding: 30px 60px;
+    }
+  }
+}

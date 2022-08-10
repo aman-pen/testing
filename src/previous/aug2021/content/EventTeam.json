@@ -1,0 +1,79 @@
+[
+  {
+    "OrganizerID": "1",
+    "OrganizerImage": "./images/website/Vignesh.jpg",
+    "OrganizerName": "Vignesh Ganesan",
+    "isVolunteer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/vignesh-ganesan-mcse-mcsa-mct-itilv3-9246384a/"
+  },
+  {
+    "OrganizerID": "2",
+    "OrganizerImage": "./images/website/Perumal.jpg",
+    "OrganizerName": "Narasima Perumal",
+    "isVolunteer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/narasimaperumal/"
+  },
+  {
+    "OrganizerID": "3",
+    "OrganizerImage": "./images/website/Jasjit.jpg",
+    "OrganizerName": "Jasjit Chopra",
+    "isVolunteer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/jasjitchopra/"
+  },
+  {
+    "OrganizerID": "4",
+    "OrganizerImage": "./images/website/Manpreet.jpg",
+    "OrganizerName": "Manpreet Singh",
+    "isVolunteer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/manpreethere/"
+  },
+  {
+    "OrganizerID": "5",
+    "OrganizerImage": "./images/website/Kamlesh.jpg",
+    "OrganizerName": "Kamlesh Rao",
+    "isVolunteer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/kamleshrao/"
+  },
+  {
+    "OrganizerID": "6",
+    "OrganizerImage": "./images/website/Lalit.jpg",
+    "OrganizerName": "Lalit Mohan",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/lalit-mohan-16628643/"
+  },
+  {
+    "OrganizerID": "7",
+    "OrganizerImage": "./images/website/Mythili.jpg",
+    "OrganizerName": "Mythili Ranganathan",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/mythilisampath/"
+  },
+  {
+    "OrganizerID": "8",
+    "OrganizerImage": "./images/website/Jason.jpg",
+    "OrganizerName": "Jason Rivera",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/riverajason/"
+  },
+  {
+    "OrganizerID": "9",
+    "OrganizerImage": "./images/website/Nishanth.jpg",
+    "OrganizerName": "Nishanth Shreepad",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/nishanth-shreepad/"
+  },
+  {
+    "OrganizerID": "10",
+    "OrganizerImage": "./images/website/Pooja.jpg",
+    "OrganizerName": "Pooja R.",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/pooja-r-48066418/"
+  },
+  {
+    "OrganizerID": "10",
+    "OrganizerImage": "./images/website/Rahul.png",
+    "OrganizerName": "Rahul Sahay",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/rahul-sahay-80112443/"
+  }
+]
