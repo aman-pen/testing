@@ -40,7 +40,7 @@ function App() {
               </>
             }
           />
-//           <Route path="/aug2021" element={<Prev />} />
+          <Route path="/aug2021" element={<Prev />} />
         </Routes>
       </BrowserRouter>
     </div>
