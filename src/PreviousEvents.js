@@ -13,7 +13,7 @@ export const PreviousEvents = () => {
         {PrevEvents.map((data) => {
           return (
             <div className="row prevEvents-wrapper">
-//               <a href={data.eventLink} target="_blank" rel="noreferrer">
+              <a href={data.eventLink} target="_blank" rel="noreferrer">
                 <div class="card prevEvents-card oct2022-nopadding shadow p-3 mb-5 bg-white rounded">
                   {/* {console.log(data.eventImage)} */}
                   <img
@@ -22,7 +22,7 @@ export const PreviousEvents = () => {
                     className="prevEventImage"
                   />
                 </div>
-//               </a>
+              </a>
             </div>
           );
         })}
