@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/App.scss";
 import { Header } from "./Header";
 import { About } from "./About";
@@ -13,6 +13,9 @@ import { CountDownTimer } from "./CountDownTimer";
 import { EventTeam } from "./EventTeam";
 
 export const Prev = () => {
+  useEffect(() => {
+    document.title = "India Cloud Security Summit Aug2021";
+  }, []);
   return (
     <>
       <Header />
