@@ -32,13 +32,8 @@ export const About = () => {
         community leaders.
       </div>
       <div className="aug2021-registration-text">
-        <a
-          className="aug2021-registration-button"
-          href={HeaderData[0].registrationLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p>Registrations are free !</p>
+        <a className="aug2021-registration-button" href="#sessions-recordings">
+          <p>Watch Now</p>
         </a>
       </div>
     </div>
