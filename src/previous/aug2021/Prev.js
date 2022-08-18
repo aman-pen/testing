@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./css/App.scss";
 import { Header } from "./Header";
 import { About } from "./About";
-// import { Donate } from "./Donate";
+import { Donate } from "./Donate";
 import { Agenda } from "./Agenda";
 import { Speaker } from "./Speaker";
 import { Sponsor } from "./Sponsor";
@@ -21,7 +21,7 @@ export const Prev = () => {
       <Header />
       <CountDownTimer />
       <About />
-      {/* <Donate /> */}
+      <Donate />
       <Agenda />
       <KeyNoteSpeaker />
       <Speaker />
