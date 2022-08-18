@@ -21,7 +21,7 @@ export const Prev = () => {
       <Header />
       <CountDownTimer />
       <About />
-      <SessionRecordings />
+      {/* <SessionRecordings /> */}
       <Donate />
       <Agenda />
       <KeyNoteSpeaker />

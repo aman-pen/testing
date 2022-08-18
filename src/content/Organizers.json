@@ -33,5 +33,12 @@
     "OrganizerName": "Shrushti Shah",
     "isVolunteer": "true",
     "speakerLinkedIn": "https://www.linkedin.com/in/shrushti-shah-bba565162/"
+  },
+  {
+    "OrganizerID": "6",
+    "OrganizerImage": "./images/website/Organizers/Lalit.jpg",
+    "OrganizerName": "Lalit Mohan",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/lalit-mohan-16628643/"
   }
 ]

@@ -99,7 +99,7 @@ export const Header = () => {
                 </Row>
                 <Row className="oct2022-registrationBtn">
                   <Col>
-                    {/* <a
+                    <a
                       href={data.registrationLink}
                       target="_blank"
                       rel="noreferrer"
@@ -110,15 +110,15 @@ export const Header = () => {
                       >
                         <span>{data.registrationBtn}</span>
                       </button>
-                    </a> */}
+                    </a>
                     {/* ------------------------------------------ */}
 
-                    <button
+                    {/* <button
                       className="oct2022-register-btn"
                       formTarget="_blank"
                     >
                       <span>COMING SOON</span>
-                    </button>
+                    </button> */}
                   </Col>
                 </Row>
               </Col>
