@@ -1,6 +1,6 @@
 import "./css/SessionRecordings.scss";
 import HeaderData from "./content/HeaderData.json";
-export const SessionRecordings = () => {
+const SessionRecordings = () => {
   return (
     <div className="d-flex flex-column align-items-center aug2021-session-recording">
       <div className="mb-4">
@@ -24,3 +24,4 @@ export const SessionRecordings = () => {
     </div>
   );
 };
+export default SessionRecordings;
