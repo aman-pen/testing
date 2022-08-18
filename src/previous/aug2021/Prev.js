@@ -11,7 +11,7 @@ import { Footer } from "./Footer";
 import { KeyNoteSpeaker } from "./KeyNoteSpeaker";
 import { CountDownTimer } from "./CountDownTimer";
 import { EventTeam } from "./EventTeam";
-
+import { SessionRecordings } from "./SessionRecordings";
 export const Prev = () => {
   useEffect(() => {
     document.title = "India Cloud Security Summit Aug2021";
@@ -21,6 +21,7 @@ export const Prev = () => {
       <Header />
       <CountDownTimer />
       <About />
+      <SessionRecordings />
       <Donate />
       <Agenda />
       <KeyNoteSpeaker />

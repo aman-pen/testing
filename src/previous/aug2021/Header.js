@@ -97,15 +97,11 @@ export const Header = () => {
                 </Row>
                 <Row className="aug2021-registrationBtn">
                   <Col>
-                    <button className="aug2021-register-btn">
-                      <a
-                        href={data.registrationLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {data.registrationBtn}
-                      </a>
-                    </button>
+                    <a href="#sessions-recordings">
+                      <button className="aug2021-register-btn">
+                        <span>{data.watchNowBtn}</span>
+                      </button>
+                    </a>
                   </Col>
                 </Row>
               </Col>

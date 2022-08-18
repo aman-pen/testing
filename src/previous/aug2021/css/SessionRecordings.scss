@@ -1,0 +1,57 @@
+.aug2021-session-recording {
+  text-align: center;
+  padding: 0 1rem 4rem 1rem;
+  //   background-color: rgba(245, 246, 246, 0.56);
+  .aug2021-session-recording-heading {
+    padding-top: 4rem;
+    font-size: 40px;
+    color: #636363;
+    position: relative;
+    // padding-bottom: 15px;
+    // border-bottom-style: solid;
+    // border-bottom-width: 3.aug2021-1px;
+    // width: fit-content;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      bottom: -40px;
+      width: 80px;
+      height: 2px;
+      background-color: #00a1f1;
+    }
+  }
+}
+
+.aug2021-youtube-wrapper {
+  width: 50vw;
+}
+
+.aug2021-youtube-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.aug2021-youtube-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .aug2021-youtube-wrapper {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aug2021-youtube-wrapper {
+    width: 80vw;
+  }
+}
