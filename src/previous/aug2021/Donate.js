@@ -65,7 +65,6 @@ export const Donate = () => {
           <div className="aug2021-donate-btn btn">
             <a
             // href={HeaderData[0].donationLink}
-            // href=""
             // target="_blank"
             // rel="noreferrer"
             >
