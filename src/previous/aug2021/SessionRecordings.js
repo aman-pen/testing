@@ -15,8 +15,8 @@ export const SessionRecordings = () => {
             src="https://www.youtube.com/embed/videoseries?list=PLhLCvUkszoFohvLy7iLiZK6uKGASNs4En"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            fs="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;"
           ></iframe>
         </div>
       </div>
