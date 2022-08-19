@@ -12,7 +12,7 @@ export const SessionRecordings = () => {
         <div className="aug2021-youtube-container">
           <iframe
             className="aug2021-youtube-iframe"
-            src="https://www.youtube.com/embed/3M21ARqKS6I"
+            src="https://www.youtube.com/embed/videoseries?list=PLhLCvUkszoFohvLy7iLiZK6uKGASNs4En"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
