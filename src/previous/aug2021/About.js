@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderData from "./content/HeaderData.json";
+// import HeaderData from "./content/HeaderData.json";
 import "./css/About.scss";
 
 export const About = () => {
