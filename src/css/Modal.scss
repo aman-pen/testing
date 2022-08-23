@@ -1,21 +1,187 @@
 $base-color-blue: #397878;
+$grid-heading-color: #4faaaa;
+$grid-list-color: #606060;
+$gold-color: #eaaf0e;
+$card-sky: #5eb3d8;
+$purple-color: #9653ca;
+.oct2022-modalSponsor {
+  font-family: "Roboto", sans-serif;
+  max-width: 85%;
+  margin: 5% auto;
+  &-body {
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(
+        90.14deg,
+        rgba(1, 58, 56, 0.8) 17.89%,
+        rgba(79, 170, 170, 0.568) 98.64%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/website/modalSponsor.png");
+    background-size: fill, contain;
+  }
+  &-title {
+    font-size: clamp(1.5rem, 5vw, 3.2rem);
+
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    &::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 2px;
+      background: #ffffff;
+      margin: 4% auto;
+    }
+  }
+
+  &-subtitle {
+    width: 62%;
+    font-size: clamp(0.8rem, 5vw, 2rem);
+
+    // font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0;
+  }
+
+  &-header {
+    height: clamp(450px, 30vh, 576px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-whyUs {
+    background-color: #fff;
+
+    &-title {
+      color: #636363;
+      &::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 2px;
+        background: #4faaaa;
+        margin: 2rem auto;
+      }
+    }
+  }
+  &-schemes {
+    background-color: #fff;
+
+    &-title {
+      color: #636363;
+      &::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 2px;
+        background: #4faaaa;
+        margin: 2rem auto;
+      }
+    }
+
+    &-header1 {
+      color: $gold-color;
+      background: #ffbb001f;
+    }
+
+    &-header2 {
+      color: $purple-color;
+      background: #9653ca1f;
+    }
+
+    &-header3 {
+      color: $card-sky;
+      background: #5eb3d81f;
+    }
+
+    &-header1,
+    &-header2,
+    &-header3 {
+      text-transform: uppercase;
+      font-family: "Metropolis", sans-serif;
+      text-align: center;
+      font-size: clamp(0.2rem, 105vw, 1.2rem);
+      font-weight: 700;
+      width: 100%;
+      margin: auto;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.oct2022-Sponsor-ulDiv {
+  width: 100%;
+  li {
+    width: 80%;
+    text-align: start;
+    margin: auto;
+  }
+}
+
+.oct2022-Sponsor-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eaeaea;
+  margin: 1.8rem 0rem 1.8rem -1rem;
+}
+
+.oct2022-moneyText1 {
+  color: $gold-color;
+}
+
+.oct2022-moneyText2 {
+  color: $purple-color;
+}
+
+.oct2022-moneyText3 {
+  color: $card-sky;
+}
+
+.oct2022-moneyText1,
+.oct2022-moneyText2,
+.oct2022-moneyText3 {
+  margin: 10% 0 5% 0;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.5rem, 4.5vw, 3.2rem);
+  text-align: center;
+
+  &-para {
+    width: 80%;
+    text-align: center;
+    font-size: clamp(0.2rem, 105vw, 1.2rem);
+  }
+}
+.scheme-card {
+  border: 1px solid rgba(79, 170, 170, 0.23);
+  height: clamp(700px, 85vh, 200rem);
+}
 
 .oct2022-modalHeader {
-  background-color: $base-color-blue;
+  background: linear-gradient(325.49deg, #4faaaa 12.41%, #064949 100.31%);
 }
-.modal-header {
+.oct2022-modal-header {
   background-color: transparent;
   padding: 20px 40px;
   color: #fff;
   position: relative;
-  .modal-title {
-    font-size: 26px;
+  .oct2022-modal-title {
     font-weight: 600;
+    font-size: 1.5rem;
   }
   .oct2022-close {
     margin: 0px !important;
+    position: absolute;
+    right: 1%;
   }
 }
+
 /** overriding reactstrap **/
 .oct2022-agenda-dialog {
   width: auto;
@@ -60,9 +226,7 @@ $base-color-blue: #397878;
 .oct2022-bg-grey {
   background-color: #f8f8f8;
 }
-// .oct2022-modal-header .oct2022-close{
-//   display: none !important;
-// }
+
 .oct2022-speaker-details {
   padding: 50px 10%;
 }
@@ -85,9 +249,10 @@ $base-color-blue: #397878;
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
+  top: 15%;
+  transform: scale(0.8);
   background-color: transparent;
   position: absolute;
-  right: 5%;
   opacity: 1;
 }
 .oct2022-image-array img {
@@ -141,19 +306,166 @@ $base-color-blue: #397878;
     font-size: 18px;
   }
 }
-
-@media only screen and (min-width: 576px) {
-  .oct2022-agenda-dialog {
-    max-width: 500px;
-    margin: 1rem auto;
+.oct-2022-grid {
+  background-repeat: no-repeat;
+  background-size: cover;
+  //full height of the image. All images have the same height
+  &-img1 {
+    background-image: url("../images/website/SponsorGrid/gridImg1.png");
+    height: 309px;
+  }
+  &-img2 {
+    background-image: url("../images/website/SponsorGrid/gridImg2.png");
+    height: 309px;
+  }
+  &-img3 {
+    background-image: url("../images/website/SponsorGrid/gridImg3.png");
+    height: 309px;
+  }
+  &-img4 {
+    background-image: url("../images/website/SponsorGrid/gridImg4.png");
+    height: 309px;
+  }
+  &-heading {
+    margin: 5% 0 4% 0;
+    color: $grid-heading-color;
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &-subHeading {
+    width: 95%;
+    margin: auto;
+    font-size: clamp(0.8rem, 5vw, 1.1rem);
+    line-height: 2rem;
+    color: $grid-list-color;
+    li {
+      margin-bottom: 1rem;
+    }
   }
 }
-@media only screen and (min-width: 750px) {
+
+.oct2022-modal-Headtitle {
+  font-size: clamp(0.8rem, 5vw, 1.8rem);
+  width: 95%;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.oct2022-btn-wrapper {
+  margin-top: 3%;
+}
+
+.oct2022-sponsorButton {
+  width: fit-content;
+  padding: 2% 4%;
+  padding-inline: clamp(0.8rem, 4%, 2rem);
+  padding-block: clamp(0.8rem, 2%, 1rem);
+  background-color: $base-color-blue;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: white;
+
+    transform: scale(1.05);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .scheme-card {
+    height: clamp(720px, 105vh, 1000px);
+  }
+  .oct2022-modalSponsor-schemes-header1,
+  .oct2022-modalSponsor-schemes-header2,
+  .oct2022-modalSponsor-schemes-header3 {
+    height: 80px;
+  }
+
+  .oct2022-sponsorButton {
+    width: fit-content;
+    padding: 2% 4%;
+    font-size: clamp(0.8rem, 12vw, 1rem);
+  }
+}
+@media only screen and (max-width: 767px) {
   .oct2022-agenda-dialog {
     max-width: 700px;
     margin: 1.75rem auto;
     .modal-body {
       padding: 30px 60px;
+    }
+  }
+  .oct2022-modal-Headtitle {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
+  .oct2022-close {
+    margin: 0px !important;
+    position: absolute;
+    right: 1%;
+    top: 10%;
+  }
+  .oct2022-close {
+    transform: scale(0.6);
+  }
+  .oct2022-sponsorButton {
+    width: fit-content;
+    padding: 3% 5%;
+    font-size: clamp(0.8rem, 12vw, 1rem);
+  }
+  .oct-2022-grid {
+    background-size: 100% 100%;
+  }
+  .oct2022-modalSponsor {
+    &-subtitle {
+      width: 80%;
+    }
+  }
+  .scheme-card {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .oct2022-modalSponsor-schemes-header1,
+  .oct2022-modalSponsor-schemes-header2,
+  .oct2022-modalSponsor-schemes-header3 {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .oct2022-agenda-dialog {
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+  .oct2022-modalSponsor {
+    &-subtitle {
+      width: 95%;
+    }
+  }
+
+  .oct-2022-grid {
+    &-img1,
+    &-img2,
+    &-img3,
+    &-img4 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: clamp(130px, 130px, 309px);
+    }
+    &-subHeading {
+      width: 100%;
     }
   }
 }

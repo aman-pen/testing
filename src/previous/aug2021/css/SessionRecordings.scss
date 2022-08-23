@@ -30,6 +30,7 @@
   background-color: #202020;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: 80%;
+
   &-header {
     padding: 1rem;
     padding-bottom: 0rem;
@@ -46,6 +47,26 @@
     overflow-y: auto;
     height: 88%;
     background-color: #061c25;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 50px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
     &-list {
       height: 200px;
@@ -123,26 +144,6 @@
 }
 
 // This CSS is Global Styling
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 50px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 @media screen and (max-width: 1080px) {
   .aug2021-youtube-wrapper {

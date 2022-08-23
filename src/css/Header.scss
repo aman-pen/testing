@@ -12,11 +12,9 @@ body::-webkit-scrollbar {
     // url("../images/website/oct2022BGImg.png");
     url("../images/website/BG\ Image.png");
 
-  // background: linear-gradient(
-  //     rgba(49, 117, 117, 0.7) 100%,
-  //     rgba(0, 150, 234, 0.7) 100%
-  //   ),
-  //   url("../images/website/BG\ Image.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -178,7 +176,7 @@ body::-webkit-scrollbar {
       padding-top: 40px;
       flex-wrap: nowrap;
       .oct2022-sessionNumber,
-      .oct2022-sponserNumber,
+      .oct2022-SponsorNumber,
       .oct2022-trackNumber {
         span {
           display: block;
@@ -209,7 +207,7 @@ body::-webkit-scrollbar {
           font-weight: 600;
         }
       }
-      .oct2022-sponserNumber {
+      .oct2022-sponsorNumber {
         span:nth-child(1) {
           display: block;
           color: #7cbb00;
@@ -220,6 +218,48 @@ body::-webkit-scrollbar {
     }
   }
 }
+
+.oct2022-Be-Sponsor {
+  height: 5rem;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    175.56deg,
+    rgba(79, 170, 170, 0.71) 4.17%,
+    rgba(1, 58, 56, 0.31) 96.57%
+  );
+  &-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+  &-text {
+    width: 75%;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 300;
+    // font-size: 1.8rem;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+  }
+
+  &-btn {
+    width: clamp(1rem, 26vw, 18rem);
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    padding: 3.5% 2%;
+    color: #275d5d;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
 .oct2022-nav-bar-logo {
   height: 100px !important;
 }
@@ -330,19 +370,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 768px) {
-  .oct2022-header .oct2022-nav-bar-logo {
-    padding-left: 0px;
-    height: 70px;
-  }
-  .oct2022-fields {
-    .oct2022-col:nth-child(1) {
-      max-width: 100% !important;
-      margin: auto;
-    }
-  }
-}
-
 @media only screen and (max-width: 1200px) {
   .oct2022-content-left {
     text-align: center;
@@ -363,6 +390,41 @@ Note: Beware of modifying this element as it can break the animations - you shou
       span {
         letter-spacing: 0;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .oct2022-header .oct2022-nav-bar-logo {
+    padding-left: 0px;
+    height: 70px;
+  }
+  .oct2022-fields {
+    .oct2022-col:nth-child(1) {
+      max-width: 100% !important;
+      margin: auto;
+    }
+  }
+
+  .oct2022-Be-Sponsor {
+    height: 8.5rem;
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 90%;
+      margin: auto;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    &-text {
+      text-align: center;
+    }
+
+    &-btn {
+      width: 200px;
+      padding: 4% 2%;
+      margin-bottom: 2px;
     }
   }
 }
