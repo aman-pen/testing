@@ -101,6 +101,7 @@ export const Header = () => {
                   <Row className="oct2022-siteTitle">
                     <Col>
                       <span>{data.presentedUserGroup}</span>
+                      <span className="proud-present">PROUDLY PRESENTS</span>
                       <h1>{data.siteTitle}</h1>
                     </Col>
                   </Row>
