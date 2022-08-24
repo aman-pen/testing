@@ -27,13 +27,13 @@ body::-webkit-scrollbar {
   }
   .oct2022-nav-bar-logo {
     padding-left: 80px;
-    margin-top: 1.5rem;
-    height: 100px !important;
+    // margin-top: 1.5rem;
+    height: 100px;
   }
   .oct2022-bg-img {
     width: 100%;
   }
-  .oct2022-nav-bar {
+  .nav-bar {
     &-logo {
       height: 10%;
     }
@@ -159,7 +159,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     text-align: center;
     .oct2022-eventData-border {
-      // border: 6px solid #ffffff;
+      border: 6px solid #ffffff;
       font-family: "Roboto", sans-serif;
       padding: 20px;
       // background: linear-gradient(
@@ -412,6 +412,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .navbar {
     padding-right: 15%;
   }
+  .oct2022-head-nav {
+    padding-top: 2%;
+    padding-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -427,6 +431,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
       width: auto;
       max-width: none;
     }
+  }
+
+  .oct2022-head-nav {
+    padding-top: 1%;
+    padding-bottom: 0;
+  }
+  .oct2022-nav-bar-logo {
+    padding-left: 80px;
   }
   .oct2022-head-data {
     padding: 10% 5%;
@@ -445,13 +457,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 @media only screen and (max-width: 768px) {
   .oct2022-header .oct2022-nav-bar-logo {
-    padding-left: 2rem;
-    height: 5rem !important;
+    height: 100px;
   }
   .proud-present {
     margin-top: 60px;
   }
-
+  .oct2022-nav-bar-logo {
+    padding-left: 0px !important;
+  }
   .oct2022-fields {
     .oct2022-col:nth-child(1) {
       max-width: 100% !important;
