@@ -41,7 +41,7 @@ $purple-color: #9653ca;
   &-subtitle {
     width: 62%;
     font-size: clamp(0.8rem, 5vw, 2rem);
-
+    letter-spacing: 1px;
     // font-size: 2rem;
     color: #ffffff;
     text-align: center;
@@ -306,25 +306,28 @@ $purple-color: #9653ca;
     font-size: 18px;
   }
 }
-.oct-2022-grid {
-  background-repeat: no-repeat;
+.oct2022-grid {
   background-size: cover;
   //full height of the image. All images have the same height
   &-img1 {
     background-image: url("../images/website/SponsorGrid/gridImg1.png");
     height: 309px;
+    background-repeat: no-repeat;
   }
   &-img2 {
     background-image: url("../images/website/SponsorGrid/gridImg2.png");
     height: 309px;
+    background-repeat: no-repeat;
   }
   &-img3 {
     background-image: url("../images/website/SponsorGrid/gridImg3.png");
     height: 309px;
+    background-repeat: no-repeat;
   }
   &-img4 {
     background-image: url("../images/website/SponsorGrid/gridImg4.png");
     height: 309px;
+    background-repeat: no-repeat;
   }
   &-heading {
     margin: 5% 0 4% 0;
@@ -415,17 +418,20 @@ $purple-color: #9653ca;
     position: absolute;
     right: 1%;
     top: 10%;
-  }
-  .oct2022-close {
     transform: scale(0.6);
   }
+
   .oct2022-sponsorButton {
     width: fit-content;
     padding: 3% 5%;
     font-size: clamp(0.8rem, 12vw, 1rem);
   }
-  .oct-2022-grid {
+  .oct2022-grid {
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &-section:not(:last-child) {
+      margin-bottom: 35px;
+    }
   }
   .oct2022-modalSponsor {
     &-subtitle {
@@ -451,10 +457,13 @@ $purple-color: #9653ca;
   }
   .oct2022-modalSponsor {
     &-subtitle {
-      width: 95%;
+      font-size: 17px;
+      width: 85%;
     }
   }
-
+  #oct2022-sponsorModal-header {
+    padding: 1rem;
+  }
   .oct-2022-grid {
     &-img1,
     &-img2,

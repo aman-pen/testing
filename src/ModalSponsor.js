@@ -12,6 +12,7 @@ export const ModalSponsor = ({ modal, toggle }) => {
           <ModalHeader
             toggle={toggle}
             close={closeBtn}
+            id="oct2022-sponsorModal-header"
             className="oct2022-modal-header"
           >
             <div className="oct2022-modal-Headtitle">
@@ -33,12 +34,12 @@ export const ModalSponsor = ({ modal, toggle }) => {
               <div className="pt-5">WHY SPONSOR US</div>
             </div>
             <div class="row p-4 gx-5 gy-2">
-              <div class="col-12 col-md-6">
-                <div className="oct-2022-grid-img1" />
-                <div className="oct-2022-grid-heading">
+              <div class="col-12 col-md-6 oct2022-grid-section">
+                <div className="oct2022-grid-img1" />
+                <div className="oct2022-grid-heading">
                   Brand &#38; Product Positioning
                 </div>
-                <ul className="oct-2022-grid-subHeading">
+                <ul className="oct2022-grid-subHeading">
                   <li>
                     Align yourselves with leading brands and fuel your marketing
                     engine through tech event sponsorship.
@@ -49,12 +50,12 @@ export const ModalSponsor = ({ modal, toggle }) => {
                   </li>
                 </ul>
               </div>
-              <div class="col-12 col-md-6">
-                <div className="oct-2022-grid-img2" />
-                <div className="oct-2022-grid-heading">
+              <div class="col-12 col-md-6 oct2022-grid-section">
+                <div className="oct2022-grid-img2" />
+                <div className="oct2022-grid-heading">
                   Talent Attraction &#38; Retention
                 </div>
-                <ul className="oct-2022-grid-subHeading">
+                <ul className="oct2022-grid-subHeading">
                   <li>
                     Gain access to a global pool of candidates from different
                     countries.
@@ -70,10 +71,10 @@ export const ModalSponsor = ({ modal, toggle }) => {
                 </ul>
               </div>
               <div class="w-100"></div>
-              <div class="col-12 col-md-6">
-                <div className="oct-2022-grid-img3" />
-                <div className="oct-2022-grid-heading">Employer Branding</div>
-                <ul className="oct-2022-grid-subHeading">
+              <div class="col-12 col-md-6 oct2022-grid-section">
+                <div className="oct2022-grid-img3" />
+                <div className="oct2022-grid-heading">Employer Branding</div>
+                <ul className="oct2022-grid-subHeading">
                   <li>
                     Put your company name in line with top industry leaders.
                   </li>
@@ -84,10 +85,10 @@ export const ModalSponsor = ({ modal, toggle }) => {
                   </li>
                 </ul>
               </div>
-              <div class="col-12 col-md-6">
-                <div className="oct-2022-grid-img4" />
-                <div className="oct-2022-grid-heading">Lead Generation</div>
-                <ul className="oct-2022-grid-subHeading">
+              <div class="col-12 col-md-6 oct2022-grid-section">
+                <div className="oct2022-grid-img4" />
+                <div className="oct2022-grid-heading">Lead Generation</div>
+                <ul className="oct2022-grid-subHeading">
                   <li>
                     Increase brand awareness and drive sales pipeline growth.
                   </li>
