@@ -220,9 +220,9 @@ body::-webkit-scrollbar {
 }
 
 .oct2022-Be-Sponsor {
-  height: 5rem;
-  width: 100%;
+  height: 5.5rem;
   font-family: "Roboto", sans-serif;
+  text-align: center;
   background: linear-gradient(
     175.56deg,
     rgba(79, 170, 170, 0.71) 4.17%,
@@ -231,12 +231,12 @@ body::-webkit-scrollbar {
   &-wrapper {
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 85%;
     margin: auto;
     align-items: center;
   }
   &-text {
-    width: 75%;
+    width: 70%;
     color: #ffffff;
     font-family: inherit;
     font-weight: 300;
@@ -370,6 +370,22 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
+@media only screen and (min-width: 1200px) {
+  .oct2022-Be-Sponsor {
+    &-text {
+      font-size: 1.5rem;
+      width: 70%;
+      text-align: start;
+    }
+    &-btn {
+      &-wrapper {
+        width: 30%;
+        text-align: start;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .oct2022-content-left {
     text-align: center;
@@ -390,6 +406,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
       span {
         letter-spacing: 0;
       }
+    }
+  }
+  .oct2022-Be-Sponsor {
+    &-text {
+      font-size: 1rem;
     }
   }
 }
