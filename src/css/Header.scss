@@ -1,13 +1,16 @@
 $White: #ffffff;
-// $havlock-blue: #479cda;
-$havlock-blue: #275d5d;
+// $havlock-blbe-sponserue: #479cda;
+$base-color-green: #4faaaa;
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 .oct2022-header {
   background: linear-gradient(
-      rgba(49, 117, 117, 0.8) 1%,
-      rgba(20, 77, 77, 0.9) 100%
+      127.39deg,
+      rgba(1, 58, 56, 0.8) 12.38%,
+      rgba(79, 170, 170, 0.8) 102.11%
     ),
     // url("../images/website/oct2022BGImg.png");
     url("../images/website/BG\ Image.png");
@@ -18,6 +21,7 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+
   .oct2022-head-nav {
     min-height: 110px;
   }
@@ -35,6 +39,10 @@ body::-webkit-scrollbar {
     }
   }
   .navbar-nav {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 27px;
     flex-direction: row;
   }
   .navbar {
@@ -109,7 +117,7 @@ body::-webkit-scrollbar {
         font-size: 25px;
         text-transform: uppercase;
         // color: #479cda !important;
-        color: rgb(39, 93, 93) !important;
+        color: $base-color-green !important;
         text-decoration: none;
         font-weight: 700;
       }
@@ -151,12 +159,20 @@ body::-webkit-scrollbar {
     justify-content: center;
     text-align: center;
     .oct2022-eventData-border {
-      border: 6px solid #ffffff;
-      width: auto;
+      // border: 6px solid #ffffff;
+      font-family: "Roboto", sans-serif;
       padding: 20px;
+      // background: linear-gradient(
+      //   rgba(49, 117, 117, 0.8) 1%,
+      //   rgba(20, 77, 77, 0.9) 100%
+      // );
+      width: auto;
       background: linear-gradient(
-        rgba(49, 117, 117, 0.8) 1%,
-        rgba(20, 77, 77, 0.9) 100%
+        270.33deg,
+        rgba(79, 170, 170, 0.05) 27.42%,
+        rgba(79, 170, 170, 0.5) 48.61%,
+        rgba(77, 179, 179, 0.53) 62.06%,
+        rgba(79, 170, 170, 0.08) 91.51%
       );
     }
     span {
@@ -176,6 +192,7 @@ body::-webkit-scrollbar {
       margin: auto;
     }
     .oct2022-eventTitle {
+      font-family: inherit;
       font-size: 30px;
     }
     .oct2022-fields-row {
@@ -261,7 +278,7 @@ body::-webkit-scrollbar {
     border: none;
     text-transform: uppercase;
     padding: 3.5% 2%;
-    color: #275d5d;
+    color: $base-color-green;
     font-weight: 600;
     font-size: clamp(1rem, 2.2vw, 1.5rem);
     transition: all 0.1s ease-in-out;
@@ -456,7 +473,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
     &-text {
       text-align: center;
     }
-
     &-btn {
       width: 200px;
       padding: 4% 2%;

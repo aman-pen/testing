@@ -76,13 +76,16 @@ export const Header = () => {
               </Col>
             </>
           ) : (
-            <Col xs={9} className="oct2022-nav-item">
+            <Col xs={9} className="nav-item">
               <Navbar>
                 <Nav navbar>
                   {NavbarData.map((data) => {
                     return (
                       <NavItem>
-                        <NavLink href={encodeURI(data.url)}>
+                        <NavLink
+                          href={encodeURI(data.url)}
+                          className="oct2022-header-text"
+                        >
                           {data.title}
                         </NavLink>
                       </NavItem>
