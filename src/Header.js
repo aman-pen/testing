@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./css/Header.scss";
-import Sponsors from "./content/SponsorData.json";
-import Speakers from "./content/SpeakersData.json";
-import Sessions from "./content/Sessions.json";
+// import Sponsors from "./content/SponsorData.json";
+// import Speakers from "./content/SpeakersData.json";
+// import Sessions from "./content/Sessions.json";
 // import NavbarData from "./content/NavbarData.json";
 import NavbarData from "./content/NavbarDataWithoutSpeaker.json";
 import HeaderData from "./content/HeaderData.json";
@@ -10,7 +10,6 @@ import HeaderData from "./content/HeaderData.json";
 import logo from "./images/website/transparentLogo.png";
 import twitterLogo from "./images/website/twittericon.png";
 import { Navbar, Nav, NavItem, NavLink, Row, Col } from "reactstrap";
-import { isMobile } from "react-device-detect";
 import { slide as Menu } from "react-burger-menu";
 import { ComingSoon } from "./ComingSoon";
 
@@ -19,6 +18,7 @@ import { ModalSponsor } from "./ModalSponsor";
 
 export const Header = () => {
   const [HamburgerOpen, setHamburgerOpen] = useState({ menuOpen: false });
+  const isMobileNav = window.innerWidth < 970;
   const handleHambugerMenuStateChange = (state) => {
     setHamburgerOpen({ menuOpen: state.isOpen });
   };
@@ -41,7 +41,7 @@ export const Header = () => {
           <Col xs={3}>
             <img src={logo} alt="ICSS-logo" className="oct2022-nav-bar-logo" />
           </Col>
-          {isMobile ? (
+          {isMobileNav ? (
             <>
               <Col xs={6}> </Col>
               <Col>
@@ -176,7 +176,7 @@ export const Header = () => {
                       </span>
                       <div
                         className={
-                          isMobile
+                          isMobileNav
                             ? "oct2022-fields-row"
                             : "oct2022-fields-row row"
                         }
