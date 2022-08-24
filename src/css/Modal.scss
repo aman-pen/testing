@@ -4,10 +4,18 @@ $grid-list-color: #606060;
 $gold-color: #eaaf0e;
 $card-sky: #5eb3d8;
 $purple-color: #9653ca;
+
+.modal-open .modal {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .oct2022-modalSponsor {
   font-family: "Roboto", sans-serif;
   max-width: 85%;
   margin: 5% auto;
+
   &-body {
     margin: 0;
     padding: 0;
