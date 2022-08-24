@@ -200,6 +200,8 @@ export const ModalSponsor = ({ modal, toggle }) => {
               <div className="oct2022-btn-wrapper d-flex align-items-center justify-content-center">
                 <a
                   className="oct2022-sponsorButton"
+                  target="_blank"
+                  rel="noreferrer"
                   href="https://forms.office.com/pages/responsepage.aspx?id=AFFBWLwhD0qOAc-aLhfjZU0ZvfSemStNkEqZOX_VTVFUQ0FOR0daTEw3SVQ1S0JWTVA3SFE2MjJNVS4u"
                 >
                   <span>Become A Sponsor now</span>

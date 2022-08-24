@@ -93,11 +93,14 @@ body::-webkit-scrollbar {
     padding-top: 5rem;
     .oct2022-register-btn {
       background-color: #fff;
-
       border-radius: 40px;
       border: none;
-
       padding: 15px 70px;
+      transition: all 0.1s ease-in-out;
+      &:hover {
+        text-decoration: none;
+        transform: scale(1.05);
+      }
       span {
         font-size: 25px;
         text-transform: uppercase;
