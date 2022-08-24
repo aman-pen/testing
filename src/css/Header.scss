@@ -471,7 +471,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
       margin: auto;
     }
   }
-
+  .oct2022-head-data .oct2022-handles {
+    .col {
+      padding-bottom: 15px;
+    }
+  }
   .oct2022-Be-Sponsor {
     height: 8.5rem;
     &-wrapper {
@@ -485,12 +489,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
     }
     &-text {
       text-align: center;
+      font-weight: 500;
     }
     &-btn {
       width: 200px;
       padding: 4% 2%;
       margin-bottom: 2px;
     }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .oct2022-head-data .oct2022-registrationBtn .oct2022-register-btn {
+    padding: 10px 32px;
   }
 }
 
