@@ -68,6 +68,9 @@ export const Donate = () => {
             target="_blank"
             rel="noreferrer"
             >
+                  {console.log(HeaderData, "hd")}
+                {console.log(HeaderData[0], "hda")}
+                {console.log(HeaderData[0].donationLink, "hdb")}
               DONATE
             </a>
           </div>
