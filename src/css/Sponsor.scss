@@ -1,24 +1,54 @@
+$gold-color: #eaaf0e;
+$card-sky: #5eb3d8;
+$purple-color: #9653ca;
+
 .oct2022-sponsor {
+  &-StatusHeading {
+    font: 500 2rem "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .oct2022-sponsor-heading {
     position: relative;
     font-size: 40px;
     color: #636363;
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      margin-left: -40px;
-      bottom: -40px;
-      width: 80px;
-      height: 2px;
-      background-color: #68b993;
+  }
+  .diamond {
+    color: $card-sky;
+    .oct2022-horizontal-divider {
+      background-color: $card-sky;
     }
   }
+  .gold {
+    color: $gold-color;
+    .oct2022-horizontal-divider {
+      background-color: $gold-color;
+    }
+  }
+  .platinum {
+    color: $purple-color;
+    .oct2022-horizontal-divider {
+      background-color: $purple-color;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    bottom: -40px;
+    width: 80px;
+    height: 2px;
+    background-color: #68b993;
+  }
+
   .oct2022-sponsor-wrapper {
     width: 80%;
     margin: 1.25rem auto;
     .oct2022-sponsor-card {
       padding: 40px;
+      transition: all 0.3s ease-in-out;
       &:hover {
         transform: scale(1.05);
       }
@@ -35,6 +65,28 @@
       object-fit: contain;
     }
   }
+}
+
+.oct2022-applySponsorText {
+  font: 500 1.5rem "Roboto", sans-serif;
+  color: $purple-color;
+  text-decoration: underline;
+  margin: 1rem 0;
+}
+.oct2022-applySponsorLink {
+  border: none;
+  color: $purple-color;
+
+  background-color: transparent;
+  transition: all 0.05s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.oct2022-horizontal-divider {
+  width: 80px;
+  height: 2px;
 }
 @media only screen and (max-width: 576px) {
   .oct2022-sponsor-wrapper {
