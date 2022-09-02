@@ -109,6 +109,11 @@ export const Sponsor = () => {
                 className="oct2022-sponsor-border"
               >
                 <img
+                  style={
+                    data.sponsorName === "Rapid Circle"
+                      ? { transform: "scale(1.3)" }
+                      : ""
+                  }
                   className="oct2022-sponsor-img"
                   alt={data.sponsorAltText}
                   src={`${data.sponsorImage}`}
