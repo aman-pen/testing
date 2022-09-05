@@ -39,7 +39,13 @@ export const Header = () => {
       <div className="oct2022-header" id="header">
         <Row className="oct2022-head-nav">
           <Col xs={3}>
-            <img src={logo} alt="ICSS-logo" className="oct2022-nav-bar-logo" />
+            <a href="/" rel="noreferrer">
+              <img
+                src={logo}
+                alt="ICSS-logo"
+                className="oct2022-nav-bar-logo"
+              />
+            </a>
           </Col>
           {isMobileNav ? (
             <>

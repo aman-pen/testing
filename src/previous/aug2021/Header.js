@@ -29,7 +29,9 @@ export const Header = () => {
     <div className="aug2021-header" id="header">
       <Row className="aug2021-head-nav">
         <Col xs={3}>
-          <img src={logo} alt="ICSS-logo" className="aug2021-nav-bar-logo" />
+          <a href="/" rel="noreferrer">
+            <img src={logo} alt="ICSS-logo" className="aug2021-nav-bar-logo" />
+          </a>
         </Col>
         {isMobile ? (
           <>
