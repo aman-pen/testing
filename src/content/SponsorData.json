@@ -22,5 +22,13 @@
     "sponsorName": "Rapid Circle",
     "sponsorUrl": "https://en.rapidcircle.com/",
     "sponsorStatus": "gold"
+  },
+  {
+    "sponsorId": "4",
+    "sponsorImage": "./images/website/ossisto.png",
+    "sponsorAltText": "Ossisto",
+    "sponsorName": "Ossisto",
+    "sponsorUrl": "https://ossisto365.com/",
+    "sponsorStatus": "diamond"
   }
 ]
