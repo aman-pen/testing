@@ -156,7 +156,7 @@ export const ModalSponsor = ({ modal, toggle }) => {
                         </li>
                         <div className="oct2022-Sponsor-divider" />
                         <li>
-                          5% off India Cloud Security Summit 2023 Sponsorship
+                          5% off on India Cloud Security Summit 2023 Sponsorship
                           Fee.
                         </li>
                       </ul>
