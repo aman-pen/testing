@@ -176,7 +176,6 @@ $purple-color: #9653ca;
 }
 .oct2022-modal-header {
   background-color: transparent;
-  padding: 20px 40px;
   color: #fff;
   position: relative;
   .oct2022-modal-title {
@@ -185,15 +184,15 @@ $purple-color: #9653ca;
   }
   .oct2022-close {
     margin: 0px !important;
-    position: absolute;
-    right: 1%;
+    // position: absolute;
+    // right: 1%;
   }
 }
 
 /** overriding reactstrap **/
 .oct2022-agenda-dialog {
-  width: auto;
-  margin: 0.5rem;
+  margin: 1.75rem auto;
+
   .modal-body {
     padding: 30px 30px;
   }
@@ -241,6 +240,7 @@ $purple-color: #9653ca;
 .oct2022-modal-image {
   width: 90%;
   height: 350px;
+  max-width: 350px;
   object-fit: cover;
   object-position: top;
 }
@@ -257,10 +257,11 @@ $purple-color: #9653ca;
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  top: 15%;
+  // top: 15%;
   transform: scale(0.8);
   background-color: transparent;
-  position: absolute;
+  // position: absolute;
+  // right: 2%;
   opacity: 1;
 }
 .oct2022-image-array img {
@@ -422,8 +423,8 @@ $purple-color: #9653ca;
 
   .oct2022-close {
     margin: 0px !important;
-    position: absolute;
-    right: 1%;
+    // position: absolute;
+    // right: 1%;
     top: 10%;
     transform: scale(0.6);
   }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Agenda.scss";
 import { ShowSessionData } from "./ShowSessionData";
 // import Sessions from "./content/Sessions.json";
@@ -8,6 +8,9 @@ import { ComingSoon } from "./ComingSoon";
 import { Col } from "reactstrap";
 
 export const Agenda = () => {
+  const [track, setTrack] = useState("1");
+  const [trackDetailsState, setTrackDetails] = useState(TrackDetails);
+
   const trackfunc = (trackValue) => {
     setTrack(trackValue);
     var temptrack = trackDetailsState;
@@ -22,9 +25,6 @@ export const Agenda = () => {
     setTrackDetails(temptrack);
   };
 
-  const [track, setTrack] = useState("1");
-
-  const [trackDetailsState, setTrackDetails] = useState(TrackDetails);
   return (
     <div className="oct2022-agenda" id="agenda">
       <h1 className="oct2022-agenda-heading"> AGENDA </h1>
@@ -69,8 +69,8 @@ export const Agenda = () => {
               </Col>
             );
           })}
-        </div>
-      </div>
+        </div> 
+      </div> 
       <ShowSessionData CurrentTrackID={track} /> */}
     </div>
   );

@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./css/Agenda.scss";
 import Sessions from "./content/Sessions.json";
 import { Row, Col } from "reactstrap";
 import ModalAgenda from "./ModalAgenda";
-// import MicrosoftTeams from "./images/website/MicrosoftTeams.png";
+import MicrosoftTeams from "./images/website/MicrosoftTeams.png";
 import Speakers from "./content/SpeakersData.json";
 import EventData from "./content/EventData.json";
 import ModalSpeaker from "./ModalSpeaker";
 import LazyLoad from "react-lazy-load";
 import ImageLoader from "./ImageLoader.js";
+import { ApiSession } from "./services/Api";
 
-export const ShowSessionData = (props) => {
+export const ShowSessionData = ({ CurrentTrackID }) => {
+  const [session, setSession] = useState([]);
+
+  // useEffect(() => {
+  //   let mounted = true;
+  //   ApiSession().then((data) => {
+  //     if (mounted) {
+  //       setSession(data);
+  //     }
+  //   });
+  //   return () => (mounted = false);
+  // }, []);
+
   const [modal, setModal] = useState(false);
   const [clickedData, setClickedData] = useState([]);
   const toggle = (data) => {
@@ -28,7 +41,7 @@ export const ShowSessionData = (props) => {
 
   const ShowSessionUrl = EventData.showSessionUrl;
   const CurrentSessions = Sessions.filter(
-    (d) => d.trackId.toString() === props.CurrentTrackID
+    (d) => d.trackId.toString() === CurrentTrackID
   );
   return (
     <>
@@ -46,7 +59,6 @@ export const ShowSessionData = (props) => {
                       onClick={() => toggle(data)}
                     >
                       <div className="oct2022-event-time">
-                        {" "}
                         {data.sessionTime}{" "}
                       </div>
                     </Col>
@@ -242,7 +254,6 @@ export const ShowSessionData = (props) => {
                             </span>
                           </div>
                         ) : null}
-
                         {data.speaker1Id != null ? (
                           <div className="oct2022-speaker1">
                             <LazyLoad height={70} width={70} debounce={false}>
@@ -274,7 +285,7 @@ export const ShowSessionData = (props) => {
                             </span>
                           </div>
                         ) : null}
-                        {/* <div className="oct2022-event-teams">
+                        <div className="oct2022-event-teams">
                           <a
                             href={data.sessionUrl}
                             target="_blank"
@@ -288,7 +299,7 @@ export const ShowSessionData = (props) => {
                             />
                             <p className="teams-img__description"></p>
                           </a>
-                        </div> */}
+                        </div>
                       </div>
                     </Col>
                   </>
