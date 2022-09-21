@@ -1,9 +1,21 @@
 $base-color-blue: #68b993;
 $base-color-black: #135858;
+
+.oct2022-countDown-mobile {
+  margin: 3rem auto !important;
+  padding: 1rem !important;
+  background: linear-gradient(0.25turn, rgb(79, 146, 146), 1%, white);
+  box-shadow: 0px 4px 10px 2px #0000001a;
+  border-radius: 40px;
+  width: 35% !important;
+}
+
+.oct2022-countDown-mobile,
 .oct2022-countDown {
   text-align: center;
   padding: 4rem 0;
   margin: auto;
+
   max-width: 60%;
   .oct2022-countDown-row {
     padding: 35px 0px;
@@ -54,6 +66,16 @@ $base-color-black: #135858;
 
 // for only mobiile
 @media only screen and (max-width: 768px) {
+  .oct2022-countDown-mobile {
+    margin: 3rem auto !important;
+    padding: 0 !important;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 40px;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
   .oct2022-col {
     padding: 0;
   }
