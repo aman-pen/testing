@@ -168,7 +168,7 @@ $purple-color: #9653ca;
 }
 .scheme-card {
   border: 1px solid rgba(79, 170, 170, 0.23);
-  height: clamp(700px, 85vh, 200rem);
+  height: 100%;
 }
 
 .oct2022-modalHeader {
@@ -393,9 +393,6 @@ $purple-color: #9653ca;
 }
 
 @media only screen and (max-width: 1000px) {
-  .scheme-card {
-    height: clamp(720px, 105vh, 1000px);
-  }
   .oct2022-modalSponsor-schemes-header1,
   .oct2022-modalSponsor-schemes-header2,
   .oct2022-modalSponsor-schemes-header3 {
