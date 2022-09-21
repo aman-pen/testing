@@ -15,7 +15,7 @@ $purple-color: #9653ca;
   font-family: "Roboto", sans-serif;
   max-width: 85%;
   margin: 5% auto;
-
+  max-width: 1600px;
   &-body {
     margin: 0;
     padding: 0;
@@ -66,7 +66,7 @@ $purple-color: #9653ca;
   }
   &-whyUs {
     background-color: #fff;
-
+    padding: 3rem;
     &-title {
       color: #636363;
       &::after {

@@ -33,7 +33,7 @@ export const ModalSponsor = ({ modal, toggle }) => {
             <div className="oct2022-modalSponsor-title oct2022-modalSponsor-whyUs-title">
               <div className="pt-5">WHY SPONSOR US</div>
             </div>
-            <div class="row p-4 gx-5 gy-2">
+            <div class="row gx-5 gy-2">
               <div class="col-12 col-md-6 oct2022-grid-section">
                 <div className="oct2022-grid-img1" />
                 <div className="oct2022-grid-heading">
