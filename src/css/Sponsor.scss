@@ -5,6 +5,7 @@ $purple-color: #9653ca;
 .oct2022-sponsor {
   &-StatusHeading {
     font: 500 2rem "Roboto", sans-serif;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +14,16 @@ $purple-color: #9653ca;
     position: relative;
     font-size: 40px;
     color: #636363;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -40px;
+      width: 80px;
+      bottom: -20px;
+      height: 2px;
+      background-color: #68b993;
+    }
   }
   .diamond {
     color: $card-sky;
@@ -31,16 +42,6 @@ $purple-color: #9653ca;
     .oct2022-horizontal-divider {
       background-color: $purple-color;
     }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    margin-left: -40px;
-    bottom: -40px;
-    width: 80px;
-    height: 2px;
-    background-color: #68b993;
   }
 
   .oct2022-sponsor-wrapper {
