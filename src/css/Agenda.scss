@@ -1,5 +1,11 @@
 $base-color-blue: #07b3b3;
 
+.oct2022-speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .oct2022-agenda {
   text-align: center;
   background-color: rgba(245, 246, 246, 0.56);
@@ -138,6 +144,12 @@ $base-color-blue: #07b3b3;
   display: block;
   text-align: center;
   padding-top: 10px;
+}
+
+.oct2022-speaker-wrapper-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .oct2022-selected-track {

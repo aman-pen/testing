@@ -42,10 +42,10 @@ export const Speaker = () => {
     <>
       <div className="oct2022-speakers" id="speakers">
         <h1 className="oct2022-speaker-heading text-center">Speakers</h1>
-        <div className="mt-4 mb-4">
+        {/* <div className="mt-4 mb-4">
           <ComingSoon />
-        </div>
-        {/* <div className="row justify-content-center">
+        </div> */}
+        <div className="row justify-content-center">
           {Speakers.map((data) => {
             return (
               <>
@@ -94,7 +94,6 @@ export const Speaker = () => {
                           onClick={() => toggle(data)}
                         >
                           {data.questionAnswers[0].answer}
-
                         </CardText>
                       </div>
 
@@ -157,7 +156,7 @@ export const Speaker = () => {
               </>
             );
           })}
-        </div> */}
+        </div>
       </div>
       {modal === true ? (
         <ModalSpeaker data={clickedData} modal={modal} toggle={toggle} />

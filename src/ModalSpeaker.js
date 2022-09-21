@@ -33,7 +33,7 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
           <div className="oct2022-bg-grey bg-grey oct2022-speaker-details speaker-details">
             <h4 className="mb-4">BIO</h4>
             <p className="oct2022-speaker-information speaker-information">
-              {data.questionAnswers[2].answer}
+              {data.questionAnswers[2]?.answer}
             </p>
             {data.sessions.map((dt) => {
               return (

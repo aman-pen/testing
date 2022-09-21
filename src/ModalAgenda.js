@@ -1,31 +1,79 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import "./css/Modal.scss";
 // import speaker1 from "./images/speakers/Speaker1.png";
 import Speakers from "./content/SpeakersData.json";
+import { ApiDemoSpeaker } from "./services/Api";
 
 const ModalAgenda = ({ modal, toggle, data }) => {
+  const [speakerData, setSpeakerData] = useState();
+  useEffect(() => {
+    ApiDemoSpeaker().then((data) => {
+      console.log("speaker api called");
+      setSpeakerData(data);
+    });
+  }, []);
+
   const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
   return (
     <div>
       <Modal className="oct2022-agenda-dialog" isOpen={modal} toggle={toggle}>
+        {console.log("data", data)}
         <div className="oct2022-modalHeader">
           <ModalHeader toggle={toggle} close={closeBtn}>
-            {data.sessionTime}
+            {new Date(data.startsAt).toLocaleTimeString().split(":")[0] +
+              ":" +
+              new Date(data.startsAt).toLocaleTimeString().split(":")[1] +
+              " " +
+              new Date(data.startsAt)
+                .toLocaleTimeString()
+                .split(":")[2]
+                .split(" ")[1]}{" "}
+            -{" "}
+            {new Date(data.endsAt).toLocaleTimeString().split(":")[0] +
+              ":" +
+              new Date(data.endsAt).toLocaleTimeString().split(":")[1] +
+              " " +
+              new Date(data.startsAt)
+                .toLocaleTimeString()
+                .split(":")[2]
+                .split(" ")[1]}
           </ModalHeader>
         </div>
         <ModalBody>
           <div className="oct2022-session-Title pb-5">
-            <span>{data.sessionTitle}</span>
+            <span>{data.title}</span>
           </div>
           <div className="oct2022-session-introtext">
-            <span>{data.sessionDescription}</span>
+            <span>{data.description}</span>
           </div>
           <div className="oct2022-divider"></div>
           <h2 className="text-center py-4">Speakers</h2>
-          <div className="oct2022-speaker-array row">
+          {data.speakers.map((spkr) => {
+            return (
+              <div className="oct2022-speaker">
+                <img
+                  src={
+                    speakerData &&
+                    speakerData.filter((s) => s.id === spkr.id)[0]
+                      .profilePicture
+                  }
+                  alt="Session Speaker"
+                  width="50px"
+                  height="50px"
+                  className="oct2022-agenda-speaker-img"
+                />
+
+                <span className="oct2022-agenda-speaker-name">
+                  {speakerData &&
+                    speakerData.filter((s) => s.id === spkr.id)[0].fullName}
+                </span>
+              </div>
+            );
+          })}
+          {/* <div className="oct2022-speaker-array row">
             {data.speaker1Id != null ? (
               <div className="col">
                 <img
@@ -82,7 +130,7 @@ const ModalAgenda = ({ modal, toggle, data }) => {
                 </p>
               </div>
             ) : null}
-          </div>
+          </div> */}
         </ModalBody>
       </Modal>
     </div>

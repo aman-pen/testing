@@ -5,25 +5,28 @@ import Sessions from "./content/Sessions.json";
 import { Row, Col } from "reactstrap";
 import ModalAgenda from "./ModalAgenda";
 import MicrosoftTeams from "./images/website/MicrosoftTeams.png";
-import Speakers from "./content/SpeakersData.json";
+// import Speakers from "./content/SpeakersData.json";
 import EventData from "./content/EventData.json";
 import ModalSpeaker from "./ModalSpeaker";
 import LazyLoad from "react-lazy-load";
 import ImageLoader from "./ImageLoader.js";
-import { ApiSession } from "./services/Api";
+import { ApiDemoSpeaker, ApiDemoGrid } from "./services/Api";
 
 export const ShowSessionData = ({ CurrentTrackID }) => {
-  const [session, setSession] = useState([]);
+  const [gridData, setGridData] = useState();
+  const [speakerData, setSpeakerData] = useState();
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   ApiSession().then((data) => {
-  //     if (mounted) {
-  //       setSession(data);
-  //     }
-  //   });
-  //   return () => (mounted = false);
-  // }, []);
+  useEffect(() => {
+    ApiDemoGrid().then((data) => {
+      console.log("Grid api called");
+      setGridData(data);
+    });
+
+    ApiDemoSpeaker().then((data) => {
+      console.log("speaker api called");
+      setSpeakerData(data);
+    });
+  }, []);
 
   const [modal, setModal] = useState(false);
   const [clickedData, setClickedData] = useState([]);
@@ -39,18 +42,19 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
     setSpeakerModal(!SpeakerModal);
   };
 
-  const ShowSessionUrl = EventData.showSessionUrl;
-  const CurrentSessions = Sessions.filter(
-    (d) => d.trackId.toString() === CurrentTrackID
-  );
+  // const ShowSessionUrl = EventData.showSessionUrl;
+  // const CurrentSessions = Sessions.filter(
+  //   (d) => d.trackId.toString() === CurrentTrackID
+  // );
   return (
     <>
       <div className="container-fluid oct2022-trackdata">
-        {CurrentSessions.map((data) => {
-          return (
-            <>
-              <Row className="oct2022-trackdata-bg " key={data.event}>
-                {ShowSessionUrl === "false" ? (
+        {console.log(gridData, "check")}
+        {gridData &&
+          gridData[0].rooms[CurrentTrackID - 1].sessions.map((data) => {
+            return (
+              <div key={"key" + Math.random()}>
+                <Row className="oct2022-trackdata-bg">
                   <>
                     <Col
                       md={12}
@@ -59,7 +63,32 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       onClick={() => toggle(data)}
                     >
                       <div className="oct2022-event-time">
-                        {data.sessionTime}{" "}
+                        {new Date(data.startsAt)
+                          .toLocaleTimeString()
+                          .split(":")[0] +
+                          ":" +
+                          new Date(data.startsAt)
+                            .toLocaleTimeString()
+                            .split(":")[1] +
+                          " " +
+                          new Date(data.startsAt)
+                            .toLocaleTimeString()
+                            .split(":")[2]
+                            .split(" ")[1]}{" "}
+                        -{" "}
+                        {new Date(data.endsAt)
+                          .toLocaleTimeString()
+                          .split(":")[0] +
+                          ":" +
+                          new Date(data.endsAt)
+                            .toLocaleTimeString()
+                            .split(":")[1] +
+                          " " +
+                          new Date(data.startsAt)
+                            .toLocaleTimeString()
+                            .split(":")[2]
+                            .split(" ")[1]}
+                        {console.log(new Date(data.startsAt).getHours())}
                       </div>
                     </Col>
                     <Col
@@ -68,246 +97,111 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       className="oct2022-event-desc cursor-click"
                       onClick={() => toggle(data)}
                     >
-                      {data.sessionTitle}
+                      {data.title}
                     </Col>
                     <Col md={12} lg={4} className="oct2022-event-speakers">
                       <div className="oct2022-speaker-head"> Speakers </div>
                       <div>
-                        {data.speaker3Id != null ? (
-                          <div className="oct2022-speaker3">
-                            <LazyLoad height={70} width={70} debounce={false}>
-                              <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker3Id
-                                    )[0]
-                                  )
-                                }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker3Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
-                                width="50px"
-                                height="50px"
-                                className="oct2022-agenda-speaker-img"
-                              />
-                            </LazyLoad>
-
-                            <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker3Id
-                                )[0].speakerName
-                              }
-                            </span>
-                          </div>
-                        ) : null}
-                        {data.speaker2Id != null ? (
-                          <div className="oct2022-speaker2">
-                            <LazyLoad height={70} width={70} debounce={false}>
-                              <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker2Id
-                                    )[0]
-                                  )
-                                }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker2Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
-                                width="50px"
-                                height="50px"
-                                className="oct2022-agenda-speaker-img"
-                              />
-                            </LazyLoad>
-
-                            <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker2Id
-                                )[0].speakerName
-                              }
-                            </span>
-                          </div>
-                        ) : null}
-
-                        {data.speaker1Id != null ? (
-                          <div className="oct2022-speaker1">
-                            <LazyLoad height={70} width={70} debounce={false}>
-                              <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker1Id
-                                    )[0]
-                                  )
-                                }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker1Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
-                                width="50px"
-                                height="50px"
-                                className="oct2022-agenda-speaker-img"
-                              />
-                            </LazyLoad>
-
-                            <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker1Id
-                                )[0].speakerName
-                              }
-                            </span>
-                          </div>
-                        ) : null}
+                        {data.speakers.map((spkr) => {
+                          return (
+                            <div className="oct2022-speaker">
+                              <LazyLoad height={70} width={70} debounce={false}>
+                                <ImageLoader
+                                  onClick={() =>
+                                    SpeakerModaltoggle(
+                                      speakerData &&
+                                        speakerData.filter(
+                                          (s) => s.id === spkr.id
+                                        )[0]
+                                    )
+                                  }
+                                  src={
+                                    speakerData &&
+                                    speakerData.filter(
+                                      (s) => s.id === spkr.id
+                                    )[0].profilePicture
+                                  }
+                                  alt="Session Speaker"
+                                  width="50px"
+                                  height="50px"
+                                  className="oct2022-agenda-speaker-img"
+                                />
+                              </LazyLoad>
+                              <span className="oct2022-agenda-speaker-name">
+                                {speakerData &&
+                                  speakerData.filter((s) => s.id === spkr.id)[0]
+                                    .fullName}
+                              </span>
+                            </div>
+                          );
+                        })}
                       </div>
                     </Col>
                   </>
-                ) : (
-                  <>
-                    <Col md={12} lg={2} onClick={() => toggle(data)}>
-                      <div className="oct2022-event-time">
-                        {" "}
-                        {data.sessionTime}{" "}
-                      </div>
-                    </Col>
-                    <Col
-                      md={12}
-                      lg={6}
-                      className="oct2022-event-desc"
-                      onClick={() => toggle(data)}
-                    >
-                      {data.sessionTitle}
-                    </Col>
-                    <Col md={12} lg={4} className="oct2022-event-speakers">
-                      <div className="oct2022-speaker-head"> Speakers </div>
-                      <div className="oct2022-speaker-wrapper-teams">
-                        {data.speaker3Id != null ? (
-                          <div className="oct2022-speaker3">
+                </Row>
+              </div>
+            );
+          })}
+        {/* {gridData[CurrentTrackID - 1].map((data) => {
+          console.log(data, "grid");
+
+          return (
+            <div key={"key" + Math.random()}>
+              <Row className="oct2022-trackdata-bg">
+                <>
+                  <Col
+                    md={12}
+                    lg={3}
+                    className="p-0 cursor-click"
+                    onClick={() => toggle(data)}
+                  >
+                    <div className="oct2022-event-time">{data.startsAt}</div>
+                  </Col>
+                  <Col
+                    md={12}
+                    lg={5}
+                    className="oct2022-event-desc cursor-click"
+                    onClick={() => toggle(data)}
+                  >
+                    {data.rooms[0].session.title}
+                  </Col>
+                  <Col md={12} lg={4} className="oct2022-event-speakers">
+                    <div className="oct2022-speaker-head"> Speakers </div>
+                    <div>
+                      {data.rooms.map((data) => {
+                        return (
+                          <div className="oct2022-speaker">
+                             {console.log(spkr, "checkrrrrr")} 
                             <LazyLoad height={70} width={70} debounce={false}>
                               <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker3Id
-                                    )[0]
-                                  )
+                                onClick={
+                                  () => SpeakerModaltoggle()
+                                  // spkr.filter((s) => s.id === data.id)[0]
                                 }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker3Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
+                                // src={
+                                //   spkr.filter((s) => s.id === data.id)[0]
+                                //     .profilePicture
+                                // }
+                                alt={data.name}
                                 width="50px"
                                 height="50px"
                                 className="oct2022-agenda-speaker-img"
                               />
                             </LazyLoad>
+
                             <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker3Id
-                                )[0].speakerName
-                              }
+                              {data.name}
                             </span>
                           </div>
-                        ) : null}
-                        {data.speaker2Id != null ? (
-                          <div className="oct2022-speaker2">
-                            <LazyLoad height={70} width={70} debounce={false}>
-                              <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker2Id
-                                    )[0]
-                                  )
-                                }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker2Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
-                                width="50px"
-                                height="50px"
-                                className="oct2022-agenda-speaker-img"
-                              />
-                            </LazyLoad>
-                            <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker2Id
-                                )[0].speakerName
-                              }
-                            </span>
-                          </div>
-                        ) : null}
-                        {data.speaker1Id != null ? (
-                          <div className="oct2022-speaker1">
-                            <LazyLoad height={70} width={70} debounce={false}>
-                              <ImageLoader
-                                onClick={() =>
-                                  SpeakerModaltoggle(
-                                    Speakers.filter(
-                                      (s) => s.speakerId === data.speaker1Id
-                                    )[0]
-                                  )
-                                }
-                                src={`${
-                                  Speakers.filter(
-                                    (s) => s.speakerId === data.speaker1Id
-                                  )[0].speakerImage
-                                }`}
-                                alt={data.speakerName}
-                                width="50px"
-                                height="50px"
-                                className="oct2022-agenda-speaker-img"
-                              />
-                            </LazyLoad>
-                            <span className="oct2022-agenda-speaker-name">
-                              {
-                                Speakers.filter(
-                                  (s) => s.speakerId === data.speaker1Id
-                                )[0].speakerName
-                              }
-                            </span>
-                          </div>
-                        ) : null}
-                        <div className="oct2022-event-teams">
-                          <a
-                            href={data.sessionUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <img
-                              title="Click here to join the session"
-                              src={MicrosoftTeams}
-                              alt="MicrosoftTeams"
-                              className="oct2022-teams-image"
-                            />
-                            <p className="teams-img__description"></p>
-                          </a>
-                        </div>
-                      </div>
-                    </Col>
-                  </>
-                )}
-              </Row>
-            </>
-          );
-        })}
+                        );
+                      })}
+                    </div>
+                  </Col>
+                </>
+              </Row> 
+            </div>
+           ); 
+        })} */}
       </div>
       {modal === true ? (
         <ModalAgenda data={clickedData} modal={modal} toggle={toggle} />
