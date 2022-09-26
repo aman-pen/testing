@@ -2,7 +2,7 @@ import React from "react";
 import "./css/App.scss";
 import { Header } from "./Header";
 import { About } from "./About";
-// import { Donate } from "./Donate";
+import { Donate } from "./Donate";
 import { CallForSpeaker } from "./CallForSpeaker";
 import { Agenda } from "./Agenda";
 import { Speaker } from "./Speaker";
@@ -27,8 +27,9 @@ function App() {
               <>
                 <Header />
                 <CountDownTimer />
-                <CallForSpeaker />
+                {/* <CallForSpeaker /> */}
                 <About />
+                <Donate />
                 <Agenda />
                 {/* <KeyNoteSpeaker /> */}
                 {/* <Speaker /> */}

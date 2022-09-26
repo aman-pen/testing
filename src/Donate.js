@@ -1,10 +1,10 @@
 import React from "react";
 import "./css/Donate.scss";
 import { Row, Col } from "reactstrap";
-import DonateImg1 from "./images/website/DonateImg-1.jpg";
-import DonateImg2 from "./images/website/DonateImg-2.jpg";
-import DonateImg3 from "./images/website/DonateImg-3.jpg";
-import DonateImg4 from "./images/website/DonateImg-4.jpg";
+import DonateImg2 from "./images/website/Donate-1.webp";
+import DonateImg1 from "./images/website/Donate-2.webp";
+import DonateImg3 from "./images/website/Donate-3.webp";
+import DonateImg4 from "./images/website/Donate-4.webp";
 import OpenQuotes from "./images/website/open-quotes.png";
 import ClosedQuotes from "./images/website/closed-quotes.png";
 import HeaderData from "./content/HeaderData.json";
@@ -52,14 +52,7 @@ export const Donate = () => {
           />
         </div>
         <div className="oct2022-donate-para-text">
-          <b>Youth Ubaal Foundation</b> is a small organisation that works for
-          the betterment of society by raising social awareness amongst the
-          youth. They have actively been working towards providing disaster
-          relief during the pandemic and also opened mini kitchens to provide
-          two time healthy meals to the children residing in the slums of Delhi.
-          We have joined hands with Youth Ubaal in an attempt to raise awareness
-          about this beautiful cause. Let us do our part to contribute and make
-          sure no one sleeps hungry during this challenging time.
+          To bring a lasting change in the lives of underprivileged students who are living in utter poverty and unable to access basic education, we are fundraising for them under the project Give India - Hamein Padhao Hamein Badhao in collaboration with <a href="https://scopeforchange.org/" target="_blank" rel="noreferrer" style={{color:"white",textDecoration:"underline"}}>Scope For Change</a>. To help us create more impact and touch more lives, we need your support and contribution. Please back our fundraising so that together we can build a better India for all of us.
         </div>
         <div className="oct2022-donation-btn">
           <div className="oct2022-donate-btn btn">
