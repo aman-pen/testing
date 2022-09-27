@@ -8,10 +8,18 @@ import "./css/Modal.scss";
 import LinkedInlogo from "./images/website/LinkedInlogo.png";
 import Twitterlogo from "./images/website/twitterblue.png";
 // import Sessions from "./content/Sessions.json";
-// import { ApiSession } from "./services/Api";
+import { ApiSession } from "./services/Api";
 
 const ModalSpeaker = ({ modal, toggle, data }) => {
   const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
+  const [sessData, setSessData] = useState();
+
+  useEffect(() => {
+    ApiSession().then((data) => {
+      console.log("Grid api called");
+      setSessData(data);
+    });
+  }, []);
 
   return (
     <div>
@@ -33,7 +41,7 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
           <div className="oct2022-bg-grey bg-grey oct2022-speaker-details speaker-details">
             <h4 className="mb-4">BIO</h4>
             <p className="oct2022-speaker-information speaker-information">
-              {data.questionAnswers[2]?.answer}
+              {data.questionAnswers[2].answer}
             </p>
             {data.sessions.map((dt) => {
               return (
@@ -42,13 +50,74 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
                   <div className="oct2022-row row">
                     <div className="oct2022-modal-track-num col-4">
                       {/* Track {dt.trackId} */}
-                      Track ID
+                      Topic
                     </div>
                     <div className="col-8 oct2022-speaker-session-time">
-                      <span>
-                        {/* {dt.sessionTime} */}
-                        Session Time
-                      </span>
+                      {/* {dt.sessionTime} */}
+                      {console.log(dt)}
+                      {console.log(
+                        sessData &&
+                          sessData[0].sessions.filter((s) => s.id == dt.id)[0]
+                      )}
+                      {sessData && (
+                        <span className="oct2022-event-time">
+                          {new Date(
+                            sessData &&
+                              sessData[0].sessions.filter(
+                                (s) => s.id == dt.id
+                              )[0].startsAt
+                          )
+                            .toLocaleTimeString()
+                            .split(":")[0] +
+                            ":" +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[1] +
+                            " " +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[2]
+                              .split(" ")[1]}{" "}
+                          -{" "}
+                          {new Date(
+                            sessData &&
+                              sessData[0].sessions.filter(
+                                (s) => s.id == dt.id
+                              )[0].endsAt
+                          )
+                            .toLocaleTimeString()
+                            .split(":")[0] +
+                            ":" +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].endsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[1] +
+                            " " +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[2]
+                              .split(" ")[1]}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="oct2022-speaker-session-title">{dt.name}</div>

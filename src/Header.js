@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./css/Header.scss";
-// import Sponsors from "./content/SponsorData.json";
+import Sponsors from "./content/SponsorData.json";
 // import Speakers from "./content/SpeakersData.json";
 // import Sessions from "./content/Sessions.json";
 // import NavbarData from "./content/NavbarData.json";
@@ -191,20 +191,20 @@ export const Header = () => {
                             : "oct2022-fields-row row"
                         }
                       >
-                        <ComingSoon />
+                        {/* <ComingSoon />s */}
 
-                        {/* <Col className="oct2022-sessionNumber">
-                        <span>{Speakers.length}</span>
-                        <span>SPEAKERS</span>
-                      </Col>
-                      <Col className="oct2022-trackNumber">
-                        <span>{Sessions.length}</span>
-                        <span>SESSIONS</span>
-                      </Col>
-                      <Col className="oct2022-SponsorNumber">
-                        <span>{Sponsors.length}</span>
-                        <span>SPONSORS</span>
-                      </Col> */}
+                        <Col className="oct2022-sessionNumber">
+                          <span>40</span>
+                          <span>SPEAKERS</span>
+                        </Col>
+                        <Col className="oct2022-trackNumber">
+                          <span>37</span>
+                          <span>SESSIONS</span>
+                        </Col>
+                        <Col className="oct2022-SponsorNumber">
+                          <span>{Sponsors.length}</span>
+                          <span>SPONSORS</span>
+                        </Col>
                       </div>
                     </Col>
                   </Row>

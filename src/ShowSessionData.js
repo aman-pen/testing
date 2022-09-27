@@ -6,23 +6,23 @@ import { Row, Col } from "reactstrap";
 import ModalAgenda from "./ModalAgenda";
 import MicrosoftTeams from "./images/website/MicrosoftTeams.png";
 // import Speakers from "./content/SpeakersData.json";
-import EventData from "./content/EventData.json";
+import sessions from "./content/Sessions.json";
 import ModalSpeaker from "./ModalSpeaker";
 import LazyLoad from "react-lazy-load";
 import ImageLoader from "./ImageLoader.js";
-import { ApiDemoSpeaker, ApiDemoGrid } from "./services/Api";
+import { ApiSpeaker, ApiGrid } from "./services/Api";
 
 export const ShowSessionData = ({ CurrentTrackID }) => {
   const [gridData, setGridData] = useState();
   const [speakerData, setSpeakerData] = useState();
 
   useEffect(() => {
-    ApiDemoGrid().then((data) => {
+    ApiGrid().then((data) => {
       console.log("Grid api called");
       setGridData(data);
     });
 
-    ApiDemoSpeaker().then((data) => {
+    ApiSpeaker().then((data) => {
       console.log("speaker api called");
       setSpeakerData(data);
     });
@@ -59,7 +59,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                     <Col
                       md={12}
                       lg={3}
-                      className="p-0 cursor-click"
+                      className="p-0 cursor-click m-auto"
                       onClick={() => toggle(data)}
                     >
                       <div className="oct2022-event-time">
@@ -94,47 +94,124 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                     <Col
                       md={12}
                       lg={5}
-                      className="oct2022-event-desc cursor-click"
+                      className="oct2022-event-desc cursor-click m-auto"
                       onClick={() => toggle(data)}
                     >
                       {data.title}
                     </Col>
                     <Col md={12} lg={4} className="oct2022-event-speakers">
-                      <div className="oct2022-speaker-head"> Speakers </div>
-                      <div>
-                        {data.speakers.map((spkr) => {
-                          return (
-                            <div className="oct2022-speaker">
-                              <LazyLoad height={70} width={70} debounce={false}>
-                                <ImageLoader
-                                  onClick={() =>
-                                    SpeakerModaltoggle(
+                      <div className="oct2022-speaker-head">Speakers</div>
+                      <div className="d-flex justify-content-center">
+                        {data.title === "Welcome Note" && (
+                          <div className="oct2022-speaker  pr-2 pl-2">
+                            <LazyLoad height={70} width={70} debounce={false}>
+                              <ImageLoader
+                                onClick={() => SpeakerModaltoggle(sessions[1])}
+                                src={sessions[1].profilePicture}
+                                alt="Session Speaker"
+                                width="50px"
+                                height="50px"
+                                className="oct2022-agenda-speaker-img"
+                              />
+                            </LazyLoad>
+                            <span className="oct2022-agenda-speaker-name">
+                              {sessions[1].fullName}
+                            </span>
+                          </div>
+                        )}
+                        {data.title ===
+                          "Keynote : Cloud Security - Board Level Imperative" && (
+                          <div className="oct2022-speaker  pr-2 pl-2">
+                            <LazyLoad height={70} width={70} debounce={false}>
+                              <ImageLoader
+                                onClick={() => SpeakerModaltoggle(sessions[0])}
+                                src={sessions[0].profilePicture}
+                                alt="Session Speaker"
+                                width="50px"
+                                height="50px"
+                                className="oct2022-agenda-speaker-img"
+                              />
+                            </LazyLoad>
+                            <span className="oct2022-agenda-speaker-name">
+                              {sessions[0].fullName}
+                            </span>
+                          </div>
+                        )}
+                        {data.title === "Quiz" && (
+                          <div className="oct2022-speaker  pr-2 pl-2">
+                            <LazyLoad height={70} width={70} debounce={false}>
+                              <ImageLoader
+                                onClick={() => SpeakerModaltoggle(sessions[2])}
+                                src={sessions[2].profilePicture}
+                                alt="Session Speaker"
+                                width="50px"
+                                height="50px"
+                                className="oct2022-agenda-speaker-img"
+                              />
+                            </LazyLoad>
+                            <span className="oct2022-agenda-speaker-name">
+                              {sessions[2].fullName}
+                            </span>
+                          </div>
+                        )}
+                        {data.title === "Quiz" && (
+                          <div className="oct2022-speaker  pr-2 pl-2">
+                            <LazyLoad height={70} width={70} debounce={false}>
+                              <ImageLoader
+                                onClick={() => SpeakerModaltoggle(sessions[3])}
+                                src={sessions[3].profilePicture}
+                                alt="Session Speaker"
+                                width="50px"
+                                height="50px"
+                                className="oct2022-agenda-speaker-img"
+                              />
+                            </LazyLoad>
+                            <span className="oct2022-agenda-speaker-name">
+                              {sessions[3].fullName}
+                            </span>
+                          </div>
+                        )}
+                        {data.title !==
+                          "Keynote : Cloud Security - Board Level Imperative" &&
+                          data.speakers.map((spkr) => {
+                            return (
+                              <div className="oct2022-speaker  pr-2 pl-2">
+                                <LazyLoad
+                                  height={70}
+                                  width={70}
+                                  debounce={false}
+                                >
+                                  <ImageLoader
+                                    onClick={() =>
+                                      SpeakerModaltoggle(
+                                        speakerData &&
+                                          speakerData.filter(
+                                            (s) => s.id === spkr.id
+                                          )[0]
+                                      )
+                                    }
+                                    src={
                                       speakerData &&
-                                        speakerData.filter(
-                                          (s) => s.id === spkr.id
-                                        )[0]
-                                    )
-                                  }
-                                  src={
-                                    speakerData &&
+                                      speakerData.filter(
+                                        (s) => s.id === spkr.id
+                                      )[0].profilePicture
+                                    }
+                                    alt="Session Speaker"
+                                    width="50px"
+                                    height="50px"
+                                    className="oct2022-agenda-speaker-img"
+                                  />
+                                </LazyLoad>
+                                <span className="oct2022-agenda-speaker-name">
+                                  {speakerData &&
                                     speakerData.filter(
                                       (s) => s.id === spkr.id
-                                    )[0].profilePicture
-                                  }
-                                  alt="Session Speaker"
-                                  width="50px"
-                                  height="50px"
-                                  className="oct2022-agenda-speaker-img"
-                                />
-                              </LazyLoad>
-                              <span className="oct2022-agenda-speaker-name">
-                                {speakerData &&
-                                  speakerData.filter((s) => s.id === spkr.id)[0]
-                                    .fullName}
-                              </span>
-                            </div>
-                          );
-                        })}
+                                    )[0].fullName}
+                                  {console.log(sessions, "ccccd")}
+                                </span>
+                              </div>
+                            );
+                          })}
                       </div>
                     </Col>
                   </>

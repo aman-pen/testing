@@ -4,12 +4,22 @@ import { ShowSessionData } from "./ShowSessionData";
 // import Sessions from "./content/Sessions.json";
 import TrackDetails from "./content/TrackDetails.json";
 import { ComingSoon } from "./ComingSoon";
+import { ApiSession } from "./services/Api";
 
 import { Col } from "reactstrap";
 
 export const Agenda = () => {
-  const [track, setTrack] = useState("1");
-  const [trackDetailsState, setTrackDetails] = useState(TrackDetails);
+  const [sessions, setSessions] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    ApiSession().then((data) => {
+      if (mounted) {
+        setSessions(data);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
 
   const trackfunc = (trackValue) => {
     setTrack(trackValue);
@@ -25,13 +35,16 @@ export const Agenda = () => {
     setTrackDetails(temptrack);
   };
 
+  const [track, setTrack] = useState("1");
+
+  const [trackDetailsState, setTrackDetails] = useState(TrackDetails);
   return (
     <div className="oct2022-agenda" id="agenda">
       <h1 className="oct2022-agenda-heading"> AGENDA </h1>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <ComingSoon />
-      </div>
-      {/* <div className="oct2022-agenda-para-text-1">
+      </div> */}
+      <div className="oct2022-agenda-para-text-1">
         Check out the agenda and the sessions for the India Cloud Security
         Summit 2021 event.
       </div>
@@ -69,9 +82,9 @@ export const Agenda = () => {
               </Col>
             );
           })}
-        </div> 
-      </div> 
-      <ShowSessionData CurrentTrackID={track} /> */}
+        </div>
+      </div>
+      <ShowSessionData CurrentTrackID={track} />
     </div>
   );
 };

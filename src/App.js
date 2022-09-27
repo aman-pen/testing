@@ -31,8 +31,8 @@ function App() {
                 <About />
                 <Donate />
                 <Agenda />
-                {/* <KeyNoteSpeaker /> */}
-                {/* <Speaker /> */}
+                <KeyNoteSpeaker />
+                <Speaker />
                 <Sponsor />
                 {/* <UserGroups /> */}
                 <EventTeam />

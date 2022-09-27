@@ -4,6 +4,7 @@ $base-color-blue: #07b3b3;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 9rem;
 }
 
 .oct2022-agenda {
@@ -82,7 +83,6 @@ $base-color-blue: #07b3b3;
     .oct2022-event-time {
       font-size: 20px;
       opacity: 1;
-      padding: 15px 0 0 0;
     }
     .oct2022-event-desc {
       font-size: 1.3rem;

@@ -15,15 +15,15 @@ import { ApiSpeaker } from "./services/Api";
 export const KeyNoteSpeaker = () => {
   const [KeyNoteSpeaker, setKeyNoteSpeaker] = useState([]);
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   ApiSpeaker().then((data) => {
-  //     if (mounted) {
-  //       setKeyNoteSpeaker(data);
-  //     }
-  //   });
-  //   return () => (mounted = false);
-  // }, []);
+  useEffect(() => {
+    let mounted = true;
+    ApiSpeaker().then((data) => {
+      if (mounted) {
+        setKeyNoteSpeaker(data);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
 
   const [modal, setModal] = useState(false);
   const [clickedData, setClickedData] = useState([]);
@@ -37,10 +37,10 @@ export const KeyNoteSpeaker = () => {
         <h1 className="oct2022-keynote-heading text-center">
           KeyNote Speakers
         </h1>
-        <div className="mt-4 mb-4">
+        {/* <div className="mt-4 mb-4">
           <ComingSoon />
-        </div>
-        {/* <div className="row justify-content-center ">
+        </div> */}
+        <div className="row justify-content-center ">
           {KeyNoteSpeaker.filter((data) => data.isTopSpeaker).map((data) => {
             return (
               <>
@@ -83,6 +83,7 @@ export const KeyNoteSpeaker = () => {
                         onClick={() => toggle(data)}
                       >
                         {data.questionAnswers[1].answer}
+                        {/* {data.speakerTitle}, {data.speakerSubTitle}   From Previous Data */}
                       </CardSubtitle>
                       <CardText
                         className="oct2022-card-text font-weight-bold text-start nopadding pl-2"
@@ -90,8 +91,10 @@ export const KeyNoteSpeaker = () => {
                       >
                         {data.questionAnswers[0].answer}
 
+                        {/* Were company names in previous iteration of the website */}
                       </CardText>
 
+                      {/* Will have to add it Manually or will se after adding column in sessionize */}
                       <div className="d-flex">
                         {data.categories.name ===
                           "Are you a Microsoft MVP?" && (
@@ -113,6 +116,7 @@ export const KeyNoteSpeaker = () => {
                             />
                           </div>
                         )}
+                        {/* --------------------------- */}
                         <div className="d-flex flex-row-reverse">
                           {data.links
                             .filter(
@@ -151,7 +155,7 @@ export const KeyNoteSpeaker = () => {
               </>
             );
           })}
-        </div> */}
+        </div>
       </div>
       {modal && (
         <ModalKeynote data={clickedData} modal={modal} toggle={toggle} />

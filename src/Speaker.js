@@ -22,15 +22,15 @@ import { ApiSpeaker } from "./services/Api";
 export const Speaker = () => {
   const [Speakers, setSpeakers] = useState([]);
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   ApiSpeaker().then((data) => {
-  //     if (mounted) {
-  //       setSpeakers(data);
-  //     }
-  //   });
-  //   return () => (mounted = false);
-  // }, []);
+  useEffect(() => {
+    let mounted = true;
+    ApiSpeaker().then((data) => {
+      if (mounted) {
+        setSpeakers(data);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
 
   const [modal, setModal] = useState(false);
   const [clickedData, setClickedData] = useState([]);
@@ -45,8 +45,9 @@ export const Speaker = () => {
         {/* <div className="mt-4 mb-4">
           <ComingSoon />
         </div> */}
+        {console.log(Speakers && Speakers, "Speakers")}
         <div className="row justify-content-center">
-          {Speakers.map((data) => {
+          {Speakers.filter((d) => !d.isTopSpeaker).map((data) => {
             return (
               <>
                 <div
@@ -94,6 +95,8 @@ export const Speaker = () => {
                           onClick={() => toggle(data)}
                         >
                           {data.questionAnswers[0].answer}
+
+                          {/* Were company names in previous iteration of the website */}
                         </CardText>
                       </div>
 
@@ -118,6 +121,7 @@ export const Speaker = () => {
                             />
                           </div>
                         )}
+                        {/* --------------------------- */}
                         <div className="d-flex flex-row-reverse">
                           {data.links
                             .filter(

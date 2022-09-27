@@ -2,21 +2,21 @@
   {
     "trackId": "1",
     "trackTitle": "Track 1",
-    "trackSubTitle": "(Microsoft 365 Security)",
+    "trackSubTitle": "(Azure Security and Compliance)",
     "trackDate": "29th October 2022",
     "isActive": true
   },
   {
     "trackId": "2",
     "trackTitle": "Track 2",
-    "trackSubTitle": "(Azure Security)",
+    "trackSubTitle": "(Microsoft 365 Security and Compliance)",
     "trackDate": "29th October 2022",
     "isActive": false
   },
   {
     "trackId": "3",
     "trackTitle": "Track 3",
-    "trackSubTitle": "(M365 , Azure , Power Platform & Modern Desktop)",
+    "trackSubTitle": "(Power Platform and Endpoint Security)",
     "trackDate": "29th October 2022",
     "isActive": false
   }
