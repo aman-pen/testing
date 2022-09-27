@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Modal,
   ModalHeader,
@@ -9,10 +9,20 @@ import LinkedInlogo from "./images/website/LinkedInlogo.png";
 import Twitterlogo from "./images/website/twitterblue.png";
 import MVPlogo from "./images/website/mvp.jpg";
 import Microsoftlogo from "./images/website/microsoft_logo.png";
+import { ApiSession } from "./services/Api";
 
 const ModalKeynote = ({ modal, toggle, data }) => {
   const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
   // console.log("modal data", data);
+  const [sessData, setSessData] = useState();
+
+  useEffect(() => {
+    ApiSession().then((data) => {
+      console.log("Grid api called");
+      setSessData(data);
+    });
+  }, []);
+
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle}>
@@ -35,7 +45,87 @@ const ModalKeynote = ({ modal, toggle, data }) => {
             <p className="oct2022-speaker-information">
               {data.questionAnswers[2].answer}
             </p>
-
+            {data.sessions.map((dt) => {
+              return (
+                <div className="oct2022-speaker-session-details">
+                  <div className="oct2022-divider"></div>
+                  <div className="oct2022-row row">
+                    <div className="oct2022-modal-track-num col-4">
+                      {/* Track {dt.trackId} */}
+                      Topic
+                    </div>
+                    <div className="col-8 oct2022-speaker-session-time">
+                      {/* {dt.sessionTime} */}
+                      {console.log(dt)}
+                      {console.log(
+                        sessData &&
+                          sessData[0].sessions.filter((s) => s.id == dt.id)[0]
+                      )}
+                      {sessData && (
+                        <span className="oct2022-event-time">
+                          {new Date(
+                            sessData &&
+                              sessData[0].sessions.filter(
+                                (s) => s.id == dt.id
+                              )[0].startsAt
+                          )
+                            .toLocaleTimeString()
+                            .split(":")[0] +
+                            ":" +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[1] +
+                            " " +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[2]
+                              .split(" ")[1]}{" "}
+                          -{" "}
+                          {new Date(
+                            sessData &&
+                              sessData[0].sessions.filter(
+                                (s) => s.id == dt.id
+                              )[0].endsAt
+                          )
+                            .toLocaleTimeString()
+                            .split(":")[0] +
+                            ":" +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].endsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[1] +
+                            " " +
+                            new Date(
+                              sessData &&
+                                sessData[0].sessions.filter(
+                                  (s) => s.id == dt.id
+                                )[0].startsAt
+                            )
+                              .toLocaleTimeString()
+                              .split(":")[2]
+                              .split(" ")[1]}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="oct2022-speaker-session-title">{dt.name}</div>
+                </div>
+              );
+            })}
             <div className="oct2022-divider"></div>
             <div className="oct2022-social-media-array">
               {data.categories[1]?.categoryItems[0]?.name === "Yes" && (
