@@ -45,21 +45,17 @@ export const KeyNoteSpeaker = () => {
             return (
               <>
                 <div
-                  className="p-4 col-xs-12 col-md-6 col-xl-4 oct2022-keynote-speaker-card"
+                  className="col-xs-12 col-md-6 oct2022-speaker-card-wrapper col-xl-4"
                   key={data.id}
                 >
-                  <Card className="oct2022-keynote-card shadow nopadding ">
-                    <div className="oct2022-keynote-image">
+                  <Card className="oct2022-speaker-card shadow nopadding">
+                    <div className="oct2022-speaker-image">
                       <div id="oct2022-cube">
                         <div className="oct2022-square-holder">
                           <div className="oct2022-square" id="square"></div>
                         </div>
                       </div>
-                      <LazyLoad
-                        height={400}
-                        debounce={false}
-                        className="oct2022-cursor-click"
-                      >
+                      <LazyLoad height={400} debounce={false}>
                         <ImageLoader
                           onClick={() => toggle(data)}
                           src={`${data.profilePicture}`}
@@ -67,42 +63,45 @@ export const KeyNoteSpeaker = () => {
                         />
                       </LazyLoad>
                     </div>
+
+                    <div
+                      className="oct2022-card-title-wrapper"
+                      onClick={() => toggle(data)}
+                    >
+                      <CardTitle
+                        tag="h3"
+                        className="oct2022-card-title text-center "
+                      >
+                        {data.fullName}
+                      </CardTitle>
+                    </div>
                     <CardBody>
-                      <div className="row w-100 flex-nowrap oct2022-cursor-click">
-                        <CardTitle
-                          tag="h3"
-                          className="p-2 col"
+                      <div className="oct2022-cursor-click">
+                        <CardSubtitle
+                          onClick={() => toggle(data)}
+                          tag="p"
+                          className="mb-2 text-start nopadding col"
+                        >
+                          {data.questionAnswers[1].answer}
+                        </CardSubtitle>
+                        <CardText
+                          className="oct2022-card-text text-start nopadding col"
                           onClick={() => toggle(data)}
                         >
-                          {data.fullName}
-                        </CardTitle>
+                          {data.questionAnswers[0].answer}
+
+                          {/* Were company names in previous iteration of the website */}
+                        </CardText>
                       </div>
-                      <CardSubtitle
-                        tag="p"
-                        className="mb-2 pl-2 pr-2 text-muted oct2022-cursor-click"
-                        onClick={() => toggle(data)}
-                      >
-                        {data.questionAnswers[1].answer}
-                        {/* {data.speakerTitle}, {data.speakerSubTitle}   From Previous Data */}
-                      </CardSubtitle>
-                      <CardText
-                        className="oct2022-card-text font-weight-bold text-start nopadding pl-2"
-                        onClick={() => toggle(data)}
-                      >
-                        {data.questionAnswers[0].answer}
 
-                        {/* Were company names in previous iteration of the website */}
-                      </CardText>
-
-                      {/* Will have to add it Manually or will se after adding column in sessionize */}
-                      <div className="d-flex">
-                        {data.categories.name ===
-                          "Are you a Microsoft MVP?" && (
+                      <div className="oct2022-social-media-array">
+                        {data.categories[1]?.categoryItems[0]?.name ===
+                          "Yes" && (
                           <div>
                             <img
                               src={MVPlogo}
                               alt="MVP"
-                              className="oct2022-card-socialmedia nopadding align-self-start oct2022-cursor-none pr-2"
+                              className="oct2022-card-socialmedia nopadding align-self-start oct2022-cursor-none"
                             />
                           </div>
                         )}
@@ -112,7 +111,7 @@ export const KeyNoteSpeaker = () => {
                             <img
                               src={Microsoftlogo}
                               alt="Microsoft Employee"
-                              className="oct2022-card-socialmedia nopadding align-self-start pr-2"
+                              className="oct2022-card-socialmedia nopadding align-self-start"
                             />
                           </div>
                         )}
@@ -121,8 +120,8 @@ export const KeyNoteSpeaker = () => {
                           {data.links
                             .filter(
                               (data) =>
-                                data.title === "LinkedIn" ||
-                                data.title === "Twitter"
+                                data.title === "Twitter" ||
+                                data.title === "LinkedIn"
                             )
                             .map((link) => {
                               return (
@@ -133,16 +132,16 @@ export const KeyNoteSpeaker = () => {
                                 >
                                   <img
                                     src={
-                                      link.title === "LinkedIn"
-                                        ? LinkedInlogo
-                                        : Twitterlogo
+                                      link.title === "Twitter"
+                                        ? Twitterlogo
+                                        : LinkedInlogo
                                     }
                                     alt={
-                                      link.title === "LinkedIn"
-                                        ? "LinkedIn logo"
-                                        : "Twitter logo"
+                                      link.title === "Twitter"
+                                        ? "Twitter logo"
+                                        : "LinkedIn logo"
                                     }
-                                    className="oct2022-card-socialmedia ml-2 pr-2 align-self-start"
+                                    className="oct2022-card-socialmedia align-self-start"
                                   />
                                 </a>
                               );
