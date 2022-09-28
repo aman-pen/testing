@@ -199,6 +199,8 @@ body::-webkit-scrollbar {
       // padding: 35px 140px 0 140px;
       padding-top: 40px;
       flex-wrap: nowrap;
+      margin: auto;
+      max-width: 500px;
       .oct2022-sessionNumber,
       .oct2022-SponsorNumber,
       .oct2022-trackNumber {
