@@ -90,6 +90,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                             .split(" ")[1]}
                         {console.log(new Date(data.startsAt).getHours())}
                       </div>
+                      <span className="oct2022-event-time">IST</span>
                     </Col>
                     <Col
                       md={12}
