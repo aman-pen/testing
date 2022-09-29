@@ -64,30 +64,20 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                     >
                       <div className="oct2022-event-time">
                         {new Date(data.startsAt)
-                          .toLocaleTimeString()
+                          .toLocaleTimeString("en-US", { hour12: false })
                           .split(":")[0] +
                           ":" +
                           new Date(data.startsAt)
-                            .toLocaleTimeString()
-                            .split(":")[1] +
-                          " " +
-                          new Date(data.startsAt)
-                            .toLocaleTimeString()
-                            .split(":")[2]
-                            ?.split(" ")[1]}{" "}
+                            .toLocaleTimeString("en-US", { hour12: false })
+                            .split(":")[1]}{" "}
                         -{" "}
                         {new Date(data.endsAt)
-                          .toLocaleTimeString()
+                          .toLocaleTimeString("en-US", { hour12: false })
                           .split(":")[0] +
                           ":" +
                           new Date(data.endsAt)
-                            .toLocaleTimeString()
-                            .split(":")[1] +
-                          " " +
-                          new Date(data.startsAt)
-                            .toLocaleTimeString()
-                            .split(":")[2]
-                            ?.split(" ")[1]}
+                            .toLocaleTimeString("en-US", { hour12: false })
+                            .split(":")[1]}
                         {console.log(new Date(data.startsAt).getHours())}
                       </div>
                       <span className="oct2022-event-time">IST</span>
