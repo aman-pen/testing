@@ -44,6 +44,32 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
               {data.questionAnswers[2].answer}
             </p>
             {data.sessions.map((dt) => {
+              let strDt =
+                sessData &&
+                sessData[0].sessions.filter((s) => s.id == dt.id)[0].startsAt;
+              let edDt =
+                sessData &&
+                sessData[0].sessions.filter((s) => s.id == dt.id)[0].endsAt;
+              console.log("strDt", strDt && strDt.split("T"));
+              let startHour =
+                strDt && strDt.split("T")[1].split(":")[0] % 12 == 0
+                  ? 12
+                  : strDt && strDt.split("T")[1].split(":")[0] % 12;
+
+              let startMinutes = strDt && strDt.split("T")[1].split(":")[1];
+
+              let startM =
+                strDt && strDt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
+
+              let endHour =
+                edDt && edDt.split("T")[1].split(":")[0] % 12 == 0
+                  ? 12
+                  : edDt && edDt.split("T")[1].split(":")[0] % 12;
+
+              let endMinutes = edDt && edDt.split("T")[1].split(":")[1];
+
+              let endM =
+                edDt && edDt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
               return (
                 <div className="oct2022-speaker-session-details">
                   <div className="oct2022-divider"></div>
@@ -61,61 +87,8 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
                       )}
                       {sessData && (
                         <span className="oct2022-event-time">
-                          {new Date(
-                            sessData &&
-                              sessData[0].sessions.filter(
-                                (s) => s.id == dt.id
-                              )[0].startsAt
-                          )
-                            .toLocaleTimeString()
-                            .split(":")[0] +
-                            ":" +
-                            new Date(
-                              sessData &&
-                                sessData[0].sessions.filter(
-                                  (s) => s.id == dt.id
-                                )[0].startsAt
-                            )
-                              .toLocaleTimeString()
-                              .split(":")[1] +
-                            " " +
-                            new Date(
-                              sessData &&
-                                sessData[0].sessions.filter(
-                                  (s) => s.id == dt.id
-                                )[0].startsAt
-                            )
-                              .toLocaleTimeString()
-                              .split(":")[2]
-                              .split(" ")[1]}{" "}
-                          -{" "}
-                          {new Date(
-                            sessData &&
-                              sessData[0].sessions.filter(
-                                (s) => s.id == dt.id
-                              )[0].endsAt
-                          )
-                            .toLocaleTimeString()
-                            .split(":")[0] +
-                            ":" +
-                            new Date(
-                              sessData &&
-                                sessData[0].sessions.filter(
-                                  (s) => s.id == dt.id
-                                )[0].endsAt
-                            )
-                              .toLocaleTimeString()
-                              .split(":")[1] +
-                            " " +
-                            new Date(
-                              sessData &&
-                                sessData[0].sessions.filter(
-                                  (s) => s.id == dt.id
-                                )[0].startsAt
-                            )
-                              .toLocaleTimeString()
-                              .split(":")[2]
-                              .split(" ")[1]}
+                          {startHour + ":" + startMinutes + " " + startM} -{" "}
+                          {endHour + ":" + endMinutes + " " + endM}{" "}
                         </span>
                       )}
                     </div>

@@ -22,29 +22,32 @@ const ModalAgenda = ({ modal, toggle, data }) => {
 
   const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
   console.log(data, "dataAgenda");
+  let startHour =
+    data.startsAt.split("T")[1].split(":")[0] % 12 == 0
+      ? 12
+      : data.startsAt.split("T")[1].split(":")[0] % 12;
+
+  let startMinutes = data.startsAt.split("T")[1].split(":")[1];
+
+  let startM = data.startsAt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
+
+  let endHour =
+    data.endsAt.split("T")[1].split(":")[0] % 12 == 0
+      ? 12
+      : data.endsAt.split("T")[1].split(":")[0] % 12;
+
+  let endMinutes = data.endsAt.split("T")[1].split(":")[1];
+
+  let endM = data.endsAt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
+
   return (
     <div>
       <Modal className="oct2022-agenda-dialog" isOpen={modal} toggle={toggle}>
         <div className="oct2022-modalHeader">
           <ModalHeader toggle={toggle} close={closeBtn}>
             <div className="oct2022-event-time">
-              {new Date(data.startsAt).toLocaleTimeString().split(":")[0] +
-                ":" +
-                new Date(data.startsAt).toLocaleTimeString().split(":")[1] +
-                " " +
-                new Date(data.startsAt)
-                  .toLocaleTimeString()
-                  .split(":")[2]
-                  .split(" ")[1]}{" "}
-              -{" "}
-              {new Date(data.endsAt).toLocaleTimeString().split(":")[0] +
-                ":" +
-                new Date(data.endsAt).toLocaleTimeString().split(":")[1] +
-                " " +
-                new Date(data.startsAt)
-                  .toLocaleTimeString()
-                  .split(":")[2]
-                  .split(" ")[1]}
+              {startHour + ":" + startMinutes + " " + startM} -{" "}
+              {endHour + ":" + endMinutes + " " + endM}{" "}
             </div>
           </ModalHeader>
         </div>

@@ -52,6 +52,26 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
         {console.log(gridData, "check")}
         {gridData &&
           gridData[0].rooms[CurrentTrackID - 1].sessions.map((data) => {
+            let startHour =
+              data.startsAt.split("T")[1].split(":")[0] % 12 == 0
+                ? 12
+                : data.startsAt.split("T")[1].split(":")[0] % 12;
+
+            let startMinutes = data.startsAt.split("T")[1].split(":")[1];
+
+            let startM =
+              data.startsAt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
+
+            let endHour =
+              data.endsAt.split("T")[1].split(":")[0] % 12 == 0
+                ? 12
+                : data.endsAt.split("T")[1].split(":")[0] % 12;
+
+            let endMinutes = data.endsAt.split("T")[1].split(":")[1];
+
+            let endM =
+              data.endsAt.split("T")[1].split(":")[0] < 12 ? "AM" : "PM";
+
             return (
               <div key={"key" + Math.random()}>
                 <Row className="oct2022-trackdata-bg">
@@ -62,31 +82,13 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       className="p-0 cursor-click m-auto"
                       onClick={() => toggle(data)}
                     >
+                      {console.log(
+                        data.endsAt.split("T")[1].split(":")[0],
+                        "hrs"
+                      )}
                       <div className="oct2022-event-time">
-                        {new Date(data.startsAt)
-                          .toLocaleTimeString("en-US", { hour12: true })
-                          .split(":")[0] +
-                          ":" +
-                          new Date(data.startsAt)
-                            .toLocaleTimeString("en-US", { hour12: true })
-                            .split(":")[1] +
-                          " " +
-                          new Date(data.startsAt)
-                            .toLocaleTimeString("en-US", { hour12: true })
-                            .split(" ")[1]}{" "}
-                        -{" "}
-                        {new Date(data.endsAt)
-                          .toLocaleTimeString("en-US", { hour12: true })
-                          .split(":")[0] +
-                          ":" +
-                          new Date(data.endsAt)
-                            .toLocaleTimeString("en-US", { hour12: true })
-                            .split(":")[1] +
-                          " " +
-                          new Date(data.startsAt)
-                            .toLocaleTimeString("en-US", { hour12: true })
-                            .split(" ")[1]}{" "}
-                        {console.log(new Date(data.startsAt).getHours())}
+                        {startHour + ":" + startMinutes + " " + startM} -{" "}
+                        {endHour + ":" + endMinutes + " " + endM}{" "}
                       </div>
                       <span className="oct2022-event-time">IST</span>
                     </Col>
