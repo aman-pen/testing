@@ -69,7 +69,11 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           ":" +
                           new Date(data.startsAt)
                             .toLocaleTimeString("en-US", { hour12: true })
-                            .split(":")[1]}{" "}
+                            .split(":")[1] +
+                          " " +
+                          new Date(data.startsAt)
+                            .toLocaleTimeString("en-US", { hour12: true })
+                            .split(" ")[1]}{" "}
                         -{" "}
                         {new Date(data.endsAt)
                           .toLocaleTimeString("en-US", { hour12: true })
@@ -77,7 +81,11 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           ":" +
                           new Date(data.endsAt)
                             .toLocaleTimeString("en-US", { hour12: true })
-                            .split(":")[1]}
+                            .split(":")[1] +
+                          " " +
+                          new Date(data.startsAt)
+                            .toLocaleTimeString("en-US", { hour12: true })
+                            .split(" ")[1]}{" "}
                         {console.log(new Date(data.startsAt).getHours())}
                       </div>
                       <span className="oct2022-event-time">IST</span>
