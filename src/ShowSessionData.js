@@ -74,8 +74,8 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           new Date(data.startsAt)
                             .toLocaleTimeString()
                             .split(":")[2]
-                            .split(" ")[1]}{" "}
-                        -{" "}
+                            .charAt(3)}
+                        {"M "}-{" "}
                         {new Date(data.endsAt)
                           .toLocaleTimeString()
                           .split(":")[0] +
@@ -87,8 +87,15 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           new Date(data.startsAt)
                             .toLocaleTimeString()
                             .split(":")[2]
-                            .split(" ")[1]}
-                        {console.log(new Date(data.startsAt).getHours())}
+                            .charAt(3)}
+                        {"M"}
+                        {console.log(
+                          new Date(data.startsAt)
+                            .toLocaleTimeString()
+                            .split(":")[2]
+                            .charAt(3),
+                          "dateAM"
+                        )}
                       </div>
                       <span className="oct2022-event-time">IST</span>
                     </Col>
