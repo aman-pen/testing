@@ -279,7 +279,8 @@ body::-webkit-scrollbar {
     border-radius: 50px;
     border: none;
     text-transform: uppercase;
-    padding: 3.5% 2%;
+    background-color: #ffffff;
+    padding: 2%;
     color: $base-color-green;
     font-weight: 600;
     font-size: clamp(1rem, 2.2vw, 1.5rem);
