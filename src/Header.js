@@ -78,6 +78,17 @@ export const Header = () => {
                       </a>
                     );
                   })}
+                  <div className="oct2022-Be-Sponsor-btn-wrapper">
+                    <button
+                      className="oct2022-Be-Sponsor-btn"
+                      onClick={() => {
+                        toggle();
+                        closeHamburgerMenu();
+                      }}
+                    >
+                      <span>BECOME A SPONSOR</span>
+                    </button>
+                  </div>
                 </Menu>
               </Col>
             </>
@@ -97,6 +108,11 @@ export const Header = () => {
                       </NavItem>
                     );
                   })}
+                  <div className="oct2022-Be-Sponsor-btn-wrapper">
+                    <button className="oct2022-Be-Sponsor-btn" onClick={toggle}>
+                      <span>BECOME A SPONSOR</span>
+                    </button>
+                  </div>
                 </Nav>
               </Navbar>
             </Col>
@@ -217,12 +233,14 @@ export const Header = () => {
           <div className="oct2022-Be-Sponsor">
             <div className="oct2022-Be-Sponsor-wrapper">
               <div className="oct2022-Be-Sponsor-text">
-                Sponsorships for India Cloud Security Summit 2022 are Now Open!
+                Be part of our event, and stand a chance to win exciting prizes.
               </div>
               <div className="oct2022-Be-Sponsor-btn-wrapper">
-                <button className="oct2022-Be-Sponsor-btn" onClick={toggle}>
-                  <span>Become A Sponsor</span>
-                </button>
+                <a href="#oct2022-Prizes">
+                  <button className="oct2022-Be-Sponsor-btn">
+                    <span>WIN EXCITING PRIZES</span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

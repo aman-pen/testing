@@ -3,6 +3,7 @@ import "./css/App.scss";
 import { Header } from "./Header";
 import { About } from "./About";
 import { Donate } from "./Donate";
+import { QuizPrizes } from "./QuizPrizes";
 import { CallForSpeaker } from "./CallForSpeaker";
 import { Agenda } from "./Agenda";
 import { Speaker } from "./Speaker";
@@ -30,6 +31,7 @@ function App() {
                 {/* <CallForSpeaker /> */}
                 <About />
                 <Donate />
+                <QuizPrizes />
                 <Agenda />
                 <KeyNoteSpeaker />
                 <Speaker />

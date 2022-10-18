@@ -13,9 +13,8 @@ $purple-color: #9653ca;
 
 .oct2022-modalSponsor {
   font-family: "Roboto", sans-serif;
-  max-width: 85%;
   margin: 5% auto;
-  max-width: 1600px;
+  max-width: 90%;
   &-body {
     margin: 0;
     padding: 0;
@@ -254,7 +253,7 @@ $purple-color: #9653ca;
   display: inline-block;
   background-image: url("../images/website/close.png");
   background-repeat: no-repeat;
-  width: 50px;
+  width: 80px;
   height: 50px;
   // top: 15%;
   transform: scale(0.6);
