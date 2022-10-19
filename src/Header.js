@@ -109,7 +109,10 @@ export const Header = () => {
                     );
                   })}
                   <div className="oct2022-Be-Sponsor-btn-wrapper">
-                    <button className="oct2022-Be-Sponsor-btn" onClick={toggle}>
+                    <button
+                      className="oct2022-Be-Sponsor-btn-header"
+                      onClick={toggle}
+                    >
                       <span>BECOME A SPONSOR</span>
                     </button>
                   </div>

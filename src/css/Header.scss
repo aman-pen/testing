@@ -275,7 +275,7 @@ body::-webkit-scrollbar {
   }
 
   &-btn {
-    width: clamp(1rem, 26vw, 18rem);
+    width: clamp(1rem, 26vw, 19rem);
     border-radius: 50px;
     border: none;
     text-transform: uppercase;
@@ -287,6 +287,22 @@ body::-webkit-scrollbar {
     transition: all 0.1s ease-in-out;
     &:hover {
       transform: scale(1.05);
+    }
+
+    &-header {
+      text-transform: none;
+      background-color: #ffffff;
+      border: none;
+      padding: 2%;
+      font-size: 22px;
+      width: clamp(1rem, 26vw, 17rem);
+      border-radius: 50px;
+      transition: all 0.1s ease-in-out;
+
+      color: $base-color-green;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
