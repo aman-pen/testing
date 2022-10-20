@@ -14,6 +14,7 @@ import { Footer } from "./Footer";
 import { KeyNoteSpeaker } from "./KeyNoteSpeaker";
 import { CountDownTimer } from "./CountDownTimer";
 import { EventTeam } from "./EventTeam";
+import { PromoPartner } from "./PromoPartner";
 import { Prev } from "./previous/aug2021/Prev";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
                 <KeyNoteSpeaker />
                 <Speaker />
                 <Sponsor />
+                <PromoPartner />
                 {/* <UserGroups /> */}
                 <EventTeam />
                 <PreviousEvents />
