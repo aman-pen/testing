@@ -7,7 +7,7 @@ export const PromoPartner = () => {
     <div className="oct2022-sponsor p-md-5 p-3" id="sponsors">
       <h1 className="oct2022-sponsor-heading my-5 text-center">
         {/* PROMOTIONAL PARTNERS */}
-        PROMOTION PARTNER
+        PROMOTION PARTNERS
       </h1>
       {/* <div className="row oct2022-sponsor-wrapper text-center"> */}
       <div
