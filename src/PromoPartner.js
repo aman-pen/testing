@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/Sponsor.scss";
 import PromoPartnerData from "./content/PromoPartnerData.json";
-import { ModalSponsor } from "./ModalSponsor";
+
 export const PromoPartner = () => {
   return (
     <div className="oct2022-sponsor p-md-5 p-3" id="sponsors">
