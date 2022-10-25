@@ -46,7 +46,7 @@ export const Agenda = () => {
       </div> */}
       <div className="oct2022-agenda-para-text-1">
         Check out the agenda and the sessions for the India Cloud Security
-        Summit 2021 event.
+        Summit 2022 event.
       </div>
       <div className="oct2022-agenda-para-text-2">
         This event has an ensemble of amazing workshops and seminars by
