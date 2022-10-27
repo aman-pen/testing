@@ -36,14 +36,14 @@
   },
   {
     "OrganizerID": "6",
-    "OrganizerImage": "./images/website/Organizers/Lalit.jpg",
+    "OrganizerImage": "./images/website/Organizers/Lalit.jfif",
     "OrganizerName": "Lalit Mohan",
     "isVolunteer": "true",
     "speakerLinkedIn": "https://www.linkedin.com/in/lalit-mohan-16628643/"
   },
   {
     "OrganizerID": "7",
-    "OrganizerImage": "./images/website/Organizers/rohitPatil.jfif",
+    "OrganizerImage": "./images/website/Organizers/rohitPatil.png",
     "OrganizerName": "Rohit S Patil ",
     "isVolunteer": "true",
     "speakerLinkedIn": "https://www.linkedin.com/in/rohitspatil/"
