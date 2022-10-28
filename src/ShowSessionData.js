@@ -113,7 +113,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       }}
                     >
                       <div>
-                        <div className="oct2022-speaker-head">Speakers</div>
+                        {/* <div className="oct2022-speaker-head">Speakers</div> */}
                         <div className="d-flex justify-content-center">
                           {data.title === "Welcome Note" && (
                             <div className="oct2022-speaker  pr-2 pl-2">
@@ -237,7 +237,12 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       </div>
                       {console.log(sessLinks, "theLink")}
 
-                      <div className="d-flex justify-content-center">
+                      <div
+                        className="d-flex justify-content-center"
+                        style={{
+                          paddingInline: "2rem",
+                        }}
+                      >
                         {data.title === "Welcome Note" ||
                         data.title ===
                           "Keynote : Cloud Security - Board Level Imperative" ? (
@@ -254,6 +259,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                 />
                               </a>
                             </LazyLoad>
+                            <span>Join Now</span>
                           </div>
                         ) : (
                           ""
@@ -279,6 +285,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                   />
                                 </a>
                               </LazyLoad>
+                              <span>Join Now</span>
                             </div>
                           )}
                         {CurrentTrackID == 2 &&
@@ -302,6 +309,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                   />
                                 </a>
                               </LazyLoad>
+                              <span>Join Now</span>
                             </div>
                           )}
                         {CurrentTrackID == 3 &&
@@ -325,6 +333,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                   />
                                 </a>
                               </LazyLoad>
+                              <span>Join Now</span>
                             </div>
                           )}
                         {data.title === "Quiz" && (
@@ -341,6 +350,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                 />
                               </a>
                             </LazyLoad>
+                            <span>Join Now</span>
                           </div>
                         )}
                       </div>
