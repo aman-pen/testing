@@ -16,7 +16,7 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
 
   useEffect(() => {
     ApiSession().then((data) => {
-      console.log("Grid api called");
+      // console.log("Grid api called");
       setSessData(data);
     });
   }, []);
@@ -46,11 +46,13 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
             {data.sessions.map((dt) => {
               let strDt =
                 sessData &&
-                sessData[0].sessions.filter((s) => s.id == dt.id)[0].startsAt;
+                sessData[0].sessions.filter(
+                  (s) => s.id == dt.id || s.id2 == dt.id
+                )[0].startsAt;
               let edDt =
                 sessData &&
                 sessData[0].sessions.filter((s) => s.id == dt.id)[0].endsAt;
-              console.log("strDt", strDt && strDt.split("T"));
+              // console.log("strDt", strDt && strDt.split("T"));
               let startHour =
                 strDt && strDt.split("T")[1].split(":")[0] % 12 == 0
                   ? 12
@@ -80,11 +82,11 @@ const ModalSpeaker = ({ modal, toggle, data }) => {
                     </div>
                     <div className="col-8 oct2022-speaker-session-time">
                       {/* {dt.sessionTime} */}
-                      {console.log(dt)}
-                      {console.log(
+                      {/* {console.log(dt)} */}
+                      {/* {console.log(
                         sessData &&
                           sessData[0].sessions.filter((s) => s.id == dt.id)[0]
-                      )}
+                      )} */}
                       {sessData && (
                         <span className="oct2022-event-time">
                           {startHour + ":" + startMinutes + " " + startM} -{" "}

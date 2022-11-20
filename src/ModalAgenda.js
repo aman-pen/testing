@@ -15,13 +15,13 @@ const ModalAgenda = ({ modal, toggle, data }) => {
 
   useEffect(() => {
     ApiSpeaker().then((data) => {
-      console.log("speaker api called");
+      // console.log("speaker api called");
       setSpeakerData(data);
     });
   }, []);
 
   const closeBtn = <button className="oct2022-close" onClick={toggle}></button>;
-  console.log(data, "dataAgenda");
+  // console.log(data, "dataAgenda");
   let startHour =
     data.startsAt.split("T")[1].split(":")[0] % 12 == 0
       ? 12

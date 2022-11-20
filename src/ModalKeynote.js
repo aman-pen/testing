@@ -18,7 +18,7 @@ const ModalKeynote = ({ modal, toggle, data }) => {
 
   useEffect(() => {
     ApiSession().then((data) => {
-      console.log("Grid api called");
+      // console.log("Grid api called");
       setSessData(data);
     });
   }, []);
@@ -52,7 +52,7 @@ const ModalKeynote = ({ modal, toggle, data }) => {
               let edDt =
                 sessData &&
                 sessData[0].sessions.filter((s) => s.id == dt.id)[0].endsAt;
-              console.log("strDt", strDt && strDt.split("T"));
+              // console.log("strDt", strDt && strDt.split("T"));
               let startHour =
                 strDt && strDt.split("T")[1].split(":")[0] % 12 == 0
                   ? 12

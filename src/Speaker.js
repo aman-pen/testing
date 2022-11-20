@@ -45,7 +45,7 @@ export const Speaker = () => {
         {/* <div className="mt-4 mb-4">
           <ComingSoon />
         </div> */}
-        {console.log(Speakers && Speakers, "Speakers")}
+        {/* {console.log(Speakers && Speakers, "Speakers")} */}
         <div className="row justify-content-center">
           {Speakers.filter((d) => !d.isTopSpeaker).map((data) => {
             return (

@@ -14,18 +14,18 @@ import ImageLoader from "./ImageLoader.js";
 import { ApiSpeaker, ApiGrid } from "./services/Api";
 
 export const ShowSessionData = ({ CurrentTrackID }) => {
-  console.log("CurrentTrackID", CurrentTrackID);
+  // console.log("CurrentTrackID", CurrentTrackID);
   const [gridData, setGridData] = useState();
   const [speakerData, setSpeakerData] = useState();
 
   useEffect(() => {
     ApiGrid().then((data) => {
-      console.log("Grid api called");
+      // console.log("Grid api called");
       setGridData(data);
     });
 
     ApiSpeaker().then((data) => {
-      console.log("speaker api called");
+      // console.log("speaker api called");
       setSpeakerData(data);
     });
   }, []);
@@ -51,7 +51,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
   return (
     <>
       <div className="container-fluid oct2022-trackdata">
-        {console.log(gridData, "check")}
+        {/* {console.log(gridData, "check")} */}
         {gridData &&
           gridData[0].rooms[CurrentTrackID - 1].sessions.map((data) => {
             let startHour =
@@ -84,10 +84,10 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                       className="p-0 cursor-click m-auto"
                       onClick={() => toggle(data)}
                     >
-                      {console.log(
+                      {/* {console.log(
                         data.endsAt.split("T")[1].split(":")[0],
                         "hrs"
-                      )}
+                      )} */}
                       <div className="oct2022-event-time">
                         {startHour + ":" + startMinutes + " " + startM} -{" "}
                         {endHour + ":" + endMinutes + " " + endM}{" "}
@@ -228,14 +228,14 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                                       speakerData.filter(
                                         (s) => s.id === spkr.id
                                       )[0].fullName}
-                                    {console.log(sessions, "ccccd")}
+                                    {/* {console.log(sessions, "ccccd")} */}
                                   </span>
                                 </div>
                               );
                             })}
                         </div>
                       </div>
-                      {console.log(sessLinks, "theLink")}
+                      {/* {console.log(sessLinks, "theLink")} */}
 
                       <div
                         className="d-flex justify-content-center"
