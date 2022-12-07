@@ -243,7 +243,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           paddingInline: "2rem",
                         }}
                       >
-                        {data.title === "Welcome Note" ||
+                        {/* {data.title === "Welcome Note" ||
                         data.title ===
                           "Keynote : Cloud Security - Board Level Imperative" ? (
                           <div className="oct2022-speaker  pr-2 pl-2">
@@ -263,8 +263,8 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                           </div>
                         ) : (
                           ""
-                        )}
-                        {CurrentTrackID == 1 &&
+                        )} */}
+                        {/* {CurrentTrackID == 1 &&
                           data.title != "Welcome Note" &&
                           data.title !=
                             "Keynote : Cloud Security - Board Level Imperative" &&
@@ -287,8 +287,8 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                               </LazyLoad>
                               <span>Join Now</span>
                             </div>
-                          )}
-                        {CurrentTrackID == 2 &&
+                          )} */}
+                        {/* {CurrentTrackID == 2 &&
                           data.title != "Welcome Note" &&
                           data.title !=
                             "Keynote : Cloud Security - Board Level Imperative" &&
@@ -311,8 +311,8 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                               </LazyLoad>
                               <span>Join Now</span>
                             </div>
-                          )}
-                        {CurrentTrackID == 3 &&
+                          )} */}
+                        {/* {CurrentTrackID == 3 &&
                           data.title != "Welcome Note" &&
                           data.title !=
                             "Keynote : Cloud Security - Board Level Imperative" &&
@@ -335,8 +335,8 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                               </LazyLoad>
                               <span>Join Now</span>
                             </div>
-                          )}
-                        {data.title === "Quiz" && (
+                          )} */}
+                        {/* {data.title === "Quiz" && (
                           <div className="oct2022-speaker  pr-2 pl-2">
                             <LazyLoad height={70} width={70} debounce={false}>
                               <a target={"_blank"} href={sessLinks[4].link}>
@@ -352,7 +352,7 @@ export const ShowSessionData = ({ CurrentTrackID }) => {
                             </LazyLoad>
                             <span>Join Now</span>
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </Col>
                   </>
