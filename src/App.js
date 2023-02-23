@@ -17,7 +17,6 @@ import { EventTeam } from "./EventTeam";
 import { PromoPartner } from "./PromoPartner";
 import { Prev } from "./previous/aug2021/Prev";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LazyLoad from "react-lazy-load";
 
 function App() {
   return (
@@ -29,43 +28,33 @@ function App() {
             element={
               <>
                 <Header />
-                <LazyLoad>
-                  <CountDownTimer />
-                </LazyLoad>
+
+                <CountDownTimer />
 
                 {/* <CallForSpeaker /> */}
-                <LazyLoad>
-                  <About />
-                </LazyLoad>
-                <LazyLoad>
-                  <Donate />
-                </LazyLoad>
-                <LazyLoad>
-                  <QuizPrizes />
-                </LazyLoad>
-                <LazyLoad>
-                  <Agenda />
-                </LazyLoad>
-                <LazyLoad>
-                  <KeyNoteSpeaker />
-                </LazyLoad>
-                <LazyLoad>
-                  <Speaker />
-                </LazyLoad>
-                <LazyLoad>
-                  <Sponsor />
-                </LazyLoad>
-                <LazyLoad>
-                  <PromoPartner />
-                </LazyLoad>
+
+                <About />
+
+                <Donate />
+
+                <QuizPrizes />
+
+                <Agenda />
+
+                <KeyNoteSpeaker />
+
+                <Speaker />
+
+                <Sponsor />
+
+                <PromoPartner />
+
                 {/* <UserGroups /> */}
 
-                <LazyLoad>
-                  <EventTeam />
-                </LazyLoad>
-                <LazyLoad>
-                  <PreviousEvents />
-                </LazyLoad>
+                <EventTeam />
+
+                <PreviousEvents />
+
                 <Footer />
               </>
             }
