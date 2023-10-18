@@ -1,0 +1,58 @@
+[
+  {
+    "OrganizerID": "1",
+    "OrganizerImage": "./2023/assets/organizers/Vignesh.jpg",
+    "OrganizerName": "Vignesh Ganesan",
+    "isVolunteer": "false",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/vignesh-ganesan-i-microsoft-mvp-and-mct-9246384a/"
+  },
+  {
+    "OrganizerID": "2",
+    "OrganizerImage": "./2023/assets/organizers/Perumal.jpg",
+    "OrganizerName": "Narasima Perumal",
+    "isVolunteer": "false",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/narasimaperumal/"
+  },
+  {
+    "OrganizerID": "3",
+    "OrganizerImage": "./2023/assets/organizers/Jasjit.jpg",
+    "OrganizerName": "Jasjit Chopra",
+    "isVolunteer": "false",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/jasjitchopra/"
+  },
+  {
+    "OrganizerID": "7",
+    "OrganizerImage": "./2023/assets/organizers/ShrustiShah.jpg",
+    "OrganizerName": "Shrushti Shah",
+    "isVolunteer": "false",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/shrushti-shah-bba565162/"
+  },
+  {
+    "OrganizerID": "4",
+    "OrganizerImage": "./2023/assets/organizers/LalitMohan.jpg",
+    "OrganizerName": "Lalit Mohan",
+    "isVolunteer": "true",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/lalitblogs/"
+  },
+  {
+    "OrganizerID": "5",
+    "OrganizerImage": "./2023/assets/organizers/rohitPatil.jpg",
+    "OrganizerName": "Rohit S Patil",
+    "isCoOrganizer": "false",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/rohitspatil/"
+  },
+  {
+    "OrganizerID": "6",
+    "OrganizerImage": "./2023/assets/organizers/TusharKumar.jpg",
+    "OrganizerName": "Tushar Kumar",
+    "isVolunteer": "false",
+    "isCoOrganizer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/followtushar/"
+  }
+]

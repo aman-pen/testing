@@ -1,0 +1,29 @@
+$organizerHeadingColor: #636363;
+$borderBottomColor: #5eb3d8;
+
+.aug-2021 {
+  .organizers {
+    background-color: #f5f5f5;
+  }
+  .organizerHeadingBox {
+    padding-top: min(15%, 5rem);
+  }
+  .organizerSubHeadingBox {
+    padding-top: min(10%, 5rem);
+  }
+  .organizerHeading {
+    color: $organizerHeadingColor;
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 5px solid $borderBottomColor;
+  }
+  .organizerSubHeading {
+    color: $organizerHeadingColor;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .organizersCard {
+    padding-inline: 4rem;
+    row-gap: 5rem;
+  }
+}

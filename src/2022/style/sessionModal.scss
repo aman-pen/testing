@@ -1,0 +1,20 @@
+.oct-2022 {
+  .aboutSpeaker-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    width: 100% !important;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 981px) {
+  .oct-2022 {
+    .aboutSpeaker-container {
+      width: 100% !important;
+      margin: auto;
+      justify-content: center !important;
+    }
+  }
+}

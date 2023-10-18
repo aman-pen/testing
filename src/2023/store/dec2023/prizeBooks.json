@@ -1,0 +1,7 @@
+[
+  { "id": 3, "mobile": true, "image": "../2023/assets/books/pl900.svg" },
+  { "id": 1, "mobile": true, "image": "../2023/assets/books/pl900green.svg" },
+  { "id": 2, "mobile": true, "image": "../2023/assets/books/sql2022.svg" },
+  { "id": 4, "mobile": false, "image": "../2023/assets/books/az700.svg" },
+  { "id": 5, "mobile": false, "image": "../2023/assets/books/ms900.svg" }
+]

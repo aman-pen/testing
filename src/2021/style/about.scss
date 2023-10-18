@@ -1,0 +1,37 @@
+$aboutHedaingColor: #636363;
+$borderBottomColor: #421282;
+
+.aug-2021 {
+  .about {
+    width: 100%;
+    margin: auto;
+  }
+  .aboutHeadingBox {
+    padding-top: min(15%, 8rem);
+  }
+  .aboutHeading {
+    color: $aboutHedaingColor;
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 5px solid $borderBottomColor;
+  }
+  .aboutHeadingText {
+    color: $aboutHedaingColor;
+    line-height: 1.5 !important;
+  }
+  .aboutSubheadingText {
+    color: $aboutHedaingColor;
+    line-height: 1.5 !important;
+  }
+  .aboutButton {
+    border-radius: 100rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    text-transform: none;
+    padding-inline: max(3%, 40px);
+    color:white;
+    &:hover {
+      background-color: #303080 !important;
+    }
+  }
+}

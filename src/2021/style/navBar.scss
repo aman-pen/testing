@@ -1,0 +1,29 @@
+.aug-2021 {
+  .navLayout {
+    width: 100% !important;
+    position: fixed !important;
+  }
+
+  .navMinHeight {
+    min-height: 12rem !important;
+  }
+
+  .navText {
+    font-size: 1.8rem !important;
+    // font-weight: 700 !important;
+    text-transform: uppercase;
+    // min-width: max-content;
+    font-weight: 600 !important;
+    line-height: 27px !important;
+  }
+  .navButton {
+    font-size: 4rem !important;
+  }
+  // .navItemButton {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  .navTextSpace {
+    width: fit-content;
+  }
+}

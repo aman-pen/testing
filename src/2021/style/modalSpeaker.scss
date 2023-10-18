@@ -1,0 +1,49 @@
+.session-list {
+  width: fit-content;
+  padding-inline: 2rem;
+  height: 3rem;
+  border-radius: 50rem;
+  &-time {
+    padding-inline: 1rem;
+  }
+}
+
+.session-name {
+  font-size: 1.8rem !important;
+  padding: 2rem 0 1rem 0;
+  font-weight: 600 !important;
+}
+
+.session-modal-speaker {
+  padding-inline: 1rem;
+}
+
+.speaker-modal {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .speaker-modal {
+    .speaker-modal-content {
+      padding-inline: 0rem !important ;
+    }
+  }
+}

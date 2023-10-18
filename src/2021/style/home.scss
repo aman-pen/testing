@@ -1,0 +1,99 @@
+$white: #fff;
+.aug-2021 {
+  .homeLayout {
+    background:linear-gradient(rgba(0,150,234,.7) 100%,rgba(0,150,234,.7) 0),
+      url(../assets/homeBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding-top: 10rem !important;
+  }
+  .eventName {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+  }
+  .eventType {
+    font-weight: 500;
+  }
+  .eventOrg {
+    font-weight: 400;
+  }
+  .eventTagline {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+  }
+  .eventButton {
+    border-radius: 100rem;
+    font-family: "Roboto";
+    padding-inline: max(3%, 40px);
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .eventDate {
+    // min-height: 10rem;
+    font-weight: 600 !important;
+  }
+
+  .letterSpacing-4 {
+    letter-spacing: 0.04em;
+  }
+  .lineHeight-4 {
+    line-height: 4rem !important;
+  }
+  .lineHeight-3 {
+    line-height: 3.5rem !important;
+  }
+  .dataBox {
+    border-radius: 0.5rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    p {
+      font-weight: 600;
+    }
+  }
+  .fields {
+    display: flex;
+    margin-top: 5rem;
+    max-width: 50rem;
+    width: 100%;
+    justify-content: space-between;
+    p {
+      color: #fff;
+      font-size: 2rem;
+      font-family: "Roboto";
+      margin-top: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  .field-container{
+    padding-block: 1.5rem;
+  }
+  .sponserNumber,
+  .trackNumber,
+  .sessionNumber {
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    span {
+      font-family: "Roboto";
+      font-size: 5rem;
+      font-weight: 600;
+      margin: auto;
+    }
+  }
+  .sponserNumber {
+    color: #7cbb00;
+  }
+  .sessionNumber{
+    color: #fb0;
+  }
+  .trackNumber{
+    color:#f66d10
+  }
+}

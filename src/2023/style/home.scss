@@ -1,0 +1,62 @@
+$white: #fff;
+.dec-2023 {
+  .homeLayout {
+    background: linear-gradient(
+        127deg,
+        #00131275 4.12%,
+        rgba(1, 58, 56, 0.301) 102.11%
+      ),
+      url(../assets/homeBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10rem !important;
+  }
+  .eventName {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+  }
+  .eventType {
+    font-weight: 500;
+  }
+  .eventOrg {
+    font-weight: 400;
+  }
+  .eventTagline {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+  }
+  .eventButton {
+    border-radius: 100rem;
+    font-family: "Roboto";
+    padding-inline: max(3%, 40px);
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .eventDate {
+    // min-height: 10rem;
+    font-weight: 500 !important;
+  }
+
+  .letterSpacing-4 {
+    letter-spacing: 0.04em;
+  }
+  .lineHeight-4 {
+    line-height: 4rem !important;
+  }
+  .lineHeight-3 {
+    line-height: 3.5rem !important;
+  }
+  .dataBox {
+    border-radius: 0.5rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    p {
+      font-weight: 600;
+    }
+  }
+}

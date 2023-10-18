@@ -1,0 +1,25 @@
+$black: #000000;
+.oct-2022 {
+  .social-container {
+    min-height: 10rem;
+  }
+
+  .social-wrapper {
+    color: $black;
+    &:hover {
+      color: #217dde !important;
+    }
+  }
+  .socialText {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .oct-2022 {
+      .socialText {
+      font-size: 2rem;
+    }
+  }
+}

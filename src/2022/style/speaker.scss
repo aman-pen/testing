@@ -1,0 +1,75 @@
+$speakersHeadingColor: #636363;
+$borderBottomColor: #421282;
+$white: #fff;
+$titlebg: #431282;
+$subGrey: #606060;
+
+.oct-2022 {
+  .speakersHeadingBox {
+    padding-top: min(15%, 8rem);
+  }
+  .speakersHeading {
+    color: $speakersHeadingColor;
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 5px solid $borderBottomColor;
+  }
+  .keynote-box {
+    padding-block: 5rem;
+  }
+
+  .speaker-grid {
+    gap: 5rem;
+  }
+
+  .img-wrapper {
+    width: 30rem;
+    height: 30rem;
+    img{
+      object-fit: cover;
+      height: 30rem;
+      object-position: top;
+    }
+  }
+  .card {
+    max-width: 30rem;
+
+    &-title {
+      &-container {
+        min-height: 7rem;
+        background-color: $titlebg;
+      }
+      // padding: 2rem;
+      color: $white;
+      font-size: 2.4rem;
+    }
+    &-container {
+      background-color: $white;
+      height: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 0.8rem;
+      align-items: flex-start;
+    }
+    &-container > p:last-child {
+      padding-bottom: 0;
+    }
+    &-subtitle {
+      padding: 0.2rem 1.5rem;
+      color: $subGrey;
+      font-size: 2rem;
+    }
+    &-social {
+      padding-inline: 0.5rem;
+    }
+    &-social-img {
+      width: 4rem;
+      padding: 0.5rem;
+      font-size: 4rem;
+    }
+    &-social-icon {
+      font-size: 4rem;
+    }
+  }
+}

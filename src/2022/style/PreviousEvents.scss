@@ -1,0 +1,44 @@
+$borderBottomColor: #431282;
+$organizerHeadingColor: #636363;
+
+.oct-2022 {
+  .prevEvents {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    .prevEvents-heading {
+      color: $organizerHeadingColor;
+      width: fit-content;
+      margin: 0 auto;
+      border-bottom: 5px solid $borderBottomColor;
+    }
+    .prevEvents-wrapper {
+      width: 60%;
+      padding: 0;
+      margin: 1.25rem auto;
+      transform: scale(1);
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .prevEvents-scroll {
+    display: flex;
+  }
+
+  .prevEventImage {
+    width: 100%;
+    margin: auto;
+    // height: 40rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .oct-2022 {
+    .prevEvents .prevEvents-wrapper {
+      width: 90%;
+    }
+  }
+}

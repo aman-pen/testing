@@ -1,0 +1,122 @@
+.baseline {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.sectionMaxWidth {
+  max-width: 160rem !important;
+  margin: 0 auto;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.marginTop5 {
+  margin-top: 5rem;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-justify {
+  text-align: justify;
+}
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-start {
+  align-items: start;
+}
+.card-social-img {
+  width: 4rem;
+  padding: 0.5rem !important;
+  font-size: 4rem;
+}
+.card-social-icon {
+  font-size: 4rem !important;
+}
+
+div[role="dialog"] {
+  min-width: 31rem;
+}
+
+.g-5 {
+  gap: 5rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+#contactUS,
+#speakers,
+#sponsors,
+#agenda,
+#about {
+  &::before {
+    display: block;
+    content: " ";
+    margin-top: -5rem;
+    height: 5rem;
+    visibility: hidden;
+  }
+}

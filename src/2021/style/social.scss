@@ -1,0 +1,18 @@
+$black: #000000;
+.aug-2021 {
+  .social-container {
+    min-height: 10rem;
+  }
+
+  .social-wrapper {
+    color: $black;
+    &:hover {
+      color: #217dde !important;
+    }
+  }
+  .socialText {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #ffff;
+  }
+}

@@ -1,0 +1,84 @@
+$base-color-black: #636363;
+.aug-2021 {
+  .countdownTimer {
+    padding-bottom: 5rem;
+  }
+
+  .timerCard {
+    padding: 2rem;
+    border-radius: 3.5rem !important;
+    background-color: hsl(0, 0%, 97%);
+    background: linear-gradient(90deg,#00a3ff,1%,#fff);
+    box-shadow: 0 4px 10px 2px rgb(0 0 0 / 10%) !important;
+  }
+
+  .countDownEventDate {
+    color: $base-color-black;
+    font-weight: 600 !important;
+    font-size: 4.5rem !important;
+  }
+
+  .eventText {
+    color: $base-color-black;
+    letter-spacing: 0.2em;
+    font-weight: 400 !important;
+    font-size: 2rem !important;
+  }
+
+  .countdownNumbers {
+    background: linear-gradient(319.35deg, #217dde 15.11%, #24a1e8 97.82%),
+      #10302e;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    // text-fill-color: transparent;
+    font-weight: 600 !important;
+    font-size: 6rem !important;
+  }
+
+  .digits {
+    background: $base-color-black;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    // text-fill-color: transparent;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    font-size: 5rem;
+    padding-inline: 1rem;
+  }
+
+  .digitDots {
+    margin-top: -3rem !important;
+    color: #c4c4c4;
+    line-height: 1.4 !important ;
+    font-weight: 600 !important;
+    font-size: 5rem !important;
+  }
+
+  .dateUnits {
+    font-size: 1.7rem;
+    background: linear-gradient(
+        319.35deg,
+        rgba(33, 125, 222, 0.37) 15.11%,
+        rgba(36, 161, 232, 0) 97.82%
+      ),
+      #10302e;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    // text-fill-color: transparent;
+    text-transform: capitalize !important;
+    letter-spacing: 3px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .digits {
+    font-size: 10vw;
+  }
+  .dateUnits {
+    font-size: min(1.5rem, 5vw);
+  }
+}

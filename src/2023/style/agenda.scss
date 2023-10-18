@@ -1,0 +1,153 @@
+$agenda-subtitle: #524f4f !important;
+$borderBottomColor: #421282;
+.dec-2023 {
+  .agenda-sessions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .session-tile {
+    display: flex;
+    padding-block: 2rem;
+    padding-inline: 4rem;
+  }
+  .session-data-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .responsive-wrapper {
+    display: flex;
+    width: 75%;
+  }
+
+  .session-time {
+    width: 30%;
+  }
+
+  .session-title-container {
+    display: flex;
+    width: 45%;
+  }
+
+  .session-title {
+    font-weight: 500;
+    padding-left: 2rem;
+  }
+
+  .speaker-container {
+    width: 25%;
+    flex: 1;
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    &:last-child {
+      width: 30rem;
+    }
+  }
+  .session-speakers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 15rem;
+  }
+  .speaker-name {
+    max-width: 15rem;
+  }
+
+  .agenda-paper {
+    width: 95%;
+    border-radius: 1rem;
+  }
+  .agenda-head {
+    width: 100%;
+    max-width: 35rem;
+    height: 10rem;
+    border-radius: 1rem !important;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .agenda-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .agenda-track {
+    padding-block: 2rem;
+    padding-bottom: 2rem;
+  }
+  .agenda-track-text {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: auto;
+  }
+  .agenda-track-subtext {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .dec-2023 {
+    .session-time {
+      width: 100%;
+    }
+    .session-time-text {
+      margin-left: 0 !important;
+    }
+
+    .responsive-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .session-title-container {
+      width: 70%;
+    }
+    .session-title {
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .dec-2023 {
+    .responsive-wrapper {
+      width: 100%;
+    }
+    .session-title-container {
+      width: 100%;
+    }
+    .session-tile {
+      padding: 2.5rem 1.5rem;
+    }
+    .session-data-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      padding-inline: 3rem;
+    }
+    .speaker-container {
+      width: 100% !important;
+      max-width: 35rem;
+    }
+    .session-speakers {
+      margin: auto;
+      min-width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .dec-2023 {
+    .session-data-container {
+      padding-inline: 0rem;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+$card-heading-gradient: linear-gradient(
+  5.47deg,
+  #0971d8 47.06%,
+  #3fb1f9 93.51%
+);
+$prizes-text-color: #0971d8;
+$prizes-subtext-color: #636363;
+$borderBottomColor: #5eb3d8;
+
+.aug-2021 {
+  .QuizPrizes {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 2rem 2rem 6rem 2rem;
+
+    .prizesHeadingBox {
+      padding-top: min(15%, 7rem);
+    }
+    .prizesHeading {
+      color: $prizes-subtext-color;
+      width: fit-content;
+      margin: 0 auto;
+      border-bottom: 5px solid $borderBottomColor;
+    }
+
+    .QuizPrizes-wrapper {
+      display: flex;
+      margin: auto;
+      width: 90%;
+      :hover {
+        transition: all 0.1s ease-in-out;
+        transform: scale(1.005);
+      }
+    }
+    .prizesSubheadingText {
+      max-width: 60rem;
+      color: $prizes-subtext-color;
+      line-height: 1.5 !important;
+      margin: auto;
+    }
+    .QuizPrizes-card {
+      padding: 1rem;
+    }
+    .QuizPrizes-card-img {
+      width: 100%;
+    }
+    .QuizPrizes-heading {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 40px;
+      color: #636363;
+    }
+    .QuizPrizes-para-wrapper {
+      padding-block: 2.5rem;
+      width: 100%;
+      text-align: center;
+    }
+    .QuizPrizes-para-text {
+      line-height: 1.9rem;
+      font-size: 1.3rem;
+    }
+    .QuizPrizes-card-head {
+      position: relative;
+    }
+
+    .QuizPrizes-card-heading {
+      position: absolute;
+      display: flex;
+      place-items: center;
+      place-content: center;
+      bottom: -3.5rem;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.045em;
+      width: 100%;
+      height: 2.5rem;
+      background: $card-heading-gradient;
+      padding: 2rem;
+    }
+    .QuizPrizes-card-desc {
+      font-size: 1.5rem;
+      display: flex;
+      place-items: center;
+      place-content: center;
+      font-weight: 500;
+      text-align: center;
+      margin: 5rem auto 0 auto;
+      /*font-size: clamp(
+        1.2rem,
+        calc(1.2rem + ((1vw - 0.48rem) * 0.4167)),
+        1.5rem
+      );*/
+      font-size: 20px;
+      color: $prizes-text-color;
+      letter-spacing: 0.045em;
+    }
+    .bookPrize-container {
+      margin-top: 6rem;
+    }
+    .bookPrizes-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 90%;
+      background: url("../assets/bookPrizes/bookPrize.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: auto;
+    }
+    .bookPrizes-parent {
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+      max-width: 110rem;
+      padding-block: 4rem;
+    }
+    .bookPrizes-card-img {
+      width: 150px;
+    }
+    .book-discount {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+
+    .discount-box {
+      padding: 0.5rem 0rem;
+      margin: 3rem auto 0 auto;
+    }
+    .prizesBookSubheadingText {
+      font-size: 20px;
+      color: $prizes-text-color;
+      letter-spacing: 0.045em;
+      font-weight: 500;
+    }
+  }
+
+  .QuizPrizes-scroll {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .bookPrizes-card-4,
+    .bookPrizes-card-5 {
+      display: none;
+    }
+    .bookPrizes-card-1,
+    .bookPrizes-card-2,
+    .bookPrizes-card-3 {
+      padding-bottom: 2rem;
+    }
+    .bookPrizes-card-img {
+      width: 180px !important;
+    }
+    .heading-mobile {
+      height: 6rem !important;
+    }
+    .QuizPrizes {
+      .QuizPrizes-wrapper {
+        width: 50%;
+      }
+      .QuizPrizes-wrapper {
+        flex-direction: column;
+      }
+    }
+    .bookPrizes-wrapper {
+      background: url("../assets/bookPrizes/bookPrizeMb.svg") !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+    }
+    .bookPrizes-parent {
+      flex-direction: column;
+    }
+    .bookPrize-container {
+      width: max(70%, 350);
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 515px) {
+    .QuizPrizes .QuizPrizes-wrapper {
+      width: 100%;
+    }
+    .heading-mobile {
+      height: 7.5rem !important;
+    }
+    .QuizPrizes-card-heading {
+      font-size: 1.5rem !important;
+    }
+  }
+}

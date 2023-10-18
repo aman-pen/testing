@@ -1,0 +1,34 @@
+[
+  {
+    "sponsorId": 1,
+    "sponsorImage": "./2023/assets/logos/PentharaLogo.svg",
+    "sponsorAltText": "Penthara Technologies",
+    "sponsorName": "Penthara Technologies",
+    "sponsorUrl": "https://www.penthara.com",
+    "sponsorStatus": "platinum"
+  },
+  {
+    "sponsorId": 2,
+    "sponsorImage": "./2023/assets/logos/microsoftLogo.png",
+    "sponsorAltText": "Microsoft",
+    "sponsorName": "Microsoft",
+    "sponsorUrl": "https://www.microsoft.com",
+    "sponsorStatus": "platinum"
+  },
+  {
+    "sponsorId": 3,
+    "sponsorImage": "./2023/assets/logos/ossisto.png",
+    "sponsorAltText": "Ossisto365",
+    "sponsorName": "Ossisto365",
+    "sponsorUrl": "https://ossisto365.com/",
+    "sponsorStatus": "platinum"
+  },
+  {
+    "sponsorId": 4,
+    "sponsorImage": "./2023/assets/logos/RapidCircle.png",
+    "sponsorAltText": "Rapid Circle",
+    "sponsorName": "Rapid Circle",
+    "sponsorUrl": "https://en.rapidcircle.com/",
+    "sponsorStatus": "diamond"
+  }
+]

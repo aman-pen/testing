@@ -1,0 +1,301 @@
+$modalHeading: clamp(
+  1.8rem,
+  calc(1.8rem + ((1vw - 0.76rem) * 1.5625)),
+  2.8rem
+) !important;
+$homeHeading: clamp(
+  3.8rem,
+  calc(3.8rem + ((1vw - 0.76rem) * 1.875)),
+  5rem
+) !important;
+$offeringsHeading: clamp(
+  3.2rem,
+  calc(3.2rem + ((1vw - 0.76rem) * 2.8125)),
+  5rem
+) !important;
+$contentBoxFont: clamp(
+  1.5rem,
+  calc(1.5rem + ((1vw - 0.76rem) * 0.7813)),
+  2rem
+) !important;
+$contentBoxLi: clamp(
+  1.5rem,
+  calc(1.2rem + ((1vw - 0.76rem) * 0.9375)),
+  1.8rem
+) !important;
+$offeringHeading: clamp(
+  2rem,
+  calc(2rem + ((1vw - 0.85rem) * 2.7273)),
+  3rem
+) !important;
+$homeSubHeading: clamp(
+  2.8rem,
+  calc(2.8rem + ((1vw - 0.76rem) * 1.0938)),
+  3.5rem
+) !important;
+
+$offeringsHeader: clamp(0.2rem, 105vw, 1.2rem) !important;
+
+$gold-color: #eaaf0e;
+$card-sky: #5eb3d8;
+$purple-color: #9653ca;
+$afterBlue: #431282;
+$textGrey: #606060;
+$afterGreen: #4faaaa;
+
+.dec2023-scroll-dialog {
+  font-family: "Roboto";
+  .scroll-dialog-title {
+    font-weight: 600 !important;
+    font-size: $modalHeading;
+    flex-grow: 1 !important;
+    width: 80%;
+  }
+
+  .scroll-dialog-head {
+    background: linear-gradient(325.49deg, #4faaaa 12.41%, #064949 100.31%);
+    color: white;
+    padding-block: min(0.5%, 1rem) !important;
+  }
+
+  .scroll-dialog-close {
+    color: white;
+    font-size: clamp(
+      3.8rem,
+      calc(3.8rem + ((1vw - 0.52rem) * 1.3636)),
+      5rem
+    ) !important;
+    font-weight: 800;
+  }
+
+  .scroll-dialog-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .scroll-dialog-home-bg {
+    background: linear-gradient(
+        90.14deg,
+        rgba(1, 58, 56, 0.8) 17.89%,
+        rgba(79, 170, 170, 0.568) 98.64%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/modal/modalSponsorHome.webp");
+    padding-block: 7rem !important;
+    min-height: max(30rem, 30vw);
+    color: white;
+  }
+
+  .scroll-dialog-home-title {
+    font-size: $homeHeading;
+    &::after {
+      content: "";
+      display: block;
+      width: 15rem;
+      height: 0.2rem;
+      background: #fff;
+      margin: 2.8rem auto;
+    }
+  }
+
+  .scroll-dialog-home-text {
+    width: 60%;
+    font-size: $homeSubHeading;
+    letter-spacing: 1px !important;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5 !important;
+  }
+
+  .scroll-dialog-content-title {
+    padding-top: 5rem;
+    color: #636363;
+    font-size: $homeHeading;
+    &::after {
+      content: "";
+      display: block;
+      width: 15rem;
+      height: 0.2rem;
+      background: $afterGreen;
+      margin: 2.8rem auto;
+    }
+  }
+
+  .scroll-dialog-content-box {
+    padding-block: 3rem;
+    &-title {
+      font-size: $modalHeading;
+      color: #4faaaa;
+      font-weight: 600 !important;
+      padding: 2rem;
+    }
+    &-list {
+      color: $textGrey;
+      font-family: "Roboto";
+      font-size: $contentBoxFont;
+      li {
+        padding-block: 1rem;
+      }
+    }
+    &-text {
+      padding-inline: 2rem;
+      font-size: 1.6rem;
+      line-height: 1.6 !important;
+    }
+  }
+
+  .scroll-dialog-content-grid {
+    padding: 3rem;
+  }
+
+  .speaker-modal-content {
+    padding-inline: max(5%, 2.5rem);
+    background-color: #f8f8f8;
+    padding-block: 2rem;
+  }
+
+  .scroll-dialog-content-box-offeings {
+    padding: 3rem;
+    .scheme-card {
+      border: 1px solid rgba(14, 155, 227, 0.23);
+      height: auto;
+    }
+    .modalSponsor-schemes {
+      &-headerGold {
+        color: $gold-color;
+        background: #ffbb001f;
+      }
+      &-headerPurple {
+        color: $purple-color;
+        background: #9653ca1f;
+      }
+
+      &-headerSky {
+        color: $card-sky;
+        background: #5eb3d81f;
+      }
+
+      &-headerGold,
+      &-headerPurple,
+      &-headerSky {
+        text-transform: uppercase;
+        font-family: "Metropolis", sans-serif;
+        text-align: center;
+        font-size: $offeringsHeader;
+        font-weight: 700;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .offerings {
+    font-size: $offeringHeading;
+  }
+
+  .moneyTextGold {
+    color: $gold-color;
+  }
+
+  .moneyTextPurple {
+    color: $purple-color;
+  }
+
+  .moneyTextSky {
+    color: $card-sky;
+  }
+
+  .moneyTextGold,
+  .moneyTextPurple,
+  .moneyTextSky {
+    margin: 10% 0 5% 0;
+    font-family: "Roboto", sans-serif;
+    font-size: $offeringsHeading;
+    text-align: center;
+
+    &-para {
+      width: 80%;
+      text-align: center;
+      font-size: $contentBoxFont;
+      color: $textGrey;
+    }
+  }
+  .Sponsor-ulDiv {
+    width: 100%;
+    li {
+      width: 80%;
+      text-align: start;
+      margin: auto;
+      font-size: $contentBoxLi;
+      color: $textGrey;
+      &:last-child {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+  .Sponsor-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 1.8rem 0rem 1.8rem -1rem;
+  }
+  .sponsorButton {
+    border-radius: 100rem;
+    font-family: "Roboto";
+    padding-inline: max(3%, 40px);
+  }
+
+  .speaker-modal-img-container {
+    width: 100%;
+  }
+
+  .speaker-modal-img-container > img {
+    margin: auto;
+    padding-block: 2.5rem;
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dec2023-scroll-dialog {
+    .scroll-dialog-home-title {
+      font-size: clamp(
+        2.4rem,
+        calc(2.4rem + ((1vw - 0.32rem) * 5.4545)),
+        4.8rem
+      ) !important;
+    }
+    .scroll-dialog-home-text {
+      width: 90%;
+      font-size: clamp(
+        1.8rem,
+        calc(1.8rem + ((1vw - 0.32rem) * 2.2727)),
+        2.8rem
+      ) !important;
+    }
+    .scroll-dialog-content-title {
+      font-size: clamp(
+        2.4rem,
+        calc(2.4rem + ((1vw - 0.32rem) * 5.4545)),
+        4.8rem
+      ) !important;
+    }
+    .scroll-dialog-content-grid {
+      padding: 5%;
+    }
+
+    .Sponsor-ulDiv {
+      width: 100%;
+      li {
+        width: 95%;
+      }
+    }
+    .sponsorButton {
+      padding-block: 1rem;
+    }
+  }
+  .speaker-modal-img-container > img {
+    width: 30rem;
+  }
+}
