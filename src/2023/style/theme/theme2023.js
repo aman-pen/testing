@@ -23,6 +23,7 @@ export const theme2023 = {
     bg: {
       button:
         "linear-gradient(95deg, #41C1C1 4.95%, rgba(14, 139, 139, 0.83) 88.43%)",
+        lightButton: "linear-gradient(132deg, #56D4D4 7.98%, rgba(60, 188, 188, 0.98) 31.48%, rgba(14, 139, 139, 0.94) 64.13%, rgba(25, 120, 120, 0.89) 92.68%)",
       date: "linear-gradient(276.83deg, rgba(36, 161, 232, 0.05) 3.46%, rgba(33, 125, 222, 0.5) 35.03%, rgba(33, 125, 222, 0.53) 59.55%, rgba(33, 125, 222, 0.08) 84.64%)",
       countDown:
         "linear-gradient(291.32deg, rgba(34, 140, 226, 0) 20.27%, rgba(138, 167, 199, 0.37) 98.32",

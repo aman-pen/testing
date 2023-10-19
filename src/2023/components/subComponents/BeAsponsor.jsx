@@ -304,8 +304,8 @@ const BeAsponsor = ({ theme, open, handleModalClose }) => {
           >
             <Button
               className="sponsorButton"
-              // href={homeData.sponsorLink}
-              // target="_blank"
+              href={homeData.sponsorLink}
+              target="_blank"
               rel="noopener noreferrer"
               sx={{
                 backgroundColor: theme.colors.text.bSponsorPrimary,
@@ -332,8 +332,8 @@ const BeAsponsor = ({ theme, open, handleModalClose }) => {
               variant="contained"
               aria-label="Become A Sponsor Now"
             >
-              {/* Become A Sponsor Now */}
-              Coming Soon
+              Become A Sponsor Now
+              {/* Coming Soon */}
             </Button>
           </Box>
         </DialogContent>

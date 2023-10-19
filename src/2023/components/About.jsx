@@ -127,7 +127,7 @@ const About = ({ theme }) => {
           sx={{
             color: "#fff",
             fontSize: theme.fontSize.eventButton,
-            background: theme.colors.bg.button,
+            background: theme.colors.bg.lightButton,
             scale: {
               xs: "0.7",
               mmb: "1.2",
