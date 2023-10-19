@@ -25,7 +25,7 @@ $organizerHeadingColor: #636363;
   }
 
   .prevEvents-scroll {
-    display: flex;
+    display: flex; flex-wrap: wrap;
   }
 
   .prevEventImage {
