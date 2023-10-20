@@ -4,7 +4,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import "../style/footer.scss";
 import "../style/global.scss";
-import icssLogo from "../assets/logoIcons/LogoTransparentbg.png";
+import icssLogo from "../assets/icssLogo.png";
 import footerData from "../store/oct2022/footer.json";
 
 const Footer = ({ theme }) => {
@@ -12,7 +12,8 @@ const Footer = ({ theme }) => {
     <Box
       className="footer"
       sx={{
-        backgroundColor: "#431282",
+        background: "linear-gradient(180deg, #35B2B2 0%, #117878 72.58%, #005151 100%)",
+        // marginTop: "5rem",
       }}
     >
       <Box className="footerWrapper sectionMaxWidth d-flex flex-column justify-content-center">

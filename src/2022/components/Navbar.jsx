@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import icssLogo from "../assets/icssLogo.png";
+import icssLogoDark from "../assets/icssLogoDark.png";
 import MobileMenu from "./MobileMenu";
 import BeAsponsor from "./subComponents/BeAsponsor";
 import {
@@ -22,14 +23,14 @@ import "../style/navBar.scss";
 //    "About",   "Speakers",   "Agenda",   "Sponsors",   "Contact Us",   "Become A Sponsor",
 // const navItems = ["About", "Sponsors", "Contact Us", "Become A Sponsor"];
 const navItems = [
-  // { text: "Home", id: "home" },
+  { text: "Home", id: "home" },
   { text: "About", id: "about" },
-  { text: "Speakers", id: "speakers" },
+  // { text: "Speakers", id: "speakers" },
 
-  { text: "Agenda", id: "agenda" },
+  // { text: "Agenda", id: "agenda" },
   { text: "Sponsors", id: "sponsors" },
-  // { text: "Contact Us", id: "contactUS" },
-  { text: "Become A Sponsor", id: "beAsponsor" },
+  { text: "Contact Us", id: "contactUS" },
+  // { text: "Become A Sponsor", id: "beAsponsor" },
 ];
 // console.log("navItems", navItems);
 
@@ -49,7 +50,9 @@ function DrawerAppBar({ theme }) {
 
   const beASponsor = {
     borderRadius: "5rem",
-    background: navbar ? theme.colors.text.bSponsorPrimary : theme.colors.bg.navWhite,
+    background: navbar
+      ? theme.colors.text.bSponsorPrimary
+      : theme.colors.bg.navWhite,
     transition: "all .3s ease-in-out",
     "&:hover": {
       background: navbar
@@ -114,16 +117,17 @@ function DrawerAppBar({ theme }) {
           >
             <Toolbar className="baseline navMinHeight">
               <Box sx={{ width: { xs: "60%", md: "40%" } }}>
-                <img
-                  alt="icss Logo"
-                  src={icssLogo}
-                  className="nav-logo"
-                  style={{
-                    width: "22rem",
-                    height: "auto",
-
-                  }}
-                />
+                <a href="/">
+                  <img
+                    alt="Viva Logo"
+                    src={navbar ? icssLogoDark : icssLogo}
+                    className="nav-logo"
+                    style={{
+                      width: "22rem",
+                      height: "auto",
+                    }}
+                  />
+                </a>
               </Box>
               <Box
                 sx={{

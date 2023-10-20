@@ -50,7 +50,7 @@ const About = ({ theme }) => {
                     mmb: theme.fontSize.aboutHeadingText,
                   },
                   display: "inline",
-                  color: theme.colors.text.purple,
+                  color: theme.colors.text.lightGreen,
                 }}
               >
                 Microsoft{" "}
@@ -76,8 +76,8 @@ const About = ({ theme }) => {
                 },
               }}
             >
-              India Cloud Security Summit , 2022 is a one day virtual event organized
-        by the{" "}
+              India Cloud Security Summit , 2022 is a one day virtual event
+              organized by the{" "}
               <a
                 href={aboutData.communityLink}
                 target="_blank"
@@ -91,7 +91,7 @@ const About = ({ theme }) => {
                       mmb: theme.fontSize.aboutSubheadingText,
                     },
                     display: "inline",
-                    color: theme.colors.text.purple,
+                    color: theme.colors.text.lightGreen,
                     textDecoration: "underline",
                   }}
                 >
@@ -99,11 +99,13 @@ const About = ({ theme }) => {
                   group{" "}
                 </Typography>
               </a>
-              . This year&#39;s event will focus on the Cloud Security topics related
-        to Microsoft 365, Microsoft Azure, Microsoft Power Platform, Dynamics
-        365, and Endpoint security. This is the second Cloud Security event from
-        the Microsoft Community in India followed by the first one we had on
-        2021. You can find all the details about the previous event in this{" "}
+              . This year&#39;s event will focus on the Cloud Security topics
+              related to Microsoft 365, Microsoft Azure, Microsoft Power
+              Platform, Dynamics 365, and Endpoint security. This is the second
+              Cloud Security event from the Microsoft Community in India
+              followed by the first one we had on 2021.
+              {/* You can find all the
+              details about the previous event in this{" "}
               <a
                 href="https://www.indiacloudsecuritysummit.com/aug2021"
                 target="_blank"
@@ -124,12 +126,15 @@ const About = ({ theme }) => {
                   2022
                 </Typography>
               </a>
-              . The ultimate goal of this one-day virtual event is to cover all the
-        aspects of the Microsoft Cloud Security services. In this one-day
-        virtual event we will deep-dive into Microsoft&#39;s Cloud Security
-        stack with hands-on sessions and labs, delivered to you by industry
-        experts, Microsoft MVP&#39;s and RD&#39;s, Microsoft employees and
-        community leaders from different parts of the world.
+              . */}
+              <br />
+              <br />
+              The ultimate goal of this one-day virtual event is to cover all
+              the aspects of the Microsoft Cloud Security services. In this
+              one-day virtual event we will deep-dive into Microsoft&#39;s Cloud
+              Security stack with hands-on sessions and labs, delivered to you
+              by industry experts, Microsoft MVP&#39;s and RD&#39;s, Microsoft
+              employees and community leaders from different parts of the world.
             </Typography>
           </Box>
         </Box>
@@ -142,12 +147,12 @@ const About = ({ theme }) => {
       >
         <Button
           className="aboutButton"
-          href={aboutData.eventRegLink}
+          href={"https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"}
           target="_blank"
           sx={{
             color: "#fff",
             fontSize: theme.fontSize.eventButton,
-            backgroundColor: theme.colors.text.purple,
+            background: theme.colors.bg.lightButton,
             scale: {
               xs: "0.7",
               mmb: "1.2",
@@ -157,7 +162,7 @@ const About = ({ theme }) => {
           aria-label="Register Now"
           variant="contained"
         >
-          Register Now
+          Watch Now
         </Button>
       </Box>
     </>

@@ -64,7 +64,7 @@ function App() {
               </ThemeProvider>
             }
           />
-          {/* <Route
+          <Route
             path="/oct2022"
             element={
               <ThemeProvider theme={theme}>
@@ -72,6 +72,7 @@ function App() {
               </ThemeProvider>
             }
           />
+          {/*
           <Route
             path="/aug2021"
             element={

@@ -63,9 +63,9 @@ function CountdownTimer() {
             placeItems: "center",
           }}
         >
-          <Typography className="countDownEventDate">12th Aug 2023</Typography>
+          <Typography className="countDownEventDate">29th Oct 2022</Typography>
           <Typography className="eventText pt-2">
-            Microsoft Viva Days
+            India Cloud Security Summit
           </Typography>
         </Grid>
       </Grid>
@@ -96,10 +96,10 @@ function CountdownTimer() {
                 }}
               >
                 <Typography className="countDownEventDate">
-                  12th Aug 2023
+                  29th Oct 2022
                 </Typography>
                 <Typography className="eventText pt-2">
-                  Microsoft Viva Days
+                  India Cloud Security Summit
                 </Typography>
               </Grid>
               <Grid
@@ -115,7 +115,7 @@ function CountdownTimer() {
                 <Countdown
                   renderer={renderer}
                   className="countdownNumbers"
-                  date={"Aug 12 2023"}
+                  date={"Oct 29 2022"}
                 />
               </Grid>
             </Grid>

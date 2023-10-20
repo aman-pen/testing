@@ -45,9 +45,9 @@ const Home = ({ theme }) => {
             }}
           >
             {/* {homeData.eventName} */}
-            Microsoft Viva
+            INDIA CLOUD
             <br />
-            Days 2023
+            SECURITY SUMMIT
           </Typography>
         </Box>
 
@@ -88,6 +88,7 @@ const Home = ({ theme }) => {
               className="eventDate text-uppercase text-center"
               sx={{
                 color: theme.colors.text.primary,
+                fontWeight: "600",
                 fontSize: {
                   xs: "2rem",
                   mmb: "3.5rem",
@@ -171,15 +172,18 @@ const Home = ({ theme }) => {
           >
             <Button
               className="eventButton"
-              href={homeData.eventRegLink}
+              href={"https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"}
               target="_blank"
               sx={{
-                color: theme.colors.text.purple,
+                color: theme.colors.text.primary,
                 fontSize: theme.fontSize.eventButton,
-                backgroundColor: "#ffffff",
+                background: theme.colors.bg.button,
                 scale: {
                   xs: "0.7",
                   mmb: "1.2",
+                },
+                ":hover": {
+                  color: theme.colors.text.primary,
                 },
               }}
               variant="contained"
@@ -187,7 +191,7 @@ const Home = ({ theme }) => {
               aria-label="Register Now"
             >
               {/* {homeData.eventButton} */}
-              Register Now
+              Watch Now
             </Button>
           </Box>
         </Box>

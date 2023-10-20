@@ -35,7 +35,7 @@ const Social = ({ theme }) => {
             className="d-flex flex-row justify-content-center align-items-center social-wrapper"
           >
             <TwitterIcon className="socialText" />
-            <Typography className="socialText">#MsVivaDays2023</Typography>
+            <Typography className="socialText">#ICSS2022</Typography>
           </a>
         </Box>
         <Box sx={socialPadding}>
@@ -47,7 +47,7 @@ const Social = ({ theme }) => {
             className="d-flex flex-row justify-content-center align-items-center social-wrapper"
           >
             <TwitterIcon className="socialText" />
-            <Typography className="socialText">#MsVivaDays</Typography>
+            <Typography className="socialText">#indiacloudsec</Typography>
           </a>
         </Box>
       </Box>

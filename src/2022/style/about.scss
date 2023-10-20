@@ -1,5 +1,5 @@
 $aboutHedaingColor: #636363;
-$borderBottomColor: #431282;
+$borderBottomColor: #4faaaa;
 
 .oct-2022 {
   .about {
@@ -28,6 +28,7 @@ $borderBottomColor: #431282;
     font-family: "Roboto";
     padding-inline: max(3%, 40px);
     color:white;
+
     &:hover {
       background-color: #303080 !important;
     }

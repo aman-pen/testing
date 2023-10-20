@@ -1,5 +1,5 @@
-$base-color-black: #fff;
-$base-digit-purple: #7c2ae8;
+$base-color-black: #135858;
+$base-digit-purple: #135858;
 .oct-2022 {
   .countdownTimer {
     padding-bottom: 5rem;
@@ -8,13 +8,7 @@ $base-digit-purple: #7c2ae8;
   .timerCard {
     padding: 2rem;
     border-radius: 3.5rem !important;
-    background: linear-gradient(
-      128deg,
-      rgba(92, 19, 190, 0.81) 0%,
-      rgba(92, 19, 190, 0.45) 23.9%,
-      rgba(212, 195, 255, 0.81) 46.51%,
-      rgba(255, 255, 255, 0.86) 92.07%
-    );
+    background: linear-gradient(90deg,#4f9292,1%,#fff);
     box-shadow: 0 4px 10px 2px rgb(0 0 0 / 10%) !important;
   }
 
