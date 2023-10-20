@@ -64,14 +64,14 @@ function App() {
               </ThemeProvider>
             }
           />
-          <Route
+          {/* <Route
             path="/oct2022"
             element={
               <ThemeProvider theme={theme}>
                 <Parent2022 theme={theme2022} />
               </ThemeProvider>
             }
-          />
+          /> */}
           {/*
           <Route
             path="/aug2021"
