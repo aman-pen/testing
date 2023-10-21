@@ -2,7 +2,7 @@ import React from "react";
 import "../style/home.scss";
 import "../style/global.scss";
 import calendarIcon from "../assets/logoIcons/calendarIcon.svg";
-import ScrollTop from "./subComponents/ScrollToTop";
+import ScrollTop from "../../2023/components/subComponents/ScrollToTop";
 import homeData from "../store/oct2022/home.json";
 import { Box, Button, Typography, Icon } from "@mui/material";
 import aboutData from "../store/oct2022/about.json";

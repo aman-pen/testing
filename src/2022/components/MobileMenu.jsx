@@ -48,7 +48,7 @@ export default function FullScreenDialog({
     >
       <Box
         className="mobileNavParent"
-        sx={{ background: theme.colors.text.purple }}
+        sx={{ background: theme.colors.text.lightGreen }}
       >
         <AppBar sx={{ position: "static" }} color="transparent" elevation={0}>
           <Toolbar sx={{ height: "10rem" }}>

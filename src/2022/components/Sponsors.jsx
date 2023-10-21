@@ -214,16 +214,17 @@ const Sponsors = ({ theme }) => {
                         d-flex justify-content-center align-items-center"
                       >
                         <a
-                          href={data.promoPartnerUrl}
+                          href={data.partnerUrl}
                           target="_blank"
                           rel="noreferrer"
                           className="sponsor-border"
                         >
                           <img
                             className="sponsor-img"
-                            alt={data.promoPartnerAltText}
-                            src={data.promoPartnerImage}
+                            alt={data.partnerAltText}
+                            src={data.partnerImage}
                             width="280px"
+                            height="150px"
                             loading="lazy"
                           />
                         </a>

@@ -1,16 +1,9 @@
 [
     {
-        "promoPartnerId": 1,
-        "promoPartnerImage": "./2023/assets/logos/PentharaLogo.svg",
-        "promoPartnerAltText": "Penthara Technologies",
-        "promoPartnerName": "Penthara Technologies",
-        "promoPartnerUrl": "https://www.penthara.com"
-    },
-    {
-        "promoPartnerId": 2,
-        "promoPartnerImage": "./2023/assets/logos/VivaExplorersHeader-Image.png",
-        "promoPartnerAltText": "Viva Explorers",
-        "promoPartnerName": "Viva Explorers",
-        "promoPartnerUrl": "https://www.vivaexplorers.com/"
+        "partnerId": "1",
+        "partnerImage": "./2022/images/logos/avanade.jpg",
+        "partnerAltText": "avanade",
+        "partnerName": "avanade",
+        "partnerUrl": "https://www.avanade.com/en"
     }
 ]

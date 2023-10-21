@@ -24,6 +24,14 @@
     "speakerLinkedIn": "https://www.linkedin.com/in/jasjitchopra/"
   },
   {
+    "OrganizerID": "4",
+    "OrganizerImage": "./2022/images/speakers/Mythili.jpg",
+    "OrganizerName": "Mythili Ranganathan",
+    "isVolunteer": "false",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/mythiliranganathan/"
+  },
+  {
     "OrganizerID": "7",
     "OrganizerImage": "./2023/assets/organizers/ShrustiShah.jpg",
     "OrganizerName": "Shrushti Shah",
@@ -48,11 +56,11 @@
     "speakerLinkedIn": "https://www.linkedin.com/in/rohitspatil/"
   },
   {
-    "OrganizerID": "6",
-    "OrganizerImage": "./2023/assets/organizers/TusharKumar.jpg",
-    "OrganizerName": "Tushar Kumar",
-    "isVolunteer": "false",
-    "isCoOrganizer": "true",
-    "speakerLinkedIn": "https://www.linkedin.com/in/followtushar/"
+    "OrganizerID": "8",
+    "OrganizerImage": "./2022/images/speakers/Kamlesh.jpg",
+    "OrganizerName": "Kamlesh Rao ",
+    "isVolunteer": "true",
+    "isCoOrganizer": "false",
+    "speakerLinkedIn": "https://www.linkedin.com/in/kamleshrao/"
   }
 ]
