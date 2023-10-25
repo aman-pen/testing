@@ -4,6 +4,7 @@ import "../style/global.scss";
 import "../style/speaker.scss";
 import Card from "./subComponents/Card";
 import AboutSpeaker from "./subComponents/AboutSpeaker";
+import { Filter } from "@mui/icons-material";
 
 const Speakers = ({ theme, speakerData, sessionData }) => {
   console.log("speakerData in Speakers.jsx", speakerData);
@@ -16,6 +17,7 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
       setSessionDetails(sessionData[0].sessions);
     }
   }, [sessionData]);
+
   console.log("sponsor data", sessionData);
   console.log("sponsor data details", sessionDetails);
   return (
@@ -44,6 +46,7 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
                     setShowData(true);
                   }, 1000);
                   return !showData ? (
+                    
                     <Stack key={idx} spacing={1}>
                       {/* For variant="text", adjust the height via font-size */}
                       <Skeleton
@@ -75,11 +78,11 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
                         theme={theme}
                         image={speakerData.profilePicture}
                         name={speakerData.fullName}
-                        designation={speakerData.questionAnswers[0].answer}
-                        company={speakerData.questionAnswers[4].answer}
-                        linkedIn={speakerData.questionAnswers[5].answer}
-                        twitter={speakerData.questionAnswers[2].answer}
-                        mvp={speakerData.questionAnswers[6].answer == "Yes"}
+                        designation={speakerData.questionAnswers[1].answer}
+                        company={speakerData.questionAnswers[0].answer}
+                        linkedIn={speakerData.links[0]?.url}
+                        twitter={speakerData.links[0]?.url}
+                        mvp={speakerData.categories[1].answer == "Yes"}
                       />
                     </a>
                   );

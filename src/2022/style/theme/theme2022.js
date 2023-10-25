@@ -36,7 +36,7 @@ export const theme2022 = {
       footer: "#217DDE",
       eventDate: "rgba(0, 0, 0, 0.24)",
       agendaUnSelected: "rgba(204,233,255,0.75)!important",
-      agendaSelected: "linear-gradient(180deg, #431282 0%, #5c5acc 100%)",
+      agendaSelected: "linear-gradient(180deg, #35B2B2 0%, #117878 72.58%, #005151 100%)",
       mobile: "#2e767f"
     },
     navbar: {

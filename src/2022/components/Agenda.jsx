@@ -22,6 +22,9 @@ import keynoteSpeaker from "../assets/speakers/hammad_rajjoub.jpg";
 import Tushar from "../assets/organizers/TusharKumar.jpg";
 import Shrusti from "../assets/speakers/ShrustiShah.jpg";
 import VivaExplorer from "../assets/logoIcons/VivaExplorersHeader-Image.png";
+import { Col } from "reactstrap";
+
+import trackdetails from "../store/oct2022/tracksdetails.json";
 
 const staticContributorData = [
   {
@@ -397,6 +400,30 @@ const staticContributorData = [
 ];
 
 const Agenda = ({ theme, speaker, session }) => {
+
+
+  // changes started from here
+
+
+  const trackfunc = (trackValue) => {
+    setTrack(trackValue);
+    var temptrack = trackDetailsState;
+    let i = 0;
+    for (i = 0; i < temptrack.length; i++) {
+      if (temptrack[i].trackId == trackValue) {
+        temptrack[i].isActive = true;
+      } else {
+        temptrack[i].isActive = false;
+      }
+    }
+    setTrackDetails(temptrack);
+  };
+  const [track, setTrack] = useState("1");
+
+  const [trackDetailsState, setTrackDetails] = useState(trackdetails);
+
+
+  // ended here
   console.log("AgendaSpeaker", speaker);
   console.log("AgendaSession", session);
 
@@ -449,10 +476,59 @@ const Agenda = ({ theme, speaker, session }) => {
                     }}
                     className="agenda-track-subtext"
                   >
-                    12th Aug 2023
+                    29th October 2022
                   </Typography>
                 </Box>
               </Box>
+              {/* start here */}
+              <div className="container-fluid dec2022-track-list">
+                <div className="row dec2022-track-row">
+                  {trackDetailsState.map((data) => {
+                    console.log(data)
+                    return (
+                      <Col
+                        xs="4"
+                        className="dec2022-tracks"
+                        key={data.trackId}
+                        onClick={() => trackfunc(data.trackId)}
+                      >
+                        {data.isActive === true ? (
+                          <div
+                            className="dec2022-track-data"
+                            style={{
+                              backgroundColor: "#4faaaa",
+                              color: "#fff",
+                            }}
+                          >
+                            <div className="dec2022-track-head">
+                              {data.trackTitle}
+                            </div>
+                            <span className="dec2022-track-span">
+                              {data.room}
+                            </span>
+                            <span className="dec2022-track-date">
+                              {data.trackDate}
+                            </span>
+                          </div>
+                        ) : (
+                          <div className="dec2022-track-data">
+                            <div className="dec2022-track-head">
+                              {data.trackTitle}
+                            </div>
+                            <span className="dec2022-track-span">
+                              {data.room}
+                            </span>
+                            <span className="dec2022-track-date">
+                              {data.trackDate}
+                            </span>
+                          </div>
+                        )}
+                      </Col>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* end here */}
               <Box className="agenda-sessions-container">
                 <Paper elevation={3} className="session-tile">
                   <Box className="session-data-container">

@@ -1,6 +1,47 @@
 $agenda-subtitle: #524f4f !important;
 $borderBottomColor: #421282;
 .oct-2022 {
+
+  .dec2022-track-list {
+    padding-top: 4rem;
+    .dec2022-tracks {
+      color: #fff;
+      padding: 0 2rem 2rem;
+
+      .dec2022-track-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background-color: rgba(132, 164, 255, 0.2);
+        color: rgba(54, 51, 51, 1);
+        padding: 1rem 0rem 1.4rem 0rem;
+        cursor: pointer;
+      }
+      .dec2022-track-head {
+        font-size: 36px;
+        letter-spacing: 2px;
+        display: block;
+        .dec2021-track-head-span {
+          font-size: 1.2rem;
+        }
+      }
+      .dec2022-track-date {
+        display: block;
+        height: 26px;
+      }
+      .dec2022-track-span {
+        display: block;
+        font-size: 15px;
+      }
+    }
+  }
+
+
+
+
+
+
   .agenda-sessions-container {
     display: flex;
     flex-direction: column;
@@ -92,6 +133,12 @@ $borderBottomColor: #421282;
     margin: auto;
   }
 }
+
+.dec2022-track-row {
+  display: flex;
+  justify-content: center !important;
+}
+
 
 @media screen and (max-width: 1280px) {
   .oct-2022 {

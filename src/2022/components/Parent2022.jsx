@@ -8,16 +8,16 @@ import Footer from "./Footer";
 import CountdownTimer from "./subComponents/CountDownTimer";
 import Social from "./Social";
 import Eventinfostripe from "./Eventinfostripe";
-import KeynoteSpeaker from "./KeynoteSpeaker";
+// import KeynoteSpeaker from "./KeynoteSpeaker";
 import Speakers from "./Speakers";
 import Agenda from "./Agenda";
-import Prizes from "./Prizes";
-import Donate from "./Donate";
+// import Prizes from "./Prizes";
+// import Donate from "./Donate";
 import ErrorBoundary from "./ErrorBoundary";
 import PreviousEvents from "./PreviousEvents";
 import { Box } from "@mui/material";
 import "../style/global.scss";
-import { speakerApi, sessionApi, scheduleGridApi } from "../services/EventData";
+import { speakerApi, sessionApi } from "../services/EventData";
 
 const Parent2022 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
@@ -31,7 +31,6 @@ const Parent2022 = ({ theme }) => {
     speakerApi().then((data) => {
       setSpeakerData(data);
       console.log("Speaker Data", data);
-
     });
     sessionApi().then((data) => {
       setSessionData(data);
@@ -50,27 +49,26 @@ const Parent2022 = ({ theme }) => {
       <CountdownTimer />
       <Box id="about" />
       <About theme={theme} />
-      {/* <Eventinfostripe theme={theme} /> */}
+      <Eventinfostripe theme={theme} />
       <ErrorBoundary>
         <Box id="speakers" />
         {/* <KeynoteSpeaker theme={theme} /> */}
-        {/* <Speakers
+        <Speakers
           theme={theme}
           speakerData={speakerData}
           sessionData={sessionData}
-        /> */}
+        />
       </ErrorBoundary>
       <Box id="agenda" />
       {/* <ErrorBoundary> */}
-        {/* {speakerData.length > 0 &&
-          sessionData.length > 0 && (
-            <Agenda
-              theme={theme}
-              speaker={speakerData}
-              session={sessionData[0].sessions}
-            />
-          )} */}
-      {/* </ErrorBoundary> */} 
+      {/* {speakerData.length > 0 && sessionData.length > 0 && (
+        <Agenda
+          theme={theme}
+          speaker={speakerData}
+          session={sessionData[0].sessions}
+        />
+      )} */}
+      {/* </ErrorBoundary> */}
       <Box id="prizes" />
       {/* <Prizes theme={theme} /> */}
       {/* <Box id="donate" />

@@ -16,6 +16,7 @@ import mvpLogo from "../../assets/logoIcons/mvp.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import moment from "moment";
+import { DatasetSharp } from "@mui/icons-material";
 
 const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
   console.log("SpeakerModalData from Card", data);
@@ -33,13 +34,31 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
   useEffect(() => {
     let currentUserDetails = {};
     if (JSON.stringify(data) != "{}") {
-      Object.assign(currentUserDetails, {
-        Bio: data.questionAnswers[1].answer,
-        Twitter: data.questionAnswers[2].answer,
-        LinkedIn: data.questionAnswers[5].answer,
-        isMVP: data.questionAnswers[6].answer,
-        isMsEmployee: data.questionAnswers[7].answer,
-      });
+      for(let a = 0; a < Object.keys(data.links).length; a++)
+      {
+        if (data.links[a].title == "LinkedIn") {
+          Object.assign(currentUserDetails, {
+            Bio: data.bio,
+            LinkedIn: data.links[a]?.url,
+            isMVP: data.categories[1].answer,
+            isMsEmployee: data.categories[0].answer,
+          });
+        } else if (data.links[a].title == "Twitter"){
+          Object.assign(currentUserDetails, {
+            Bio: data.bio,
+            Twitter: data.links[0]?.url,
+            isMVP: data.categories[1].answer,
+            isMsEmployee: data.categories[0].answer,
+          });
+        }
+      }
+      // Object.assign(currentUserDetails, {
+      //   Bio: data.bio,
+      //   Twitter: data.links[0]?.url,
+      //   LinkedIn: data.links[0]?.url,
+      //   isMVP: data.categories[1].answer,
+      //   isMsEmployee: data.categories[0].answer,
+      // });
     }
     let currentSpeakerSessionDetails = [];
     if (JSON.stringify(data) != "{}") {
@@ -143,7 +162,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                       <Box
                         className="session-list d-flex justify-content-center align-items-center"
                         sx={{
-                          backgroundColor: "#431282",
+                          backgroundColor: "#4faaaa",
                           marginRight: "1rem",
                         }}
                       >
@@ -188,7 +207,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                       <Typography
                         className="session-name"
                         sx={{
-                          color: "#431282",
+                          color: "#4faaaa",
                         }}
                       >
                         {isKeynote ? "Keynote" : session.name}
