@@ -26,7 +26,98 @@ import { Col } from "reactstrap";
 
 import trackdetails from "../store/oct2022/tracksdetails.json";
 
-const staticContributorData = [
+export const staticContributorData = [
+  // {
+  //   id: "1",
+  //   firstName: "Tushar",
+  //   lastName: "Kumar",
+  //   fullName: "Tushar Kumar",
+  //   bio: "Azure Certified Cloud Solutions Architect, Awarded Most valuable professional by Alibaba Cloud, former MSP, Community lead and Microsoft recognized Azure Community Hero. With rich experience in planning, designing, implementing and maintaining secure applications in Azure Cloud from x86 and non-x86 environments. A recognized leader in migrating and creating enterprise architecture for the transition from on-premise to cloud using Azure services. I hold advanced specialization in Identity, Security, and Compliance and working extensively in the large transformation of enterprises and Banking Finance and Insurance institutions towards public cloud and responsible for designing scalable architecture with respective industry standards and security compliance Framework.",
+  //   tagLine: "-",
+  //   profilePicture: Tushar,
+  //   sessions: [
+  //     {
+  //       id: "8c13b06b-d43a-4615-abe3-0ac805939849",
+  //       name: "Quiz & Closing Note",
+  //     },
+  //   ],
+  //   isTopSpeaker: false,
+  //   links: [],
+  //   questionAnswers: [
+  //     {
+  //       id: 50129,
+  //       question: "Company Name",
+  //       questionType: "Short_Text",
+  //       answer: "Codec",
+  //       sort: 0,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 50130,
+  //       question: "LinkedIn ID",
+  //       questionType: "Short_Text",
+  //       answer: "https://www.linkedin.com/in/followtushar",
+  //       sort: 1,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 50131,
+  //       question: "Twitter ID",
+  //       questionType: "Short_Text",
+  //       answer: "https://twitter.com/followtushar",
+  //       sort: 2,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 50132,
+  //       question: "Instagram ID",
+  //       questionType: "Short_Text",
+  //       answer: "-",
+  //       sort: 3,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 50133,
+  //       question: "WhatsApp no.",
+  //       questionType: "Short_Text",
+  //       answer: "-",
+  //       sort: 4,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "Designation",
+  //       questionType: "Short_Text",
+  //       answer: "Cloud Security Lead",
+  //       sort: 5,
+  //       answerExtra: null,
+  //     },
+  //   ],
+  //   categories: [
+  //     {
+  //       id: 50127,
+  //       name: "Can we mention your company name on the poster?",
+  //       categoryItems: [
+  //         {
+  //           id: 171335,
+  //           name: "Yes",
+  //         },
+  //       ],
+  //       sort: 0,
+  //     },
+  //     {
+  //       id: 50128,
+  //       name: "Are you currently a Microsoft MVP?",
+  //       categoryItems: [
+  //         {
+  //           id: 171337,
+  //           name: "No",
+  //         },
+  //       ],
+  //       sort: 1,
+  //     },
+  //   ],
+  // },
   {
     id: "1",
     firstName: "Tushar",
@@ -42,10 +133,21 @@ const staticContributorData = [
       },
     ],
     isTopSpeaker: false,
-    links: [],
+    links: [
+      {
+        title: "Twitter",
+        url: "https://twitter.com/followtushar",
+        linkType: "Twitter",
+      },
+      {
+        title: "LinkedIn",
+        url: "https://www.linkedin.com/in/followtushar",
+        linkType: "LinkedIn",
+      },
+    ],
     questionAnswers: [
       {
-        id: 50129,
+        id: 43958,
         question: "Company Name",
         questionType: "Short_Text",
         answer: "Codec",
@@ -53,39 +155,7 @@ const staticContributorData = [
         answerExtra: null,
       },
       {
-        id: 50130,
-        question: "LinkedIn ID",
-        questionType: "Short_Text",
-        answer: "https://www.linkedin.com/in/followtushar",
-        sort: 1,
-        answerExtra: null,
-      },
-      {
-        id: 50131,
-        question: "Twitter ID",
-        questionType: "Short_Text",
-        answer: "https://twitter.com/followtushar",
-        sort: 2,
-        answerExtra: null,
-      },
-      {
-        id: 50132,
-        question: "Instagram ID",
-        questionType: "Short_Text",
-        answer: "-",
-        sort: 3,
-        answerExtra: null,
-      },
-      {
-        id: 50133,
-        question: "WhatsApp no.",
-        questionType: "Short_Text",
-        answer: "-",
-        sort: 4,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
+        id: 43959,
         question: "Designation",
         questionType: "Short_Text",
         answer: "Cloud Security Lead",
@@ -95,22 +165,17 @@ const staticContributorData = [
     ],
     categories: [
       {
-        id: 50127,
-        name: "Can we mention your company name on the poster?",
-        categoryItems: [
-          {
-            id: 171335,
-            name: "Yes",
-          },
-        ],
+        id: 43956,
+        name: "Are you a Microsoft Employee?",
+        categoryItems: [{}],
         sort: 0,
       },
       {
-        id: 50128,
-        name: "Are you currently a Microsoft MVP?",
+        id: 43957,
+        name: "Are you  a Microsoft MVP?",
         categoryItems: [
           {
-            id: 171337,
+            id: 144060,
             name: "No",
           },
         ],
@@ -118,37 +183,137 @@ const staticContributorData = [
       },
     ],
   },
+  // {
+  //   id: "2",
+  //   firstName: "Shrushti",
+  //   lastName: "Shah",
+  //   fullName: "Shrushti Shah",
+  //   bio: "Speaker, Working professional with 4.5+ years of experience as SharePoint Framework Developer, Building usecases in Microsoft Teams and Microsoft Power Platform based on the latest features by Microsoft.",
+  //   tagLine: "-",
+  //   profilePicture: Shrusti,
+  //   sessions: [
+  //     {
+  //       id: "501279",
+  //       name: "Empower employees using viva engage and keep every employee in the flow of work using connection",
+  //     },
+  //     { id: "b9ea879f-d988-410c-901f-6ebdf6d99597", name: "Quiz" },
+  //   ],
+  //   isTopSpeaker: false,
+  //   links: [
+  //     {
+  //       linkType: "Twitter",
+  //       title: "Twitter",
+  //       url: null,
+  //     },
+  //     {
+  //       linkType: "LinkedIn",
+  //       title: "LinkedIn",
+  //       url: "https://www.linkedin.com/in/shrushti-shah-bba565162/",
+  //     },
+  //   ],
+  //   questionAnswers: [
+  //     {
+  //       id: 52209,
+  //       question: "Designation",
+  //       questionType: "Short_Text",
+  //       answer: "Cloud & Microsoft 365 Consultant",
+  //       sort: 1,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "Bio",
+  //       questionType: "Long_Text",
+  //       answer:
+  //         "Speaker, Working professional with 4.5+ years of experience as SharePoint Framework Developer, Building usecases in Microsoft Teams and Microsoft Power Platform based on the latest features by Microsoft.",
+  //       sort: 2,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "Twitter",
+  //       questionType: "Long_Text",
+  //       answer: null,
+  //       sort: 3,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "Custom TagLine",
+  //       questionType: "Long_Text",
+  //       answer: "Cloud & Microsoft 365 Consultant",
+  //       sort: 4,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "Company",
+  //       questionType: "Long_Text",
+  //       answer: "Rapid Circle",
+  //       sort: 5,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "LinkedIn",
+  //       questionType: "Long_Text",
+  //       answer: "https://www.linkedin.com/in/shrushti-shah-bba565162/",
+  //       sort: 6,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "isMVP",
+  //       questionType: "Long_Text",
+  //       answer: "Yes",
+  //       sort: 7,
+  //       answerExtra: null,
+  //     },
+  //     {
+  //       id: 52209,
+  //       question: "isMicrosoftEmployee",
+  //       questionType: "Long_Text",
+  //       answer: "No",
+  //       sort: 7,
+  //       answerExtra: null,
+  //     },
+  //   ],
+  //   categories: [],
+  // },
   {
-    id: "2",
+    id: "501279",
     firstName: "Shrushti",
     lastName: "Shah",
     fullName: "Shrushti Shah",
     bio: "Speaker, Working professional with 4.5+ years of experience as SharePoint Framework Developer, Building usecases in Microsoft Teams and Microsoft Power Platform based on the latest features by Microsoft.",
-    tagLine: "-",
+    tagLine: "Cloud & Microsoft 365 Consultant",
     profilePicture: Shrusti,
-    sessions: [
-      {
-        id: "501279",
-        name: "Empower employees using viva engage and keep every employee in the flow of work using connection",
-      },
-      { id: "b9ea879f-d988-410c-901f-6ebdf6d99597", name: "Quiz" },
-    ],
+    title: "Quiz",
+    sessions: [{ id: "501279", name: "Quiz" }],
     isTopSpeaker: false,
     links: [
       {
-        linkType: "Twitter",
         title: "Twitter",
         url: null,
+        linkType: "Twitter",
       },
       {
-        linkType: "LinkedIn",
         title: "LinkedIn",
         url: "https://www.linkedin.com/in/shrushti-shah-bba565162/",
+        linkType: "LinkedIn",
       },
     ],
     questionAnswers: [
       {
-        id: 52209,
+        id: 43958,
+        question: "Company Name",
+        questionType: "Short_Text",
+        answer: "Rapid Circle",
+        sort: 26,
+        answerExtra: null,
+      },
+      {
+        id: 43959,
         question: "Designation",
         questionType: "Short_Text",
         answer: "Cloud & Microsoft 365 Consultant",
@@ -156,75 +321,53 @@ const staticContributorData = [
         answerExtra: null,
       },
       {
-        id: 52209,
-        question: "Bio",
+        id: 44032,
+        question: "About",
         questionType: "Long_Text",
         answer:
           "Speaker, Working professional with 4.5+ years of experience as SharePoint Framework Developer, Building usecases in Microsoft Teams and Microsoft Power Platform based on the latest features by Microsoft.",
-        sort: 2,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "Twitter",
-        questionType: "Long_Text",
-        answer: null,
-        sort: 3,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "Custom TagLine",
-        questionType: "Long_Text",
-        answer: "Cloud & Microsoft 365 Consultant",
-        sort: 4,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "Company",
-        questionType: "Long_Text",
-        answer: "Rapid Circle",
-        sort: 5,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "LinkedIn",
-        questionType: "Long_Text",
-        answer: "https://www.linkedin.com/in/shrushti-shah-bba565162/",
-        sort: 6,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "isMVP",
-        questionType: "Long_Text",
-        answer: "Yes",
-        sort: 7,
-        answerExtra: null,
-      },
-      {
-        id: 52209,
-        question: "isMicrosoftEmployee",
-        questionType: "Long_Text",
-        answer: "No",
-        sort: 7,
+        sort: 28,
         answerExtra: null,
       },
     ],
-    categories: [],
+    categories: [
+      {
+        id: 43956,
+        name: "Are you a Microsoft Employee?",
+        categoryItems: [
+          {
+            id: 144060,
+            name: "No",
+          },
+        ],
+        sort: 24,
+      },
+      {
+        id: 43957,
+        name: "Are you a Microsoft MVP?",
+        categoryItems: [
+          {
+            id: 144059,
+            name: "Yes",
+          },
+        ],
+        sort: 25,
+      },
+    ],
+    startsAt: "2022-10-29T10:30:00",
+    endsAt: "2022-10-29T10:45:00",
   },
   {
-    id: "3",
+    id: "7617ea5b-3616-4cd7-899d-68c9a498b3ec",
     firstName: "Vignesh",
     lastName: "Ganesan",
     fullName: "Vignesh Ganesan",
     bio: "Vignesh Ganesan is an Enterprise Cloud Architect with 10+ years of experience . He specializes in technical presales, designing and implementing SaaS, IaaS and PaaS environments including on-premises and hybrid infrastructures. In addition to that he also has a sound knowledge in designing and implementing security solutions for customers using native cloud controls along with 3rd party tools to build a secure Cloud environment. During his stint with Microsoft , he designed technical solutions that can meet his customer’s needs and helped in driving their Digital Transformation so that they can get the best out of their Office 365, EMS & Azure implementation . He has worked on many products/technologies so far such as Active Directory , Windows Server , SharePoint & Exchange Server , Microsoft 365 , Azure AD ,Azure IaaS & PaaS , Slack , Google Workspace&Enterprise Mobility & Security etc .He has spoken on plethora of user groups , conferences & events across the globe and you can find all his work on his blog site i.e. Vignesh’s SharePoint Thought’s and his YouTube Channel . Over the years he has written almost 400 technical articles and has involved himself in many technical community related engagements for which he was awarded the prestigious C Sharp corner MVP award three times in a row for all his contributions . He always has a thirst to constantly learn something new which is what made him to complete almost 18+ Microsoft certifications.",
     tagLine: "-",
     profilePicture: welcomeSpeaker,
+    title: "Welcome Note",
     sessions: [
-      { id: "7617ea5b-3616-4cd7-899d-68c9a498b3ec", name: "Welcome Note" },
+      { id: "7617ea5b-3616-4cd7-899d-68c9a498b3ec", title: "Welcome Note" },
     ],
     isTopSpeaker: false,
     links: [
@@ -310,6 +453,8 @@ const staticContributorData = [
       },
     ],
     categories: [],
+    startsAt: "2022-10-29T08:35:00",
+    endsAt: "2022-10-29T09:00:00",
   },
   {
     id: "4",
@@ -401,29 +546,41 @@ const staticContributorData = [
 
 const Agenda = ({ theme, speaker, session }) => {
 
-
   // changes started from here
-
 
   const trackfunc = (trackValue) => {
     setTrack(trackValue);
     var temptrack = trackDetailsState;
+    var tempselectedRoomId;
     let i = 0;
     for (i = 0; i < temptrack.length; i++) {
       if (temptrack[i].trackId == trackValue) {
         temptrack[i].isActive = true;
+        tempselectedRoomId = temptrack[i].roomId;
       } else {
         temptrack[i].isActive = false;
       }
     }
     setTrackDetails(temptrack);
+    setselecteditem(tempselectedRoomId);
   };
   const [track, setTrack] = useState("1");
 
   const [trackDetailsState, setTrackDetails] = useState(trackdetails);
 
+  const [selectedRoomId, setselecteditem] = useState(27836);
 
   // ended here
+
+
+  //loop to push hard coded data into the session and delete the pre-existing hard coded data from the session array
+  for (let i = 0; i < staticContributorData.length; i++) {
+    if (session.indexOf(staticContributorData[i]) > -1) {
+      session.splice(session.indexOf(staticContributorData[i]), 1);
+    }
+    session.push(staticContributorData[i]);
+  }
+
   console.log("AgendaSpeaker", speaker);
   console.log("AgendaSession", session);
 
@@ -484,7 +641,7 @@ const Agenda = ({ theme, speaker, session }) => {
               <div className="container-fluid dec2022-track-list">
                 <div className="row dec2022-track-row">
                   {trackDetailsState.map((data) => {
-                    console.log(data)
+                    console.log(data);
                     return (
                       <Col
                         xs="4"
@@ -542,7 +699,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             marginLeft: "1rem",
                           }}
                         >
-                          {" 09:30 AM - 09:40 AM IST"}
+                          {" 08:45 AM - 09:00 AM IST"}
                         </Typography>
                       </Box>
                       <Box className="session-title-container">
@@ -560,7 +717,7 @@ const Agenda = ({ theme, speaker, session }) => {
                       </Box>
                     </Box>
                     <Box className="speaker-container">
-                      <Box className="session-speakers">
+                      {/* <Box className="session-speakers">
                         <IconButton
                           sx={{ minWidth: "6rem" }}
                           href={about.track}
@@ -620,7 +777,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             </svg>
                           </SvgIcon>
                         </IconButton>
-                      </Box>
+                      </Box> */}
                       <Box className="session-speakers">
                         <a
                           onClick={() => {
@@ -774,13 +931,47 @@ const Agenda = ({ theme, speaker, session }) => {
                     </Box>
                   </Box>
                 </Paper> */}
+
+                {/* Data starts here */}
                 {session
                   ?.filter(
                     (data) =>
-                      data.id != "7617ea5b-3616-4cd7-899d-68c9a498b3ec" &&
-                      data.id != "b9ea879f-d988-410c-901f-6ebdf6d99597"
+                      // data.id != "7617ea5b-3616-4cd7-899d-68c9a498b3ec" &&
+                      // data.id != "b9ea879f-d988-410c-901f-6ebdf6d99597"
+                      data.roomId === selectedRoomId
                   )
                   .map((trackData, idx) => {
+                    let timezone = moment(
+                      trackData.startsAt.split("T")[1].split(":")[0],
+                      "hh"
+                    )
+                      .format("LT")
+                      .split(" ")[1];
+                    let timezone2 = moment(
+                      trackData.endsAt.split("T")[1].split(":")[0],
+                      "hh"
+                    )
+                      .format("LT")
+                      .split(" ")[1];
+
+                    // let starttime = trackData.startsAt.split("T")[1].split(":")[0]+":"+trackData.startsAt.split("T")[1].split(":")[1];
+                    let starttime =
+                      moment(
+                        trackData.startsAt.split("T")[1].split(":")[0],
+                        "hh"
+                      )
+                        .format("LT")
+                        .split(":")[0] +
+                      ":" +
+                      trackData.startsAt.split("T")[1].split(":")[1];
+                    let endtime =
+                      moment(trackData.endsAt.split("T")[1].split(":")[0], "hh")
+                        .format("LT")
+                        .split(":")[0] +
+                      ":" +
+                      trackData.endsAt.split("T")[1].split(":")[1];
+
+                    // let endtime = trackData.endsAt.split("T")[1].split(":")[0]+":"+trackData.endsAt.split("T")[1].split(":")[1];
                     return (
                       <Paper key={idx} elevation={3} className="session-tile">
                         {console.log("trackDT", trackData.id)}
@@ -802,7 +993,7 @@ const Agenda = ({ theme, speaker, session }) => {
                                   marginLeft: "1rem",
                                 }}
                               >
-                                {moment
+                                {/* {moment
                                   .utc(trackData.startsAt, null)
                                   .tz("Asia/Kolkata")
                                   .format("hh:mm A")}{" "}
@@ -811,7 +1002,10 @@ const Agenda = ({ theme, speaker, session }) => {
                                   .utc(trackData.endsAt, null)
                                   .tz("Asia/Kolkata")
                                   .format("hh:mm A")}{" "}
-                                {"IST"}
+                                {"IST"} */}
+                                {starttime + " " + timezone + " "}-
+                                {" " + endtime + " " + timezone2 + " "}
+                                {" IST"}
                               </Typography>
                             </Box>
                             <Box className="session-title-container">
@@ -831,7 +1025,7 @@ const Agenda = ({ theme, speaker, session }) => {
 
                           {trackData.id != "520924" ? (
                             <Box className="speaker-container">
-                              <Box className="session-speakers">
+                              {/* <Box className="session-speakers">
                                 <IconButton
                                   sx={{ minWidth: "6rem" }}
                                   href={about.track}
@@ -894,7 +1088,7 @@ const Agenda = ({ theme, speaker, session }) => {
                                     </svg>
                                   </SvgIcon>
                                 </IconButton>
-                              </Box>
+                              </Box> */}
                               {trackData.id ==
                                 "3838e772-52d5-4631-9490-54276814f3ee" && (
                                 <Box className="session-speakers">
@@ -949,7 +1143,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             </Box>
                           ) : (
                             <Box className="speaker-container">
-                              <Box className="session-speakers">
+                              {/* <Box className="session-speakers">
                                 <IconButton
                                   sx={{ minWidth: "6rem" }}
                                   href={about.track}
@@ -1012,7 +1206,7 @@ const Agenda = ({ theme, speaker, session }) => {
                                     </svg>
                                   </SvgIcon>
                                 </IconButton>
-                              </Box>
+                              </Box> */}
                               <Box className="session-speakers">
                                 <Button target="_blank">
                                   <img
@@ -1034,6 +1228,8 @@ const Agenda = ({ theme, speaker, session }) => {
                       </Paper>
                     );
                   })}
+                {/* Data ends here */}
+
                 <Paper elevation={3} className="session-tile">
                   <Box className="session-data-container">
                     <Box className="responsive-wrapper pointer">
@@ -1046,7 +1242,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             marginLeft: "1rem",
                           }}
                         >
-                          {" 07:15 PM - 07:30 PM IST"}
+                          {" 10:30 PM - 10:45 PM IST"}
                         </Typography>
                       </Box>
                       <Box className="session-title-container">
@@ -1151,7 +1347,7 @@ const Agenda = ({ theme, speaker, session }) => {
                           Tushar Kumar
                         </Typography>
                       </Box> */}
-                      <Box className="session-speakers">
+                      {/* <Box className="session-speakers">
                         <IconButton
                           sx={{ minWidth: "6rem" }}
                           href={about.track}
@@ -1211,7 +1407,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             </svg>
                           </SvgIcon>
                         </IconButton>
-                      </Box>
+                      </Box> */}
                       <Box className="session-speakers">
                         <a
                           onClick={() => {

@@ -15,7 +15,7 @@ import mslogo from "../../assets/logoIcons/ms.png";
 import mvpLogo from "../../assets/logoIcons/mvp.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import moment from "moment";
+import moment from "moment-timezone";
 import { DatasetSharp } from "@mui/icons-material";
 
 const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
@@ -40,15 +40,15 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
           Object.assign(currentUserDetails, {
             Bio: data.bio,
             LinkedIn: data.links[a]?.url,
-            isMVP: data.categories[1].answer,
-            isMsEmployee: data.categories[0].answer,
+            isMVP: data.categories[1]?.answer,
+            isMsEmployee: data.categories[0]?.answer,
           });
         } else if (data.links[a].title == "Twitter"){
           Object.assign(currentUserDetails, {
             Bio: data.bio,
             Twitter: data.links[0]?.url,
-            isMVP: data.categories[1].answer,
-            isMsEmployee: data.categories[0].answer,
+            isMVP: data.categories[1]?.answer,
+            isMsEmployee: data.categories[0]?.answer,
           });
         }
       }
@@ -56,8 +56,8 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
       //   Bio: data.bio,
       //   Twitter: data.links[0]?.url,
       //   LinkedIn: data.links[0]?.url,
-      //   isMVP: data.categories[1].answer,
-      //   isMsEmployee: data.categories[0].answer,
+      //   isMVP: data.categories[1]?.answer,
+      //   isMsEmployee: data.categories[0]?.answer,
       // });
     }
     let currentSpeakerSessionDetails = [];
@@ -80,6 +80,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
           id: sessions[i].id,
           startsAt: sessions[i].startsAt,
           endsAt: sessions[i].endsAt,
+          title: sessions[i].title
         });
         allSessionDetails.push(dummyObject);
       }
@@ -150,6 +151,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
               additionalSpeakerSessionDetails.map((data, idx) => {
                 console.log("dts", data);
                 let session = sessionDetails.find((ses) => ses.id == data.id);
+                console.log("session", session);
 
                 return (
                   <Box
@@ -208,9 +210,10 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                         className="session-name"
                         sx={{
                           color: "#4faaaa",
+                          fontSize: "1.6rem"
                         }}
                       >
-                        {isKeynote ? "Keynote" : session.name}
+                        {isKeynote ? "Keynote" : session.title}
                       </Typography>
                     </Box>
                   </Box>

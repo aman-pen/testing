@@ -15,7 +15,7 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
   useEffect(() => {
     if (sessionData.length > 0) {
       setSessionDetails(sessionData[0].sessions);
-    }
+    };
   }, [sessionData]);
 
   console.log("sponsor data", sessionData);

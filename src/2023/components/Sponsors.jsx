@@ -21,18 +21,18 @@ const Sponsors = ({ theme }) => {
           </Box>
           <Box
             sx={{
-              // paddingBlock: "3rem",
+              paddingBlock: "3rem",
               // uncomment above when tier sponsor added
             }}
           >
-            {/* <Typography
+            <Typography
               className="text-center sponsorSubHeading diamond"
               sx={{
                 fontSize: { xs: "3rem", mmb: theme.fontSize.sponsorTags },
               }}
             >
               Diamond
-            </Typography> */}
+            </Typography>
             <Box>
               <Box
                 sx={{
@@ -89,18 +89,18 @@ const Sponsors = ({ theme }) => {
           </Box>
           <Box
             sx={{
-              // paddingBlock: "3rem",
+              paddingBlock: "3rem",
               // uncomment above when tier sponsor added
             }}
           >
-            {/* <Typography
+            <Typography
               className="text-center sponsorSubHeading platinum"
               sx={{
                 fontSize: { xs: "3rem", mmb: theme.fontSize.sponsorTags },
               }}
             >
               Platinum
-            </Typography> */}
+            </Typography>
             <Box>
               <Box
                 sx={{
@@ -155,7 +155,7 @@ const Sponsors = ({ theme }) => {
               </Box>
             </Box>
           </Box>
-          {/* <Box sx={{
+          <Box sx={{
               paddingBlock: "3rem",
             }}>
             <Typography
@@ -166,7 +166,7 @@ const Sponsors = ({ theme }) => {
             >
               Gold
             </Typography>
-          </Box> */}
+          </Box>
         </Box>
         <Box className="sectionMaxWidth" sx={{ paddingBlockEnd: "3rem" }}>
           {/* <Box className="sponsorsHeadingBox">
