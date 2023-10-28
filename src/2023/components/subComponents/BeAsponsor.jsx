@@ -13,7 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import "../../style/sponsorModal.scss";
 import "../../style/global.scss";
 import homeData from "../../store/dec2023/home.json";
-
+import sponsorPDF from "../../assets/ICSS2023.pdf";
 const BeAsponsor = ({ theme, open, handleModalClose }) => {
   return (
     <div>
@@ -245,7 +245,8 @@ const BeAsponsor = ({ theme, open, handleModalClose }) => {
                       </li>
                       <div className="Sponsor-divider" />
                       <li>
-                        5% off on India Cloud Security Summit 2024 Sponsorship Fee.
+                        5% off on India Cloud Security Summit 2024 Sponsorship
+                        Fee.
                       </li>
                     </ul>
                   </div>
@@ -285,6 +286,20 @@ const BeAsponsor = ({ theme, open, handleModalClose }) => {
               </div>
             </Grid>
           </Grid>
+          <Box sx={{ width: "100%", display: "flex", justifyContent: "center", textAlign: "center" }}>
+            <a href={sponsorPDF} target="_blank">
+              <Typography
+                sx={{
+                  color: "#41C1C1",
+                  marginInline: "auto 0",
+                  display: "inline",
+                }}
+                variant="h4"
+              >
+                Download the Sponsorship Boucher
+              </Typography>
+            </a>
+          </Box>
           <Box
             className="d-flex flex-column align-items-center"
             sx={{
@@ -325,9 +340,9 @@ const BeAsponsor = ({ theme, open, handleModalClose }) => {
                 paddingInline: {
                   xs: "2.5rem !important",
                 },
-                "&:hover":{
-                  color: theme.colors.text.primary
-                }
+                "&:hover": {
+                  color: theme.colors.text.primary,
+                },
               }}
               variant="contained"
               aria-label="Become A Sponsor Now"
