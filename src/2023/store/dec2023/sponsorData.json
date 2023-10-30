@@ -14,5 +14,13 @@
     "sponsorName": "Microsoft",
     "sponsorUrl": "https://www.microsoft.com",
     "sponsorStatus": "platinum"
+  },
+  {
+    "sponsorId": 3,
+    "sponsorImage": "./2023/assets/logos/ossisto.png",
+    "sponsorAltText": "Ossisto365",
+    "sponsorName": "Ossisto365",
+    "sponsorUrl": "https://ossisto365.com/",
+    "sponsorStatus": "diamond"
   }
 ]
