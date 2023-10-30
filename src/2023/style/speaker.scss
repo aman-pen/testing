@@ -1,7 +1,7 @@
 $speakersHeadingColor: #636363;
 $borderBottomColor: #4faaaa;
 $white: #fff;
-$titlebg: #4faaaa;
+$titlebg: linear-gradient(325.49deg, #4faaaa 12.41%, #064949 100.31%);
 $subGrey: #606060;
 
 .dec-2023 {
@@ -37,7 +37,7 @@ $subGrey: #606060;
     &-title {
       &-container {
         min-height: 7rem;
-        background-color: $titlebg;
+        background: $titlebg;
       }
       // padding: 2rem;
       color: $white;
