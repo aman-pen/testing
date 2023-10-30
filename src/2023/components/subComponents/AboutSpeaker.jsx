@@ -36,9 +36,11 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
       Object.assign(currentUserDetails, {
         Bio: data.questionAnswers[1].answer,
         Twitter: data.questionAnswers[2].answer,
-        LinkedIn: data.questionAnswers[5].answer,
-        isMVP: data.questionAnswers[6].answer,
-        isMsEmployee: data.questionAnswers[7].answer,
+        LinkedIn: data.questionAnswers[3].answer,
+        isMVP: data.categories
+        [0].answer,
+        isMsEmployee: data.categories
+        [1].answer,
       });
     }
     let currentSpeakerSessionDetails = [];
@@ -53,7 +55,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
       }
     }
     let allSessionDetails = [];
-    if (JSON.stringify(sessions) != "{}") {
+    if (JSON.stringify(sessions) != "{}" && sessions!=null) {
       for (let i = 0; i < Object.keys(sessions).length; i++) {
         let dummyObject = {};
         Object.assign(dummyObject, {

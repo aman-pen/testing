@@ -22,6 +22,7 @@ import { speakerApi, sessionApi, scheduleGridApi } from "../services/EventData";
 const Parent2023 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
   const [sessionData, setSessionData] = useState([]);
+  const [KeynoteSpeakerData, setKeyNoteSpeakerData] = useState();
 
   useEffect(() => {
     document.title = "ICSS 2023";
@@ -31,7 +32,9 @@ const Parent2023 = ({ theme }) => {
     speakerApi().then((data) => {
       setSpeakerData(data);
       console.log("Speaker Data", data);
-
+      let keyNote = data.filter((dt) => dt.isTopSpeaker == true);
+      console.log("keyNote", keyNote);
+      setKeyNoteSpeakerData(keyNote[0]);
     });
     sessionApi().then((data) => {
       setSessionData(data);
@@ -53,7 +56,9 @@ const Parent2023 = ({ theme }) => {
       <Eventinfostripe theme={theme} />
       <ErrorBoundary>
         <Box id="speakers" />
-        {/* <KeynoteSpeaker theme={theme} /> */}
+        {(KeynoteSpeakerData != null && KeynoteSpeakerData != undefined) ? (
+          <KeynoteSpeaker sessionData={sessionData} keyNote={KeynoteSpeakerData} theme={theme} />
+        ):""}
         {/* <Speakers
           theme={theme}
           speakerData={speakerData}
@@ -62,7 +67,7 @@ const Parent2023 = ({ theme }) => {
       </ErrorBoundary>
       <Box id="agenda" />
       {/* <ErrorBoundary> */}
-        {/* {speakerData.length > 0 &&
+      {/* {speakerData.length > 0 &&
           sessionData.length > 0 && (
             <Agenda
               theme={theme}
@@ -70,7 +75,7 @@ const Parent2023 = ({ theme }) => {
               session={sessionData[0].sessions}
             />
           )} */}
-      {/* </ErrorBoundary> */} 
+      {/* </ErrorBoundary> */}
       <Box id="prizes" />
       {/* <Prizes theme={theme} /> */}
       {/* <Box id="donate" />

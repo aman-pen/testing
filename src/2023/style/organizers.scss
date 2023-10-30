@@ -25,5 +25,8 @@ $borderBottomColor: #4faaaa;
   .organizersCard {
     padding-inline: 4rem;
     row-gap: 5rem;
+    column-gap: 10rem;
+    max-width: 120rem;
+    margin-inline: auto;
   }
 }

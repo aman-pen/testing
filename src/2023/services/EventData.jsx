@@ -1,7 +1,7 @@
 export const speakerApi = async () => {
   try {
     const response = await fetch(
-      "https://sessionize.com/api/v2/bheuir6t/view/Speakers"
+      "https://sessionize.com/api/v2/ca6moh2z/view/Speakers"
     );
     const data = await response.json();
     console.log("speakerData API Return", data);
@@ -13,7 +13,7 @@ export const speakerApi = async () => {
 export const scheduleGridApi = async () => {
   try {
     const response = await fetch(
-      "https://sessionize.com/api/v2/bheuir6t/view/GridSmart"
+      "https://sessionize.com/api/v2/ca6moh2z/view/GridSmart"
     );
     const data = await response.json();
     console.log("Schedule Grid API Return", data);
@@ -25,7 +25,7 @@ export const scheduleGridApi = async () => {
 export const sessionApi = async () => {
   try {
     const response = await fetch(
-      "https://sessionize.com/api/v2/bheuir6t/view/Sessions"
+      "https://sessionize.com/api/v2/ca6moh2z/view/Sessions"
     );
     const data = await response.json();
     console.log("Sessions API Return", data);
