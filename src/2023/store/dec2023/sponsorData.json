@@ -22,5 +22,13 @@
     "sponsorName": "Ossisto365",
     "sponsorUrl": "https://ossisto365.com/",
     "sponsorStatus": "diamond"
+  },
+  {
+    "sponsorId": 4,
+    "sponsorImage": "./2023/assets/logos/Rencore.png",
+    "sponsorAltText": "Rencore",
+    "sponsorName": "Rencore",
+    "sponsorUrl": "https://rencore.com/en/",
+    "sponsorStatus": "diamond"
   }
 ]
