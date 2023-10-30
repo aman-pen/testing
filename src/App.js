@@ -71,9 +71,8 @@ function App() {
                 <Parent2022 theme={theme2022} />
               </ThemeProvider>
             }
-          />
-          {/*
-          <Route
+          />         
+          {/* <Route
             path="/aug2021"
             element={
               <ThemeProvider theme={theme}>

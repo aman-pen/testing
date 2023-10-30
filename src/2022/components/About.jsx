@@ -154,8 +154,11 @@ const About = ({ theme }) => {
             fontSize: theme.fontSize.eventButton,
             background: theme.colors.bg.lightButton,
             scale: {
+              xl: "1.5",
               xs: "0.7",
-              mmb: "1.2",
+              cd: "1",
+              sm: "1",
+              mmb: "1",
             },
           }}
           alt="Register Now"

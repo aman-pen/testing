@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Typography,
   Box,
@@ -25,6 +25,7 @@ import VivaExplorer from "../assets/logoIcons/VivaExplorersHeader-Image.png";
 import { Col } from "reactstrap";
 
 import trackdetails from "../store/oct2022/tracksdetails.json";
+import { screen } from "@testing-library/react";
 
 export const staticContributorData = [
   // {
@@ -544,6 +545,8 @@ export const staticContributorData = [
   },
 ];
 
+
+
 const Agenda = ({ theme, speaker, session }) => {
 
   // changes started from here
@@ -569,6 +572,8 @@ const Agenda = ({ theme, speaker, session }) => {
   const [trackDetailsState, setTrackDetails] = useState(trackdetails);
 
   const [selectedRoomId, setselecteditem] = useState(27836);
+
+  
 
   // ended here
 
@@ -651,9 +656,10 @@ const Agenda = ({ theme, speaker, session }) => {
                       >
                         {data.isActive === true ? (
                           <div
-                            className="dec2022-track-data"
+                            className="dec2022-track-data"                 
                             style={{
-                              backgroundColor: "#4faaaa",
+                              // backgroundColor: "#4faaaa",
+                              background: "linear-gradient(180deg, #35B2B2 0%, #117878 72.58%, #005151 100%)",
                               color: "#fff",
                             }}
                           >

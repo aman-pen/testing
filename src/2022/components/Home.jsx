@@ -172,15 +172,20 @@ const Home = ({ theme }) => {
           >
             <Button
               className="eventButton"
-              href={"https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"}
+              href={
+                "https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"
+              }
               target="_blank"
               sx={{
                 color: theme.colors.text.primary,
                 fontSize: theme.fontSize.eventButton,
                 background: theme.colors.bg.button,
                 scale: {
+                  xl: "1.5",
                   xs: "0.7",
-                  mmb: "1.2",
+                  cd: "1",
+                  sm: "1",
+                  mmb: "1",
                 },
                 ":hover": {
                   color: theme.colors.text.primary,

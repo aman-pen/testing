@@ -116,22 +116,22 @@ function DrawerAppBar({ theme }) {
             }}
           >
             <Toolbar className="baseline navMinHeight">
-              <Box sx={{ width: { xs: "60%", md: "40%" } }}>
+              <Box sx={{ width: { xs: "60%", md: "60%" } }}>
                 <a href="/">
                   <img
                     alt="Viva Logo"
                     src={navbar ? icssLogoDark : icssLogo}
                     className="nav-logo"
-                    style={{
-                      width: "22rem",
-                      height: "auto",
-                    }}
+                    // style={{
+                      // width: "22rem",
+                      // height: "auto",
+                    // }}
                   />
                 </a>
               </Box>
               <Box
                 sx={{
-                  width: { xs: "40%", md: "60%" },
+                  width: { xs: "40%", md: "40%" },
                 }}
               >
                 <List

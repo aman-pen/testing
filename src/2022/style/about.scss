@@ -34,3 +34,11 @@ $borderBottomColor: #4faaaa;
     }
   }
 }
+
+@media screen and (max-width: 768){
+  .oct-2022{
+    .aboutButton{
+      scale: 1.2;
+    }
+  }
+}

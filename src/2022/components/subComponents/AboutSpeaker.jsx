@@ -150,6 +150,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
               additionalSpeakerSessionDetails.length > 0 &&
               additionalSpeakerSessionDetails.map((data, idx) => {
                 console.log("dts", data);
+                console.log("sessionDetails", sessionDetails);
                 let session = sessionDetails.find((ses) => ses.id == data.id);
                 console.log("session", session);
 
