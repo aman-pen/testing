@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import icssLogo from "../assets/icssLogo.png";
+import icssLogoDark from "../assets/icssLogoDark.png";
 import MobileMenu from "./MobileMenu";
 import {
   AppBar,
@@ -100,11 +101,12 @@ function DrawerAppBar({ theme }) {
               <Box sx={{ width: { xs: "60%", md: "40%" } }}>
                 <img
                   alt="viva Logo"
-                  src={icssLogo}
-                  style={{
-                    height: "auto",
-                    width: "22rem",
-                  }}
+                  src={navbar ? icssLogoDark : icssLogo}
+                  className="nav-logo"
+                  // style={{
+                  //   width: "22rem",
+                  //   height: "auto",
+                  // }}
                 />
               </Box>
               <Box

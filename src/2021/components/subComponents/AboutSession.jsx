@@ -15,8 +15,11 @@ import "../../style/sponsorModal.scss";
 import "../../style/modalSpeaker.scss";
 import "../../style/agenda.scss";
 import "../../style/sessionModal.scss";
+import speakersdata from "../../store/aug2021/speakers.json";
 
-const AboutSession = ({ theme, open, close, data, sessionSpeaker }) => {
+const AboutSession = ({ theme, open, close, sessiondata, sessionSpeaker }) => {
+  console.log("sessiondata", sessiondata);
+  console.log("sessionspeaker", speakersdata);
   const handleSessionModalClose = () => {
     close(false);
   };
@@ -34,7 +37,7 @@ const AboutSession = ({ theme, open, close, data, sessionSpeaker }) => {
       >
         <Box className="d-flex scroll-dialog-head align-items-center">
           <DialogTitle className="scroll-dialog-title text-uppercase text-start">
-            {data.sessionTime}
+            {sessiondata.sessionTime}
           </DialogTitle>
           <IconButton
             sx={{
@@ -54,11 +57,11 @@ const AboutSession = ({ theme, open, close, data, sessionSpeaker }) => {
               }}
               className="scroll-dialog-content-box-title"
             >
-              {data.sessionTitle}
+              {sessiondata.sessionTitle}
             </Typography>
 
             <Typography className="scroll-dialog-content-box-text text-justify">
-              {data.sessionDescription}
+              {sessiondata.sessionDescription}
             </Typography>
             <Divider
               variant="middle"
@@ -69,11 +72,12 @@ const AboutSession = ({ theme, open, close, data, sessionSpeaker }) => {
               }}
             />
             <Box className="speaker-container aboutSpeaker-container">
-              {sessionSpeaker?.map((spkr, idx) => {
-                return (
-                  <Box key={idx} className="session-speakers">
-                    <Avatar
-                      src={spkr.speakerImage}
+              {/* {sessionSpeaker?.map((spkr, idx) => { */}
+                {/* return ( */}
+                  <Box  className="session-speakers-parent">
+                    {/* <Avatar
+                      // src={sessionSpeaker.speakerImage}
+                      src={speakersdata?.filter((s) => s.speakerTitle == sessiondata.sessionTitle)}
                       sx={{
                         width: 80,
                         height: 80,
@@ -90,11 +94,144 @@ const AboutSession = ({ theme, open, close, data, sessionSpeaker }) => {
                         },
                       }}
                     >
-                      {spkr.speakerName}
-                    </Typography>
+                      {sessionSpeaker.speakerName}
+                    </Typography> */}
+
+                    {sessiondata.speaker1Id != null ? (
+                      <Box  className="session-speakers">
+                        {/* <a
+                          onClick={() => {
+                            setSpeakerModal(true);
+                            setSpeakerModalData(
+                              speakersdata.filter(
+                                (s) => s.speakerId == trackData.speaker1Id
+                              )[0]
+                            );
+                          }}
+                        > */}
+                          <Avatar
+                            className="pointer"
+                            src={
+                              speakersdata.filter(
+                                (s) => s.speakerId == sessiondata.speaker1Id
+                              )[0].speakerImage
+                            }
+                            sx={{
+                              width: 80,
+                              height: 80,
+                              marginBottom: "1rem",
+                            }}
+                          />
+                        {/* </a> */}
+                        <Typography
+                          className="text-center speaker-name"
+                          sx={{
+                            color: theme.colors.text.bodyGrey,
+                            fontSize: {
+                              xs: "1.5rem",
+                              mmb: theme.fontSize.footerSubTxt,
+                            },
+                          }}
+                        >
+                          {
+                            speakersdata.filter(
+                              (s) => s.speakerId == sessiondata.speaker1Id
+                            )[0].speakerName
+                          }
+                        </Typography>
+                      </Box>
+                    ) : null}
+                    {sessiondata.speaker2Id != null ? (
+                      <Box  className="session-speakers">
+                        {/* <a
+                          onClick={() => {
+                            setSpeakerModal(true);
+                            setSpeakerModalData(
+                              speakersdata.filter(
+                                (s) => s.speakerId == trackData.speaker1Id
+                              )[0]
+                            );
+                          }}
+                        > */}
+                          <Avatar
+                            className="pointer"
+                            src={
+                              speakersdata.filter(
+                                (s) => s.speakerId == sessiondata.speaker2Id
+                              )[0].speakerImage
+                            }
+                            sx={{
+                              width: 80,
+                              height: 80,
+                              marginBottom: "1rem",
+                            }}
+                          />
+                        {/* </a> */}
+                        <Typography
+                          className="text-center speaker-name"
+                          sx={{
+                            color: theme.colors.text.bodyGrey,
+                            fontSize: {
+                              xs: "1.5rem",
+                              mmb: theme.fontSize.footerSubTxt,
+                            },
+                          }}
+                        >
+                          {
+                            speakersdata.filter(
+                              (s) => s.speakerId == sessiondata.speaker2Id
+                            )[0].speakerName
+                          }
+                        </Typography>
+                      </Box>
+                    ) : null}
+                    {sessiondata.speaker3Id != null ? (
+                      <Box  className="session-speakers">
+                        {/* <a
+                          onClick={() => {
+                            setSpeakerModal(true);
+                            setSpeakerModalData(
+                              speakersdata.filter(
+                                (s) => s.speakerId == trackData.speaker1Id
+                              )[0]
+                            );
+                          }}
+                        > */}
+                          <Avatar
+                            className="pointer"
+                            src={
+                              speakersdata.filter(
+                                (s) => s.speakerId == sessiondata.speaker3Id
+                              )[0].speakerImage
+                            }
+                            sx={{
+                              width: 80,
+                              height: 80,
+                              marginBottom: "1rem",
+                            }}
+                          />
+                        {/* </a> */}
+                        <Typography
+                          className="text-center speaker-name"
+                          sx={{
+                            color: theme.colors.text.bodyGrey,
+                            fontSize: {
+                              xs: "1.5rem",
+                              mmb: theme.fontSize.footerSubTxt,
+                            },
+                          }}
+                        >
+                          {
+                            speakersdata.filter(
+                              (s) => s.speakerId == sessiondata.speaker3Id
+                            )[0].speakerName
+                          }
+                        </Typography>
+                      </Box>
+                    ) : null}
                   </Box>
-                );
-              })}
+                {/* ); */}
+              {/* })} */}
             </Box>
           </Box>
         </DialogContent>

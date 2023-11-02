@@ -94,7 +94,7 @@ const About = ({ theme }) => {
         <Button
           className="aboutButton"
           // href={aboutData.eventRegLink}
-          href="#sessions-recordings"
+          href="https://www.youtube.com/playlist?list=PLhLCvUkszoFohvLy7iLiZK6uKGASNs4En"
           // target="_blank"
           sx={{
             color: theme.colors.text.primary,
@@ -103,7 +103,7 @@ const About = ({ theme }) => {
               xs: "1",
               mmb: "1.2",
             },
-            backgroundColor: "#421282",
+            backgroundColor: "#00a1f1",
           }}
           alt="Watch Now"
           aria-label="Watch Now"

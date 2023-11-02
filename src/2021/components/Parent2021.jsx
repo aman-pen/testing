@@ -8,6 +8,11 @@ import CountdownTimer from "./subComponents/CountDownTimer";
 import Speakers from "./Speakers";
 import Agenda from "./Agenda";
 import ErrorBoundary from "./ErrorBoundary";
+import Organizers from "./Organizers";
+import Keynote from "./Keynote";
+import Support from "./Support";
+
+
 import { Box } from "@mui/material";
 import "../style/global.scss";
 
@@ -28,10 +33,16 @@ const Parent2021 = ({ theme }) => {
       </ErrorBoundary>
       <ErrorBoundary>
         <Box id="speakers" />
+        <Keynote theme={theme} />
+        <Box id="speakers" />
         <Speakers theme={theme} />
       </ErrorBoundary>
       <Box id="sponsors" />
       <Sponsors theme={theme} />
+      {/* <Support theme={theme} /> */}
+      <Box id="organizers">
+        <Organizers theme={theme}/>
+      </Box>
       <Box id="contactUS" />
       <Footer theme={theme} />
     </Box>

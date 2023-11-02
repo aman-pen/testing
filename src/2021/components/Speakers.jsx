@@ -29,7 +29,7 @@ const Speakers = ({ theme }) => {
 
           <Box className="d-flex justify-content-center flex-wrap keynote-box speaker-grid">
             {speakerData.length > 0 &&
-              speakerData.map((speakerData, idx) => {
+              speakerData.filter(dt=>dt.keynoteSpeaker=="false").map((speakerData, idx) => {
                 setTimeout(() => {
                   setShowData(true);
                 }, 1000);
@@ -84,7 +84,7 @@ const Speakers = ({ theme }) => {
           theme={theme}
           open={speakerModal}
           close={setSpeakerModal}
-          data={speakerModalData}
+          speakerdata={speakerModalData}
         />
       </div>
     </>

@@ -15,11 +15,19 @@ import mslogo from "../../assets/logoIcons/ms.png";
 import mvpLogo from "../../assets/logoIcons/mvp.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import sessiondata from "../../store/aug2021/sessions.json";
 
-const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
+const AboutSpeaker = ({ theme, open, sessionOpen, close, speakerdata }) => {
   const handleSpeakerModalClose = () => {
     close(false);
   };
+  const CurrentSessions = sessiondata.filter(
+    (s) =>
+      s.speaker1Id == speakerdata.speakerId ||
+      s.speaker2Id == speakerdata.speakerId ||
+      s.speaker3Id == speakerdata.speakerId
+  );
+  console.log("CurrentDataSpeaker",CurrentSessions)
   return (
     <div>
       <Dialog
@@ -34,7 +42,7 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
       >
         <Box className="d-flex scroll-dialog-head align-items-center">
           <DialogTitle className="scroll-dialog-title text-uppercase text-start">
-            {data.speakerName}
+            {speakerdata.speakerName}
           </DialogTitle>
           <IconButton
             sx={{
@@ -49,8 +57,8 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
         <DialogContent dividers={false} className="scroll-dialog-content">
           <Box className="speaker-modal-img-container">
             <img
-              src={data.speakerImage}
-              alt={data.speakerName}
+              src={speakerdata.speakerImage}
+              alt={speakerdata.speakerName}
               loading="lazy"
             />
           </Box>
@@ -65,7 +73,7 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
             </Typography>
 
             <Typography className="scroll-dialog-content-box-text text-justify">
-              {data.speakerInformation}
+              {speakerdata.speakerInformation}
             </Typography>
             <Divider
               variant="middle"
@@ -75,11 +83,15 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
                 marginBlock: "2rem",
               }}
             />
-            {data.speakerSessions?.length > 0 &&
-              data.speakerSessions.map((data, idx) => {
-                return (
+            {CurrentSessions?.length > 0 &&
+              CurrentSessions?.map((speakerdata, idx) => {
+                console.log("currSess",speakerdata)
+                if((speakerdata.sessionTitle== "Event Opening" || speakerdata.sessionTitle==   "Welcome Speech and Keynote") && idx >0){
+                  return;
+                }
+                 return ( 
                   <Box
-                    key={idx}
+                    
                     sx={{
                       paddingInline: "2rem",
                     }}
@@ -118,8 +130,9 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
                               fontSize: "1.6rem",
                             }}
                           >
-                            {data.sessionTime}
-                            {"IST"}
+                            {speakerdata.sessionTime}
+
+                            {" IST"}
                           </Typography>
                         </Box>
                       </Box>
@@ -131,12 +144,12 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
                           color: "#0d2958",
                         }}
                       >
-                        {data.sessionTitle}
+                        {speakerdata.sessionTitle}
                       </Typography>
                     </Box>
                   </Box>
-                );
-              })}
+                 ); 
+               })} 
             <Divider
               variant="middle"
               sx={{
@@ -147,7 +160,7 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
             />
 
             <Box className="card-social session-modal-speaker">
-              {data.MVPstatus && (
+              {speakerdata.MVPstatus && (
                 <IconButton href={""} target="_blank" aria-label="MVP" disabled>
                   <img
                     src={mvpLogo}
@@ -156,7 +169,7 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
                   />
                 </IconButton>
               )}
-              {data.MicrosoftEmployee && (
+              {speakerdata.MicrosoftEmployee && (
                 <IconButton
                   href={""}
                   target="_blank"
@@ -170,18 +183,18 @@ const AboutSpeaker = ({ theme, open, sessionOpen, close, data }) => {
                   />
                 </IconButton>
               )}
-              {data.speakerLinkedIn && (
+              {speakerdata.speakerLinkedIn && (
                 <IconButton
-                  href={data.speakerLinkedIn}
+                  href={speakerdata.speakerLinkedIn}
                   aria-label="LinkedIn"
                   target="_blank"
                 >
                   <LinkedInIcon color="primary" className="card-social-icon" />
                 </IconButton>
               )}
-              {data.speakerTwitter && (
+              {speakerdata.speakerTwitter && (
                 <IconButton
-                  href={data.speakerTwitter}
+                  href={speakerdata.speakerTwitter}
                   aria-label="twitter"
                   target="_blank"
                 >

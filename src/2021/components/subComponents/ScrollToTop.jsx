@@ -29,7 +29,7 @@ const ScrollToTop = ({theme}) => {
           href="#home"
           aria-label="add"
           sx={{
-            backgroundColor: theme.colors.text.purple,
+            backgroundColor: "#00a1f1",
             color: "white",
             position: "fixed",
             bottom: "2.5rem",

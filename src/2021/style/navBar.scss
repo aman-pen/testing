@@ -1,4 +1,9 @@
 .aug-2021 {
+
+  .nav-logo {
+    width: 22rem;
+    height: auto;
+  }
   .navLayout {
     width: 100% !important;
     position: fixed !important;
@@ -25,5 +30,22 @@
   // }
   .navTextSpace {
     width: fit-content;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .aug-2021{
+    .nav-logo{
+      width: 17rem;
+      height: auto;
+    }
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .aug-2021{
+    .nav-logo{
+      width: 15rem;
+    }
   }
 }

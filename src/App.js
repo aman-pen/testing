@@ -72,14 +72,14 @@ function App() {
               </ThemeProvider>
             }
           />         
-          {/* <Route
+          <Route
             path="/aug2021"
             element={
               <ThemeProvider theme={theme}>
                 <Parent2021 theme={theme2021} />
               </ThemeProvider>
             }
-          /> */}
+          />
         </Routes>
       </BrowserRouter>
     </div>
