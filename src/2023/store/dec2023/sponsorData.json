@@ -30,5 +30,13 @@
     "sponsorName": "Rencore",
     "sponsorUrl": "https://rencore.com/en/",
     "sponsorStatus": "diamond"
+  },
+  {
+    "sponsorId": 4,
+    "sponsorImage": "./2023/assets/logos/RapidCircle.png",
+    "sponsorAltText": "Rapid Circle",
+    "sponsorName": "Rapid Circle",
+    "sponsorUrl": "https://en.rapidcircle.com/",
+    "sponsorStatus": "diamond"
   }
 ]
