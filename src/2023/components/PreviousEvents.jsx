@@ -24,7 +24,6 @@ const PreviousEvents = ({ theme }) => {
         {PrevEvents.map((data) => {
           return (
             <div className="row prevEvents-wrapper">
-              {data.eventLink == "/oct2022" ? (
                 <a href={data.eventLink} target="_blank" rel="noreferrer">
                   <Card class="prevEvents-card" elevation={10}>
                     {/* {console.log(data.eventImage)} */}
@@ -36,19 +35,7 @@ const PreviousEvents = ({ theme }) => {
                     />
                   </Card>
                 </a>
-              ) : (
-                // <a href={data.eventLink} target="_blank" rel="noreferrer">
-                  <Card class="prevEvents-card" elevation={10}>
-                    {/* {console.log(data.eventImage)} */}
-                    <img
-                      alt="Card"
-                      src={data.eventImage}
-                      className="prevEventImage"
-                      loading="lazy"
-                    />
-                  </Card>
-                // </a>
-              )}
+              
             </div>
           );
         })}

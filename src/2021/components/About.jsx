@@ -25,6 +25,10 @@ const About = ({ theme }) => {
             >
               About
             </Typography>
+            <div className="one-day-event">
+              A One Day Event Focusing On The <span> Microsoft </span> Cloud
+              Security Services
+            </div>
           </Box>
           <Box
             sx={{

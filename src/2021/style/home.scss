@@ -1,12 +1,17 @@
 $white: #fff;
 .aug-2021 {
   .homeLayout {
-    background:linear-gradient(rgba(0,150,234,.7) 100%,rgba(0,150,234,.7) 0),
+    background: linear-gradient(
+        rgba(0, 150, 234, 0.7) 100%,
+        rgba(0, 150, 234, 0.7) 0
+      ),
       url(../assets/homeBG.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
-    height: 70rem;
+    // height: 70rem;
+    min-height: 70vh;
+    // height: 70vh;
     padding-top: 10rem !important;
   }
   .eventName {
@@ -70,7 +75,7 @@ $white: #fff;
       font-weight: 500;
     }
   }
-  .field-container{
+  .field-container {
     padding-block: 1.5rem;
   }
   .sponserNumber,
@@ -91,10 +96,10 @@ $white: #fff;
   .sponserNumber {
     color: #7cbb00;
   }
-  .sessionNumber{
+  .sessionNumber {
     color: #fb0;
   }
-  .trackNumber{
-    color:#f66d10
+  .trackNumber {
+    color: #f66d10;
   }
 }
