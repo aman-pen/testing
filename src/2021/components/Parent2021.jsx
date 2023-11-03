@@ -39,7 +39,7 @@ const Parent2021 = ({ theme }) => {
       </ErrorBoundary>
       <Box id="sponsors" />
       <Sponsors theme={theme} />
-      {/* <Support theme={theme} /> */}
+      <Support theme={theme} />
       <Box id="organizers">
         <Organizers theme={theme}/>
       </Box>

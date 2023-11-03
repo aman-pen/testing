@@ -79,7 +79,7 @@ const Support = ({ theme }) => {
                           <Box className="group-name d-flex justify-content-start" sx={{width: "60%",paddingLeft:"2rem"}}>
                             <span className="text-left">{data.groupName}</span>
                           </Box>
-                          <Box className="group-arrow" sx={{width: "15%", paddingLeft:"2rem"}}>
+                          <Box className="group-arrow" sx={{width: "15%", paddingLeft:"2rem", paddingRight:"1.5rem"}}>
                             <img
                               src={arrow}
                               alt="arrow"

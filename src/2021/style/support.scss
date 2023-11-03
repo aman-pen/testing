@@ -46,6 +46,7 @@ $goldColor: #eaaf0e;
     display: flex;
     box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.25);
     border-radius: 7px;
+    margin-left: 1.5rem;
 
   }
   .support-img {
@@ -53,6 +54,8 @@ $goldColor: #eaaf0e;
     height: 8rem;
     margin-left: 2.5rem;
     border-radius: 7px;
+    padding-right: 2rem;
+    // min-width: 2rem;
   }
   .group-name{
     color: #000;
