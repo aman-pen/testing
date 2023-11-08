@@ -17,7 +17,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import PreviousEvents from "./PreviousEvents";
 import { Box } from "@mui/material";
 import "../style/global.scss";
-import { speakerApi, sessionApi, scheduleGridApi } from "../services/EventData";
+import { SpeakersAndSessionsCompleteData } from "../services/EventData";
 
 const Parent2023 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
@@ -29,20 +29,15 @@ const Parent2023 = ({ theme }) => {
   }, []);
 
   useEffect(() => {
-    speakerApi().then((data) => {
-      setSpeakerData(data);
-      console.log("Speaker Data", data);
-      let keyNote = data.filter((dt) => dt.isTopSpeaker == true);
+    SpeakersAndSessionsCompleteData().then((data) => {
+      setSpeakerData(data[0]);
+      console.log("Speaker Data", data[0]);
+      console.log("Session Data", data[1]);
+      setSessionData(data[1]);
+      let keyNote = data[0].filter((speaker) => speaker.isTopSpeaker == true);
       console.log("keyNote", keyNote);
       setKeyNoteSpeakerData(keyNote[0]);
     });
-    sessionApi().then((data) => {
-      setSessionData(data);
-      console.log("Session Data", data);
-    });
-    // scheduleGridApi().then((data) => {
-    //   setScheduleGridData(data);
-    // });
   }, []);
 
   return (
