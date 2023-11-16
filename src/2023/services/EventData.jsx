@@ -1,48 +1,3 @@
-// export const speakerApi = async () => {
-//   try {
-//     const response = await fetch(
-//       "https://sessionize.com/api/v2/ca6moh2z/view/Speakers"
-//     );
-//     const sessResponse = await fetch(
-//       "https://sessionize.com/api/v2/ca6moh2z/view/Sessions"
-//     );
-//     const data = await response.json();
-//     const sessData = await sessResponse.json();
-//     console.info("speaker API", data);
-//     let dt = data;
-//     sessData != undefined &&
-//       sessData.length > 0 &&
-//      dt.map((val, index, arr) => {
-//         val.sessions.map((valin, indexin, arrin) => {
-//           let curSessDetail = null;
-//           curSessDetail = sessData[0].sessions.find(
-//             (curr) => curr.id == valin.id
-//           );
-//           // console.info("curSessDetail", curSessDetail);
-//           let newObj = {
-//             description: curSessDetail.description,
-//             endsAt: curSessDetail.endsAt,
-//             id: curSessDetail.id,
-//             isPlenumSession: curSessDetail.isPlenumSession,
-//             isServiceSession: curSessDetail.isServiceSession,
-//             room: curSessDetail.room,
-//             roomId: curSessDetail.roomId,
-//             startsAt: curSessDetail.startsAt,
-//             status: curSessDetail.status,
-//             title: curSessDetail.title,
-//           };
-//           arrin[indexin] = {...arrin[indexin],...newObj};
-//           // valin = {...valin,...newObj};
-//           // console.info("finalDtat", valin);
-//         });
-//       });
-//     console.info("finalDtat", dt);
-//     // console.info("speaker API", data);
-//     return data;
-//   } catch (error) {
-//     console.info("Error Receiving Speaker(s) Data", error);
-//   }
-// };
 export const scheduleGridApi = async () => {
   try {
     const response = await fetch(
@@ -55,19 +10,6 @@ export const scheduleGridApi = async () => {
     console.info("Error Receiving Grid Data", error);
   }
 };
-// export const sessionApi = async () => {
-//   try {
-//     const response = await fetch(
-//       "https://sessionize.com/api/v2/ca6moh2z/view/Sessions"
-//     );
-//     const data = await response.json();
-//     console.info("Sessions API", data[0].sessions);
-//     // console.info("Sessions API", data);
-//     return data;
-//   } catch (error) {
-//     console.info("Error Receiving session(s) Data", error);
-//   }
-// };
 
 export const SpeakersAndSessionsCompleteData = async () => {
   try {
@@ -81,41 +23,8 @@ export const SpeakersAndSessionsCompleteData = async () => {
     let tempSessionsStore = await sessionResponse.json();
     const sessionApiResponseJSON = tempSessionsStore[0].sessions;
 
-    speakerApiResponseJSON.map((speaker) => {
-      speaker.sessions.map(
-        (
-          currSpeakerSessions,
-          currSpeakerSessionIndex,
-          currSpeakerSessionsArray
-        ) => {
-          const currSessionDetails = sessionApiResponseJSON.find(
-            (currSpeakerSessionDetail) =>
-              currSpeakerSessionDetail.id == currSpeakerSessions.id
-          );
-          // console.info("currSessionDetails", currSessionDetails);
-          let additionalSessionDetails = {
-            description: currSessionDetails.description,
-            endsAt: currSessionDetails.endsAt,
-            id: currSessionDetails.id,
-            isPlenumSession: currSessionDetails.isPlenumSession,
-            isServiceSession: currSessionDetails.isServiceSession,
-            room: currSessionDetails.room,
-            roomId: currSessionDetails.roomId,
-            startsAt: currSessionDetails.startsAt,
-            status: currSessionDetails.status,
-          };
-          currSpeakerSessionsArray[currSpeakerSessionIndex] = {
-            ...currSpeakerSessionsArray[currSpeakerSessionIndex],
-            ...additionalSessionDetails,
-          };
-          // currSpeakerSessions = {...currSpeakerSessions,...additionalSessionDetails};
-          // console.info("FinalDataForCurrentSpeaker", currSpeakerSessions);
-        }
-      );
-    });
-
     sessionApiResponseJSON.map((session) => {
-      session.speakers.map(
+      return session.speakers.map(
         (
           currSessionSpeakers,
           currSessionSpeakerIndex,
@@ -125,6 +34,7 @@ export const SpeakersAndSessionsCompleteData = async () => {
             (currSessionSpeakerDetail) =>
               currSessionSpeakerDetail.id == currSessionSpeakers.id
           );
+
           // console.info("currSpeakerDetails", currSpeakerDetails);
           let additionalSpeakerDetails = {
             bio: currSpeakerDetails.bio,
@@ -136,20 +46,81 @@ export const SpeakersAndSessionsCompleteData = async () => {
             profilePicture: currSpeakerDetails.profilePicture,
             questionAnswers: currSpeakerDetails.questionAnswers,
             tagLine: currSpeakerDetails.tagLine,
+            // Data To Be Custom Mapped
+            customTagLine: currSpeakerDetails.questionAnswers[0].answer,
+            linkedIn: currSpeakerDetails.questionAnswers[3].answer,
+            twitter: currSpeakerDetails.questionAnswers[2].answer,
+            companyName: currSpeakerDetails.questionAnswers[4].answer,
+            designation: currSpeakerDetails.questionAnswers[5].answer,
+            isMVP: currSpeakerDetails.categories[0].categoryItems[0].name == "Yes",
+            isMicrosoftEmployee:
+              currSpeakerDetails.categories[1].categoryItems[0].name == "Yes",
           };
-          currSessionSpeakersArray[currSessionSpeakerIndex] = {
+          return (currSessionSpeakersArray[currSessionSpeakerIndex] = {
             ...currSessionSpeakersArray[currSessionSpeakerIndex],
             ...additionalSpeakerDetails,
-          };
+          });
           // currSessionSpeakers = {...currSessionSpeakers,...additionalSpeakerDetails};
           // console.info("FinalDataForCurrentSpeaker", currSessionSpeakers);
         }
       );
     });
 
+    speakerApiResponseJSON.map(
+      (speaker, currSpeakerIndex, parentSpeakerArray) => {
+        let additionalSpeakerDetails = {
+          // Data To Be Custom Mapped
+          customTagLine: speaker.questionAnswers[0].answer,
+          companyName: speaker.questionAnswers[4].answer,
+          linkedIn: speaker.questionAnswers[3].answer,
+          twitter: speaker.questionAnswers[2].answer,
+          designation: speaker.questionAnswers[5].answer,
+          isMVP: speaker.categories[0].categoryItems[0].name == "Yes",
+          isMicrosoftEmployee:
+          speaker.categories[1].categoryItems[0].name == "Yes",
+        };
+
+        parentSpeakerArray[currSpeakerIndex] = {
+          ...parentSpeakerArray[currSpeakerIndex],
+          ...additionalSpeakerDetails,
+        };
+
+        return speaker.sessions.map(
+          (
+            currSpeakerSessions,
+            currSpeakerSessionIndex,
+            currSpeakerSessionsArray
+          ) => {
+            const currSessionDetails = sessionApiResponseJSON.find(
+              (currSpeakerSessionDetail) =>
+                currSpeakerSessionDetail.id == currSpeakerSessions.id
+            );
+            // console.info("currSessionDetails", currSessionDetails);
+            let additionalSessionDetails = {
+              description: currSessionDetails.description,
+              endsAt: currSessionDetails.endsAt,
+              id: currSessionDetails.id,
+              isPlenumSession: currSessionDetails.isPlenumSession,
+              isServiceSession: currSessionDetails.isServiceSession,
+              room: currSessionDetails.room,
+              roomId: currSessionDetails.roomId,
+              startsAt: currSessionDetails.startsAt,
+              status: currSessionDetails.status,
+            };
+
+            return (currSpeakerSessionsArray[currSpeakerSessionIndex] = {
+              ...currSpeakerSessionsArray[currSpeakerSessionIndex],
+              ...additionalSessionDetails,
+            });
+            // currSpeakerSessions = {...currSpeakerSessions,...additionalSessionDetails};
+            // console.info("FinalDataForCurrentSpeaker", currSpeakerSessions);
+          }
+        );
+      }
+    );
     console.info("Speaker API", speakerApiResponseJSON);
     console.info("Session API", sessionApiResponseJSON);
-    return [speakerApiResponseJSON,sessionApiResponseJSON];
+    return [speakerApiResponseJSON, sessionApiResponseJSON];
   } catch (error) {
     console.info("Error Receiving Speaker(s) Data", error);
   }

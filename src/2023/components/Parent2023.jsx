@@ -54,11 +54,11 @@ const Parent2023 = ({ theme }) => {
         {(KeynoteSpeakerData != null && KeynoteSpeakerData != undefined) ? (
           <KeynoteSpeaker sessionData={sessionData} keyNote={KeynoteSpeakerData} theme={theme} />
         ):""}
-        {/* <Speakers
+        <Speakers
           theme={theme}
           speakerData={speakerData}
           sessionData={sessionData}
-        /> */}
+        />
       </ErrorBoundary>
       <Box id="agenda" />
       {/* <ErrorBoundary> */}

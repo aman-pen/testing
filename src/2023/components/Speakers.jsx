@@ -6,7 +6,7 @@ import Card from "./subComponents/Card";
 import AboutSpeaker from "./subComponents/AboutSpeaker";
 
 const Speakers = ({ theme, speakerData, sessionData }) => {
-  console.log("speakerData in Speakers.jsx", speakerData);
+  console.info("speakerData in Speakers.jsx", speakerData);
   const [showData, setShowData] = useState(false);
   const [speakerModal, setSpeakerModal] = useState(false);
   const [speakerModalData, setSpeakerModalData] = useState({});
@@ -75,11 +75,12 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
                         theme={theme}
                         image={speakerData.profilePicture}
                         name={speakerData.fullName}
-                        designation={speakerData.questionAnswers[0].answer}
-                        company={speakerData.questionAnswers[4].answer}
-                        linkedIn={speakerData.questionAnswers[5].answer}
-                        twitter={speakerData.questionAnswers[2].answer}
-                        mvp={speakerData.questionAnswers[6].answer == "Yes"}
+                        designation={speakerData?.designation}
+                        company={speakerData?.companyName}
+                        linkedIn={speakerData?.linkedIn}
+                        twitter={speakerData?.twitter}
+                        mvp={speakerData?.isMVP}
+                        isMicroSoftEmployee={speakerData?.isMicrosoftEmployee}
                       />
                     </a>
                   );

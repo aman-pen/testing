@@ -18,6 +18,7 @@ const Card = ({
   linkedIn,
   twitter,
   mvp,
+  isMicroSoftEmployee
 }) => {
 
   return (
@@ -53,6 +54,15 @@ const Card = ({
                     src={mvpLogo}
                     className="card-social-img"
                     alt="microsoft-mvp"
+                  />
+                </IconButton>
+              )}
+              {isMicroSoftEmployee && (
+                <IconButton href={""} target="_blank" aria-label="MVP" disabled>
+                  <img
+                    src={mslogo}
+                    className="card-social-img"
+                    alt="microsoft"
                   />
                 </IconButton>
               )}

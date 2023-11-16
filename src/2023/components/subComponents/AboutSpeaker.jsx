@@ -18,8 +18,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import moment from "moment";
 
 const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
-  console.log("SpeakerModalData from Card", data);
-  console.log("isEmpty", sessions);
+  console.info("SpeakerModalData from Card", data);
+  // console.info("isEmpty", sessions);
   const [additionalSpeakerFields, setAdditionalSpeakerFieldsData] = useState(
     []
   );
@@ -30,47 +30,47 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
     close(false);
   };
   // console.log("kysO",Object.keys(data.sessions).length);
-  useEffect(() => {
-    let currentUserDetails = {};
-    if (JSON.stringify(data) != "{}") {
-      Object.assign(currentUserDetails, {
-        Bio: data.questionAnswers[1].answer,
-        Twitter: data.questionAnswers[2].answer,
-        LinkedIn: data.questionAnswers[3].answer,
-        isMVP: data.categories
-        [0].answer,
-        isMsEmployee: data.categories
-        [1].answer,
-      });
-    }
-    let currentSpeakerSessionDetails = [];
-    if (JSON.stringify(data) != "{}") {
-      for (let i = 0; i < Object.keys(data.sessions).length; i++) {
-        let dummyObject = {};
-        Object.assign(dummyObject, {
-          name: data.sessions[i].name,
-          id: data.sessions[i].id,
-        });
-        currentSpeakerSessionDetails.push(dummyObject);
-      }
-    }
-    let allSessionDetails = [];
-    if (JSON.stringify(sessions) != "{}" && sessions!=null) {
-      for (let i = 0; i < Object.keys(sessions).length; i++) {
-        let dummyObject = {};
-        Object.assign(dummyObject, {
-          name: sessions[i].title,
-          id: sessions[i].id,
-          startsAt: sessions[i].startsAt,
-          endsAt: sessions[i].endsAt,
-        });
-        allSessionDetails.push(dummyObject);
-      }
-    }
-    setAdditionalSpeakerFieldsData(currentUserDetails);
-    setAdditionalSpeakerSessionDetails(currentSpeakerSessionDetails);
-    setSessionDetails(allSessionDetails);
-  }, [data, sessions]);
+  // useEffect(() => {
+  //   // let currentUserDetails = {};
+  //   // if (JSON.stringify(data) != "{}") {
+  //   //   Object.assign(currentUserDetails, {
+  //   //     Bio: data.questionAnswers[1].answer,
+  //   //     Twitter: data.questionAnswers[2].answer,
+  //   //     LinkedIn: data.questionAnswers[3].answer,
+  //   //     isMVP: data.categories
+  //   //     [0].answer,
+  //   //     isMsEmployee: data.categories
+  //   //     [1].answer,
+  //   //   });
+  //   // }
+  //   // let currentSpeakerSessionDetails = [];
+  //   // if (JSON.stringify(data) != "{}") {
+  //   //   for (let i = 0; i < Object.keys(data.sessions).length; i++) {
+  //   //     let dummyObject = {};
+  //   //     Object.assign(dummyObject, {
+  //   //       name: data.sessions[i].name,
+  //   //       id: data.sessions[i].id,
+  //   //     });
+  //   //     currentSpeakerSessionDetails.push(dummyObject);
+  //   //   }
+  //   // }
+  //   // let allSessionDetails = [];
+  //   // if (JSON.stringify(sessions) != "{}" && sessions!=null) {
+  //   //   for (let i = 0; i < Object.keys(sessions).length; i++) {
+  //   //     let dummyObject = {};
+  //   //     Object.assign(dummyObject, {
+  //   //       name: sessions[i].title,
+  //   //       id: sessions[i].id,
+  //   //       startsAt: sessions[i].startsAt,
+  //   //       endsAt: sessions[i].endsAt,
+  //   //     });
+  //   //     allSessionDetails.push(dummyObject);
+  //   //   }
+  //   // }
+  //   setAdditionalSpeakerFieldsData(currentUserDetails);
+  //   setAdditionalSpeakerSessionDetails(currentSpeakerSessionDetails);
+  //   setSessionDetails(allSessionDetails);
+  // }, [data, sessions]);
 
   return (
     <div>
@@ -113,12 +113,12 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
             </Typography>
 
             <Typography className="scroll-dialog-content-box-text text-justify">
-              {additionalSpeakerFields?.Bio}
-              {console.log("currentSpeakerData", additionalSpeakerFields)}
-              {console.log(
+              {data?.bio}
+              {/* {console.log("currentSpeakerData", additionalSpeakerFields)} */}
+              {/* {console.log(
                 "currentSpeakerSessionData",
                 additionalSpeakerSessionDetails
-              )}
+              )} */}
             </Typography>
             <Divider
               variant="middle"
@@ -128,12 +128,9 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                 marginBlock: "2rem",
               }}
             />
-            {sessionDetails.length > 0 &&
-              additionalSpeakerSessionDetails.length > 0 &&
-              additionalSpeakerSessionDetails.map((data, idx) => {
+            {data.sessions?.length > 0 &&
+              data.sessions.map((data, idx) => {
                 console.log("dts", data);
-                let session = sessionDetails.find((ses) => ses.id == data.id);
-
                 return (
                   <Box
                     key={idx}
@@ -161,30 +158,32 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                           </Typography>
                         </Box>
                       </Box>
-                      <Box
-                        className="session-list session-list-time d-flex justify-content-center align-items-center"
-                        sx={{
-                          backgroundColor: "#e1e9e9",
-                        }}
-                      >
-                        <Box>
-                          <Typography
-                            className="text-center"
-                            sx={{
-                              color: "#000000",
-                              fontSize: "1.6rem",
-                            }}
-                          >
-                            {isKeynote
-                              ? "9:40 AM"
-                              : moment(session.startsAt).format("LT")}{" "}
-                            -{" "}
-                            {isKeynote
-                              ? "10:00 AM"
-                              : moment(session.endsAt).format("LT")}
-                          </Typography>
+                      {data.startsAt != null && (
+                        <Box
+                          className="session-list session-list-time d-flex justify-content-center align-items-center"
+                          sx={{
+                            backgroundColor: "#e1e9e9",
+                          }}
+                        >
+                          <Box>
+                            <Typography
+                              className="text-center"
+                              sx={{
+                                color: "#000000",
+                                fontSize: "1.6rem",
+                              }}
+                            >
+                              {isKeynote
+                                ? "9:40 AM"
+                                : moment(data.startsAt).format("LT")}{" "}
+                              -{" "}
+                              {isKeynote
+                                ? "10:00 AM"
+                                : moment(data.endsAt).format("LT")}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
+                      )}
                     </Box>
                     <Box>
                       <Typography
@@ -193,7 +192,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                           color: "#431282",
                         }}
                       >
-                        {isKeynote ? "Keynote" : session.name}
+                        {isKeynote ? "Keynote" : data.name}
                       </Typography>
                     </Box>
                   </Box>
@@ -209,7 +208,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
             />
             {!isKeynote ? (
               <Box className="card-social session-modal-speaker">
-                {additionalSpeakerFields.isMVP == "Yes" && (
+                {data.isMVP && (
                   <IconButton
                     href={""}
                     target="_blank"
@@ -223,7 +222,7 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                     />
                   </IconButton>
                 )}
-                {additionalSpeakerFields.isMsEmployee == "Yes" && (
+                {data.isMicrosoftEmployee && (
                   <IconButton
                     href={""}
                     target="_blank"
@@ -237,9 +236,9 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                     />
                   </IconButton>
                 )}
-                {additionalSpeakerFields.LinkedIn != null && (
+                {data.linkedIn != null && (
                   <IconButton
-                    href={additionalSpeakerFields.LinkedIn}
+                    href={data.linkedIn}
                     aria-label="LinkedIn"
                     target="_blank"
                   >
@@ -249,9 +248,9 @@ const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
                     />
                   </IconButton>
                 )}
-                {additionalSpeakerFields.Twitter != null && (
+                {data.twitter != null && (
                   <IconButton
-                    href={additionalSpeakerFields.Twitter}
+                    href={data.twitter}
                     aria-label="twitter"
                     target="_blank"
                   >
