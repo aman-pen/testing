@@ -18,14 +18,14 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import moment from "moment";
 
 const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
-  console.info("SpeakerModalData from Card", data);
+  // console.info("SpeakerModalData from Card", data);
   // console.info("isEmpty", sessions);
-  const [additionalSpeakerFields, setAdditionalSpeakerFieldsData] = useState(
-    []
-  );
-  const [additionalSpeakerSessionDetails, setAdditionalSpeakerSessionDetails] =
-    useState([]);
-  const [sessionDetails, setSessionDetails] = useState([]);
+  // const [additionalSpeakerFields, setAdditionalSpeakerFieldsData] = useState(
+  //   []
+  // );
+  // const [additionalSpeakerSessionDetails, setAdditionalSpeakerSessionDetails] =
+  //   useState([]);
+  // const [sessionDetails, setSessionDetails] = useState([]);
   const handleSpeakerModalClose = () => {
     close(false);
   };
