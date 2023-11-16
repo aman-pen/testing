@@ -4,10 +4,10 @@ export const speakerApi = async () => {
       "https://sessionize.com/api/v2/hbbdpvjn/view/Speakers"
     );
     const data = await response.json();
-    console.info("speakerData API Return", data);
+    console.log("speakerData API Return", data);
     return data;
   } catch (error) {
-    console.info("Error Receiving Speaker(s) Data", error);
+    console.log("Error Receiving Speaker(s) Data", error);
   }
 };
 export const scheduleGridApi = async () => {
@@ -16,10 +16,10 @@ export const scheduleGridApi = async () => {
       "https://sessionize.com/api/v2/hbbdpvjn/view/GridSmart"
     );
     const data = await response.json();
-    console.info("Schedule Grid API Return", data);
+    console.log("Schedule Grid API Return", data);
     return data;
   } catch (error) {
-    console.info("Error Receiving Grid Data", error);
+    console.log("Error Receiving Grid Data", error);
   }
 };
 export const sessionApi = async () => {
@@ -28,9 +28,9 @@ export const sessionApi = async () => {
       "https://sessionize.com/api/v2/hbbdpvjn/view/Sessions"
     );
     const data = await response.json();
-    console.info("Sessions API Return", data);
+    console.log("Sessions API Return", data);
     return data;
   } catch (error) {
-    console.info("Error Receiving session(s) Data", error);
+    console.log("Error Receiving session(s) Data", error);
   }
 };

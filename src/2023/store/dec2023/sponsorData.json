@@ -38,5 +38,13 @@
     "sponsorName": "Rapid Circle",
     "sponsorUrl": "https://en.rapidcircle.com/",
     "sponsorStatus": "diamond"
+  },
+  {
+    "sponsorId": 5,
+    "sponsorImage": "./2023/assets/logos/CloudThat_Master Logo.png",
+    "sponsorAltText": "CloudThat",
+    "sponsorName": "CloudThat",
+    "sponsorUrl": "https://www.cloudthat.com/",
+    "sponsorStatus": "diamond"
   }
 ]

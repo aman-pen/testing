@@ -6,7 +6,6 @@ import Card from "./subComponents/Card";
 import AboutSpeaker from "./subComponents/AboutSpeaker";
 
 const Speakers = ({ theme, speakerData, sessionData }) => {
-  console.info("speakerData in Speakers.jsx", speakerData);
   const [showData, setShowData] = useState(false);
   const [speakerModal, setSpeakerModal] = useState(false);
   const [speakerModalData, setSpeakerModalData] = useState({});

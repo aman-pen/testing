@@ -26,6 +26,8 @@ const Parent2023 = ({ theme }) => {
 
   useEffect(() => {
     document.title = "ICSS 2023";
+    console.info("Hello");
+    SpeakersAndSessionsCompleteData();
   }, []);
 
   useEffect(() => {
@@ -51,9 +53,15 @@ const Parent2023 = ({ theme }) => {
       <Eventinfostripe theme={theme} />
       <ErrorBoundary>
         <Box id="speakers" />
-        {(KeynoteSpeakerData != null && KeynoteSpeakerData != undefined) ? (
-          <KeynoteSpeaker sessionData={sessionData} keyNote={KeynoteSpeakerData} theme={theme} />
-        ):""}
+        {KeynoteSpeakerData != null && KeynoteSpeakerData != undefined ? (
+          <KeynoteSpeaker
+            sessionData={sessionData}
+            keyNote={KeynoteSpeakerData}
+            theme={theme}
+          />
+        ) : (
+          ""
+        )}
         <Speakers
           theme={theme}
           speakerData={speakerData}

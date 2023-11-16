@@ -7,7 +7,7 @@ import AboutSpeaker from "./subComponents/AboutSpeaker";
 import { Filter } from "@mui/icons-material";
 
 const Speakers = ({ theme, speakerData, sessionData }) => {
-  console.log("speakerData in Speakers.jsx", speakerData);
+  // console.log("speakerData in Speakers.jsx", speakerData);
   const [showData, setShowData] = useState(false);
   const [speakerModal, setSpeakerModal] = useState(false);
   const [speakerModalData, setSpeakerModalData] = useState({});

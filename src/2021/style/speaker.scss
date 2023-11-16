@@ -53,6 +53,9 @@ $subGrey: #606060;
       padding-top: 1rem;
       align-items: flex-start;
     }
+    &-container > p {
+      max-width: 100%;
+    }
     &-container > p:last-child {
       padding-bottom: 0;
     }

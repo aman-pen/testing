@@ -1,29 +1,28 @@
+const SpeakerApi = "https://sessionize.com/api/v2/ca6moh2z/view/Speakers";
+const SessionApi = "https://sessionize.com/api/v2/ca6moh2z/view/Sessions";
+const GridApi = "https://sessionize.com/api/v2/ca6moh2z/view/GridSmart";
+
 export const scheduleGridApi = async () => {
   try {
-    const response = await fetch(
-      "https://sessionize.com/api/v2/ca6moh2z/view/GridSmart"
-    );
+    const response = await fetch(GridApi);
     const data = await response.json();
-    console.info("Schedule API", data);
+    console.log("Schedule API", data);
     return data;
   } catch (error) {
-    console.info("Error Receiving Grid Data", error);
+    console.log("Error Receiving Grid Data", error);
   }
 };
 
 export const SpeakersAndSessionsCompleteData = async () => {
   try {
-    const speakerResponse = await fetch(
-      "https://sessionize.com/api/v2/ca6moh2z/view/Speakers"
-    );
-    const sessionResponse = await fetch(
-      "https://sessionize.com/api/v2/ca6moh2z/view/Sessions"
-    );
+    const speakerResponse = await fetch(SpeakerApi);
+    const sessionResponse = await fetch(SessionApi);
     const speakerApiResponseJSON = await speakerResponse.json();
     let tempSessionsStore = await sessionResponse.json();
     const sessionApiResponseJSON = tempSessionsStore[0].sessions;
 
     sessionApiResponseJSON.map((session) => {
+
       return session.speakers.map(
         (
           currSessionSpeakers,
@@ -35,7 +34,7 @@ export const SpeakersAndSessionsCompleteData = async () => {
               currSessionSpeakerDetail.id == currSessionSpeakers.id
           );
 
-          // console.info("currSpeakerDetails", currSpeakerDetails);
+          // console.log("currSpeakerDetails", currSpeakerDetails);
           let additionalSpeakerDetails = {
             bio: currSpeakerDetails.bio,
             categories: currSpeakerDetails.categories,
@@ -47,37 +46,40 @@ export const SpeakersAndSessionsCompleteData = async () => {
             questionAnswers: currSpeakerDetails.questionAnswers,
             tagLine: currSpeakerDetails.tagLine,
             // Data To Be Custom Mapped
-            customTagLine: currSpeakerDetails.questionAnswers[0].answer,
-            linkedIn: currSpeakerDetails.questionAnswers[3].answer,
-            twitter: currSpeakerDetails.questionAnswers[2].answer,
-            companyName: currSpeakerDetails.questionAnswers[4].answer,
-            designation: currSpeakerDetails.questionAnswers[5].answer,
-            isMVP: currSpeakerDetails.categories[0].categoryItems[0].name == "Yes",
+            customTagLine: currSpeakerDetails.questionAnswers[0]?.answer,
+            linkedIn: currSpeakerDetails.questionAnswers[3]?.answer,
+            twitter: currSpeakerDetails.questionAnswers[2]?.answer,
+            companyName: currSpeakerDetails.questionAnswers[4]?.answer,
+            designation: currSpeakerDetails.questionAnswers[5]?.answer,
+            isMVP:
+              currSpeakerDetails.categories[0]?.categoryItems[0]?.name == "Yes",
             isMicrosoftEmployee:
-              currSpeakerDetails.categories[1].categoryItems[0].name == "Yes",
+              currSpeakerDetails.categories[1]?.categoryItems[0]?.name == "Yes",
           };
+
           return (currSessionSpeakersArray[currSessionSpeakerIndex] = {
             ...currSessionSpeakersArray[currSessionSpeakerIndex],
             ...additionalSpeakerDetails,
           });
           // currSessionSpeakers = {...currSessionSpeakers,...additionalSpeakerDetails};
-          // console.info("FinalDataForCurrentSpeaker", currSessionSpeakers);
+          // console.log("FinalDataForCurrentSpeaker", currSessionSpeakers);
         }
       );
+
     });
 
     speakerApiResponseJSON.map(
       (speaker, currSpeakerIndex, parentSpeakerArray) => {
         let additionalSpeakerDetails = {
           // Data To Be Custom Mapped
-          customTagLine: speaker.questionAnswers[0].answer,
-          companyName: speaker.questionAnswers[4].answer,
-          linkedIn: speaker.questionAnswers[3].answer,
-          twitter: speaker.questionAnswers[2].answer,
-          designation: speaker.questionAnswers[5].answer,
-          isMVP: speaker.categories[0].categoryItems[0].name == "Yes",
+          customTagLine: speaker.questionAnswers[0]?.answer,
+          companyName: speaker.questionAnswers[4]?.answer,
+          linkedIn: speaker.questionAnswers[3]?.answer,
+          twitter: speaker.questionAnswers[2]?.answer,
+          designation: speaker.questionAnswers[5]?.answer,
+          isMVP: speaker.categories[0]?.categoryItems[0]?.name == "Yes",
           isMicrosoftEmployee:
-          speaker.categories[1].categoryItems[0].name == "Yes",
+            speaker.categories[1]?.categoryItems[0]?.name == "Yes",
         };
 
         parentSpeakerArray[currSpeakerIndex] = {
@@ -95,7 +97,7 @@ export const SpeakersAndSessionsCompleteData = async () => {
               (currSpeakerSessionDetail) =>
                 currSpeakerSessionDetail.id == currSpeakerSessions.id
             );
-            // console.info("currSessionDetails", currSessionDetails);
+            // console.log("currSessionDetails", currSessionDetails);
             let additionalSessionDetails = {
               description: currSessionDetails.description,
               endsAt: currSessionDetails.endsAt,
@@ -113,15 +115,17 @@ export const SpeakersAndSessionsCompleteData = async () => {
               ...additionalSessionDetails,
             });
             // currSpeakerSessions = {...currSpeakerSessions,...additionalSessionDetails};
-            // console.info("FinalDataForCurrentSpeaker", currSpeakerSessions);
+            // console.log("FinalDataForCurrentSpeaker", currSpeakerSessions);
           }
         );
       }
     );
+    console.info("Speaker API");
     console.info("Speaker API", speakerApiResponseJSON);
     console.info("Session API", sessionApiResponseJSON);
+
     return [speakerApiResponseJSON, sessionApiResponseJSON];
   } catch (error) {
-    console.info("Error Receiving Speaker(s) Data", error);
+    console.log("Error Receiving Speaker(s) Data", error);
   }
 };
