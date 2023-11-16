@@ -34,56 +34,51 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
 
           <Box className="d-flex justify-content-center flex-wrap keynote-box speaker-grid">
             {speakerData.length > 0 &&
-              speakerData
-                .filter(
-                  (data) => data.id != "188a6929-83f4-40c6-9584-3b9b38b89c2f"
-                )
-                .map((speakerData, idx) => {
-                  setTimeout(() => {
-                    setShowData(true);
-                  }, 1000);
-                  return !showData ? (
-                    <Stack key={idx} spacing={1}>
-                      {/* For variant="text", adjust the height via font-size */}
-                      <Skeleton
-                        variant="rectangular"
-                        width={300}
-                        height={300}
-                      />
-                      {/* For other variants, adjust the size with `width` and `height` */}
-                      <Skeleton
-                        variant="text"
-                        width={300}
-                        sx={{ fontSize: "2rem" }}
-                      />
-                      <Skeleton
-                        variant="text"
-                        width="60%"
-                        sx={{ fontSize: "2rem" }}
-                      />
-                    </Stack>
-                  ) : (
-                    <a
-                      key={idx}
-                      onClick={() => {
-                        setSpeakerModal(true);
-                        setSpeakerModalData(speakerData);
-                      }}
-                    >
-                      <Card
-                        theme={theme}
-                        image={speakerData.profilePicture}
-                        name={speakerData.fullName}
-                        designation={speakerData?.designation}
-                        company={speakerData?.companyName}
-                        linkedIn={speakerData?.linkedIn}
-                        twitter={speakerData?.twitter}
-                        mvp={speakerData?.isMVP}
-                        isMicroSoftEmployee={speakerData?.isMicrosoftEmployee}
-                      />
-                    </a>
-                  );
-                })}
+              speakerData.map((speakerData, idx) => {
+                if(speakerData.isTopSpeaker){
+                  return false;
+                }
+                setTimeout(() => {
+                  setShowData(true);
+                }, 1000);
+                return !showData ? (
+                  <Stack key={idx} spacing={1}>
+                    {/* For variant="text", adjust the height via font-size */}
+                    <Skeleton variant="rectangular" width={300} height={300} />
+                    {/* For other variants, adjust the size with `width` and `height` */}
+                    <Skeleton
+                      variant="text"
+                      width={300}
+                      sx={{ fontSize: "2rem" }}
+                    />
+                    <Skeleton
+                      variant="text"
+                      width="60%"
+                      sx={{ fontSize: "2rem" }}
+                    />
+                  </Stack>
+                ) : (
+                  <a
+                    key={idx}
+                    onClick={() => {
+                      setSpeakerModal(true);
+                      setSpeakerModalData(speakerData);
+                    }}
+                  >
+                    <Card
+                      theme={theme}
+                      image={speakerData.profilePicture}
+                      name={speakerData.fullName}
+                      designation={speakerData?.designation}
+                      company={speakerData?.companyName}
+                      linkedIn={speakerData?.linkedIn}
+                      twitter={speakerData?.twitter}
+                      mvp={speakerData?.isMVP}
+                      isMicroSoftEmployee={speakerData?.isMicrosoftEmployee}
+                    />
+                  </a>
+                );
+              })}
           </Box>
         </Box>
         <AboutSpeaker
