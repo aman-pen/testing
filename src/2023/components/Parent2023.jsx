@@ -23,10 +23,10 @@ const Parent2023 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
   const [sessionData, setSessionData] = useState([]);
   const [KeynoteSpeakerData, setKeyNoteSpeakerData] = useState();
+  const [defaultTrackData, setDefaultTrackData] = useState([]);
 
   useEffect(() => {
     document.title = "ICSS 2023";
-    console.info("Hello");
     SpeakersAndSessionsCompleteData();
   }, []);
 
@@ -34,11 +34,14 @@ const Parent2023 = ({ theme }) => {
     SpeakersAndSessionsCompleteData().then((data) => {
       setSpeakerData(data[0]);
       console.log("Speaker Data", data[0]);
-      console.log("Session Data", data[1]);
+      console.info("Session Data", data[1]);
       setSessionData(data[1]);
       let keyNote = data[0].filter((speaker) => speaker.isTopSpeaker == true);
       console.log("keyNote", keyNote);
       setKeyNoteSpeakerData(keyNote[0]);
+      let defTrkDt =
+        data != undefined && data[1].filter((session) => session.room == "1");
+      setDefaultTrackData(defTrkDt);
     });
   }, []);
 
@@ -70,14 +73,14 @@ const Parent2023 = ({ theme }) => {
       </ErrorBoundary>
       <Box id="agenda" />
       {/* <ErrorBoundary> */}
-      {/* {speakerData.length > 0 &&
-          sessionData.length > 0 && (
-            <Agenda
-              theme={theme}
-              speaker={speakerData}
-              session={sessionData[0].sessions}
-            />
-          )} */}
+      {speakerData.length > 0 && sessionData.length > 0 && (
+        <Agenda
+          theme={theme}
+          speaker={speakerData}
+          session={sessionData}
+          defaultTrackData={defaultTrackData}
+        />
+      )}
       {/* </ErrorBoundary> */}
       <Box id="prizes" />
       {/* <Prizes theme={theme} /> */}

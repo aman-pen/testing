@@ -120,9 +120,8 @@ export const SpeakersAndSessionsCompleteData = async () => {
         );
       }
     );
-    console.info("Speaker API");
-    console.info("Speaker API", speakerApiResponseJSON);
-    console.info("Session API", sessionApiResponseJSON);
+    console.log("Speaker API", speakerApiResponseJSON);
+    console.log("Session API", sessionApiResponseJSON);
 
     return [speakerApiResponseJSON, sessionApiResponseJSON];
   } catch (error) {
