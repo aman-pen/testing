@@ -23,11 +23,11 @@ import "../style/navBar.scss";
 //    "About",   "Speakers",   "Agenda",   "Sponsors",   "Contact Us",   "Become A Sponsor",
 // const navItems = ["About", "Sponsors", "Contact Us", "Become A Sponsor"];
 const navItems = [
-  { text: "Home", id: "home" },
-  { text: "About", id: "about" },
-  // { text: "Speakers", id: "speakers" },
+  // { text: "Home", id: "home" },
+  // { text: "About", id: "about" },
+  { text: "Speakers", id: "speakers" },
 
-  // { text: "Agenda", id: "agenda" },
+  { text: "Agenda", id: "agenda" },
   { text: "Sponsors", id: "sponsors" },
   { text: "Contact Us", id: "contactUS" },
   { text: "Become A Sponsor", id: "beAsponsor" },

@@ -34,7 +34,7 @@ $agenda-subtitle: #524f4f !important;
 
   .session-title-container {
     display: flex;
-    width: 45%;
+    width: 100%;
   }
 
   .session-title {
@@ -49,9 +49,12 @@ $agenda-subtitle: #524f4f !important;
     column-gap: 2rem;
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
+    row-gap: 3rem;
     justify-content: flex-start;
+    min-width: 32rem;
     &:last-child {
-      width: 30rem;
+      width: 32rem;
     }
   }
   .session-speakers {
@@ -145,6 +148,9 @@ $agenda-subtitle: #524f4f !important;
     .session-speakers {
       margin: auto;
       min-width: 0;
+    }
+    .agenda-track-text {
+      font-size: 2rem;
     }
   }
 }
