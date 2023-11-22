@@ -29,7 +29,9 @@ const navItems = [
 
   { text: "Agenda", id: "agenda" },
   { text: "Sponsors", id: "sponsors" },
-  { text: "Contact Us", id: "contactUS" },
+  { text: "Prizes", id: "prizes" },
+
+  // { text: "Contact Us", id: "contactUS" },
   { text: "Become A Sponsor", id: "beAsponsor" },
 ];
 // console.log("navItems", navItems);
