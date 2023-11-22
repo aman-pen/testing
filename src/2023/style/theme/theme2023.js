@@ -58,6 +58,7 @@ export const theme2023 = {
     sponsorTags: "3rem",
     footerTxt: "1.5rem",
     footerSubTxt: "1.8rem",
+    agendaSubTxt: "1.6rem",
   },
   icon: {
     twitter: "#1da1f2 !important",

@@ -1,4 +1,8 @@
-$card-heading-gradient: linear-gradient(325.49deg, #4faaaa 12.41%, #064949 100.31%);
+$card-heading-gradient: linear-gradient(
+  325.49deg,
+  #4faaaa 12.41%,
+  #064949 100.31%
+);
 $prizes-text-color: #2d7d7d;
 $prizes-subtext-color: #636363;
 $borderBottomColor: #4faaaa;
@@ -34,7 +38,7 @@ $borderBottomColor: #4faaaa;
       max-width: 120rem;
       justify-content: center;
       align-items: center;
-      row-gap: 2rem;
+      row-gap: 6rem;
       column-gap: 2rem;
       :hover {
         transition: all 0.1s ease-in-out;
@@ -49,8 +53,8 @@ $borderBottomColor: #4faaaa;
     }
     .QuizPrizes-card {
       padding: 1rem;
-      min-width: 29rem;
-      width: 29rem;
+      min-width: 34rem;
+      width: 34rem;
       height: 40rem;
     }
     .QuizPrizes-card-img {
@@ -197,7 +201,13 @@ $borderBottomColor: #4faaaa;
   @media only screen and (max-width: 515px) {
     .QuizPrizes .QuizPrizes-wrapper {
       width: 100%;
+      row-gap: 0rem;
     }
+    .QuizPrizes .QuizPrizes-wrapper .QuizPrizes-card {
+      min-width: 29rem;
+      width: 29rem;
+    }
+
     .heading-mobile {
       height: 7.5rem !important;
     }

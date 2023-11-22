@@ -86,7 +86,7 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                         ? theme.colors.bg.agendaSelected
                         : theme.colors.bg.agendaUnSelected,
                   }}
-                  className="agenda-track t1 d-flex"
+                  className="agenda-track t1 d-flex flex-column"
                 >
                   <Typography
                     sx={{
@@ -99,6 +99,22 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                   >
                     Track I
                   </Typography>
+                  <Typography
+                    sx={{
+                      color:
+                        alignment == "1"
+                          ? theme.colors.text.agendaSelected
+                          : theme.colors.text.agendaUnSelected,
+                      fontSize: theme.fontSize.agendaSubTxt,
+                      display: {
+                        xs: "none",
+                        cd: "block",
+                      },
+                    }}
+                    className="text-capitalize"
+                  >
+                    ( Azure Security & Compliance )
+                  </Typography>
                 </ToggleButton>
                 <ToggleButton
                   value="2"
@@ -108,7 +124,7 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                         ? theme.colors.bg.agendaSelected
                         : theme.colors.bg.agendaUnSelected,
                   }}
-                  className="agenda-track t2 d-flex"
+                  className="agenda-track t2 d-flex flex-column"
                 >
                   <Typography
                     sx={{
@@ -121,6 +137,22 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                   >
                     Track II
                   </Typography>
+                  <Typography
+                    sx={{
+                      color:
+                        alignment == "2"
+                          ? theme.colors.text.agendaSelected
+                          : theme.colors.text.agendaUnSelected,
+                      fontSize: theme.fontSize.agendaSubTxt,
+                      display: {
+                        xs: "none",
+                        cd: "block",
+                      },
+                    }}
+                    className="text-capitalize"
+                  >
+                    ( M365 Security & Compliance )
+                  </Typography>
                 </ToggleButton>
                 <ToggleButton
                   value="3"
@@ -130,7 +162,7 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                         ? theme.colors.bg.agendaSelected
                         : theme.colors.bg.agendaUnSelected,
                   }}
-                  className="agenda-track t3 d-flex"
+                  className="agenda-track t3 d-flex flex-column"
                 >
                   <Typography
                     sx={{
@@ -142,6 +174,22 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                     className="agenda-track-text text-uppercase"
                   >
                     Track III
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color:
+                        alignment == "3"
+                          ? theme.colors.text.agendaSelected
+                          : theme.colors.text.agendaUnSelected,
+                      fontSize: theme.fontSize.agendaSubTxt,
+                      display: {
+                        xs: "none",
+                        cd: "block",
+                      },
+                    }}
+                    className="text-capitalize"
+                  >
+                    ( Power Platform, Endpoint security and others )
                   </Typography>
                 </ToggleButton>
               </ToggleButtonGroup>

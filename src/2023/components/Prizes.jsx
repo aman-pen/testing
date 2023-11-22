@@ -16,7 +16,7 @@ const Prizes = ({ theme }) => {
               fontSize: { xs: "3rem", mmb: theme.fontSize.eventDate },
             }}
           >
-            Win exciting prizes
+            Win exciting prizes worth upto 60K
           </Typography>
         </Box>
         <div className="QuizPrizes-para-wrapper">
