@@ -46,5 +46,13 @@
     "sponsorName": "CloudThat",
     "sponsorUrl": "https://www.cloudthat.com/",
     "sponsorStatus": "diamond"
+  },
+  {
+    "sponsorId": 5,
+    "sponsorImage": "./2023/assets/logos/kloudatech.png",
+    "sponsorAltText": "CloudThat",
+    "sponsorName": "CloudThat",
+    "sponsorUrl": "https://www.kloudatech.com/",
+    "sponsorStatus": "platinum"
   }
 ]
