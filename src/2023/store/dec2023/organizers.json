@@ -49,26 +49,34 @@
   },
   {
     "OrganizerID": "4",
-    "OrganizerImage": "./2023/assets/organizers/LalitMohan.jpg",
-    "OrganizerName": "Lalit Mohan",
+    "OrganizerImage": "./2023/assets/organizers/Kamlesh.jpg",
+    "OrganizerName": "Kamlesh Rao",
     "isVolunteer": "true",
     "isCoOrganizer": "false",
-    "speakerLinkedIn": "https://www.linkedin.com/in/lalitblogs/"
+    "speakerLinkedIn": "https://www.linkedin.com/in/kamleshrao/"
   },
   {
     "OrganizerID": "5",
-    "OrganizerImage": "./2023/assets/organizers/rohitPatil.jpg",
-    "OrganizerName": "Rohit S Patil",
+    "OrganizerImage": "./2023/assets/organizers/AniketSinha.jpg",
+    "OrganizerName": "Aniket Kumar Sinha",
     "isCoOrganizer": "false",
     "isVolunteer": "true",
-    "speakerLinkedIn": "https://www.linkedin.com/in/rohitspatil/"
+    "speakerLinkedIn": "https://www.linkedin.com/in/aniketkumarsinha/"
   },
   {
     "OrganizerID": "6",
-    "OrganizerImage": "./2023/assets/organizers/TusharKumar.jpg",
-    "OrganizerName": "Tushar Kumar",
-    "isVolunteer": "false",
-    "isCoOrganizer": "true",
-    "speakerLinkedIn": "https://www.linkedin.com/in/followtushar/"
+    "OrganizerImage": "./2023/assets/organizers/MandeepMonty.jpg",
+    "OrganizerName": "Mondeep Maity",
+    "isCoOrganizer": "false",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/mondeep-maity-8083b2b9/"
+  },
+  {
+    "OrganizerID": "7",
+    "OrganizerImage": "./2023/assets/organizers/FerozKhan.jpg",
+    "OrganizerName": "Abdul Rasheed Feroz Khan",
+    "isCoOrganizer": "false",
+    "isVolunteer": "true",
+    "speakerLinkedIn": "https://www.linkedin.com/in/abdul-rasheed-feroz-khan-72918a102/"
   }
 ]

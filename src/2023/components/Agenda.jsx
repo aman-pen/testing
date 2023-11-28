@@ -166,7 +166,7 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                 >
                   <Typography
                     sx={{
-                      color:
+                      color: 
                         alignment == "3"
                           ? theme.colors.text.agendaSelected
                           : theme.colors.text.agendaUnSelected,

@@ -79,7 +79,7 @@ const Organizers = ({ theme }) => {
                 );
               })}
           </Box> */}
-          {/* <Box className="organizerSubHeadingBox">
+          <Box className="organizerSubHeadingBox">
             <Typography
               className="text-center organizerSubHeading"
               sx={{
@@ -104,7 +104,7 @@ const Organizers = ({ theme }) => {
                   />
                 );
               })}
-          </Box> */}
+          </Box>
         </Box>
       </div>
     </>
