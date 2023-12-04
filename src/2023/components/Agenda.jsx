@@ -15,10 +15,7 @@ import "../style/speaker.scss";
 import "../style/agenda.scss";
 import AboutSpeaker from "./subComponents/AboutSpeaker";
 import AboutSession from "./subComponents/AboutSession";
-import welcomeSpeaker from "../assets/speakers/vignesh.jpg";
-import keynoteSpeaker from "../assets/speakers/hammad_rajjoub.jpg";
-import Tushar from "../assets/organizers/TusharKumar.jpg";
-import Shrusti from "../assets/speakers/ShrustiShah.jpg";
+import about from "../store/dec2023/about.json";
 
 const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
   const trackOne = session != undefined && session.filter((s) => s.room == "1");
@@ -166,7 +163,7 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                 >
                   <Typography
                     sx={{
-                      color: 
+                      color:
                         alignment == "3"
                           ? theme.colors.text.agendaSelected
                           : theme.colors.text.agendaUnSelected,
@@ -265,79 +262,93 @@ const Agenda = ({ theme, speaker, session, defaultTrackData }) => {
                                   mmb: theme.fontSize.aboutSubheadingText,
                                 },
                               }}
-                              className="session-title"
+                              className="session-title d-flex align-items-center"
                             >
+                              {Date.now() > new Date("2023-12-6") && (
+                                <Box
+                                  className="session-speakers"
+                                  sx={{
+                                    minWidth: "7rem !important",
+                                  }}
+                                >
+                                  <IconButton
+                                    href={
+                                      alignment == "1" ||
+                                      trackData.title == "Welcome Note" ||
+                                      trackData.title == "Keynote" ||
+                                      trackData.title == "Quiz & Closing Notes"
+                                        ? about.trackOne
+                                        : alignment == "2"
+                                        ? about.trackTwo
+                                        : about.trackThree
+                                    }
+                                    target="_blank"
+                                  >
+                                    <SvgIcon
+                                      sx={{
+                                        fontSize: "3.2rem",
+                                      }}
+                                    >
+                                      <svg
+                                        viewBox="0 0 24 24"
+                                        role="presentation"
+                                        class="app-svg icons-teams"
+                                      >
+                                        <path
+                                          d="M8 10.12v7.38a5.47 5.47 0 0 0 .605 2.5h5A1.5 1.5 0 0 0 15 18.646V9.02L14.72 9h-5.6A1.12 1.12 0 0 0 8 10.12zM13.833 6h-2.976A3.24 3.24 0 0 0 15 8.143v-.976A1.17 1.17 0 0 0 13.833 6z"
+                                          opacity=".1"
+                                        ></path>
+                                        <path
+                                          fill="none"
+                                          d="M0 0h24v24H0z"
+                                        ></path>
+                                        <path
+                                          d="M22.873 9H17.88l-1.394 1.127v5.589a3.757 3.757 0 1 0 7.514 0v-5.589A1.127 1.127 0 0 0 22.873 9z"
+                                          fill="#5059c9"
+                                        ></path>
+                                        <circle
+                                          cx="20.5"
+                                          cy="5.5"
+                                          r="2.5"
+                                          fill="#5059c9"
+                                        ></circle>
+                                        <path
+                                          d="M9.12 9h8.76A1.12 1.12 0 0 1 19 10.12v7.38a5.5 5.5 0 0 1-5.5 5.5A5.5 5.5 0 0 1 8 17.5v-7.38A1.12 1.12 0 0 1 9.12 9z"
+                                          fill="#7b83eb"
+                                        ></path>
+                                        <circle
+                                          cx="14"
+                                          cy="5"
+                                          r="3.313"
+                                          fill="#7b83eb"
+                                        ></circle>
+                                        <path
+                                          d="M8 10.12v7.38a5.47 5.47 0 0 0 .605 2.5h5A1.5 1.5 0 0 0 15 18.646V9.02L14.72 9h-5.6A1.12 1.12 0 0 0 8 10.12zM13.833 6h-2.976A3.24 3.24 0 0 0 15 8.143v-.976A1.17 1.17 0 0 0 13.833 6z"
+                                          opacity=".5"
+                                        ></path>
+                                        <rect
+                                          y="5"
+                                          width="14"
+                                          height="14"
+                                          rx="1.167"
+                                          ry="1.167"
+                                          fill="#4b53bc"
+                                        ></rect>
+                                        <path
+                                          d="M10.18 9.578H7.793V16h-1.57V9.578H3.819V8h6.362z"
+                                          fill="#fff"
+                                        ></path>
+                                      </svg>
+                                    </SvgIcon>
+                                  </IconButton>
+                                </Box>
+                              )}
                               {trackData.title}
                             </Typography>
                           </Box>
                         </Box>
 
                         <Box className="speaker-container">
-                          {/* <Box className="session-speakers">
-                            <IconButton
-                              href={
-                                alignment == "1"
-                                  ? about.trackOne
-                                  : about.trackTwo
-                              }
-                              target="_blank"
-                            >
-                              <SvgIcon
-                                sx={{
-                                  fontSize: "3.2rem",
-                                }}
-                              >
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  role="presentation"
-                                  class="app-svg icons-teams"
-                                >
-                                  <path
-                                    d="M8 10.12v7.38a5.47 5.47 0 0 0 .605 2.5h5A1.5 1.5 0 0 0 15 18.646V9.02L14.72 9h-5.6A1.12 1.12 0 0 0 8 10.12zM13.833 6h-2.976A3.24 3.24 0 0 0 15 8.143v-.976A1.17 1.17 0 0 0 13.833 6z"
-                                    opacity=".1"
-                                  ></path>
-                                  <path fill="none" d="M0 0h24v24H0z"></path>
-                                  <path
-                                    d="M22.873 9H17.88l-1.394 1.127v5.589a3.757 3.757 0 1 0 7.514 0v-5.589A1.127 1.127 0 0 0 22.873 9z"
-                                    fill="#5059c9"
-                                  ></path>
-                                  <circle
-                                    cx="20.5"
-                                    cy="5.5"
-                                    r="2.5"
-                                    fill="#5059c9"
-                                  ></circle>
-                                  <path
-                                    d="M9.12 9h8.76A1.12 1.12 0 0 1 19 10.12v7.38a5.5 5.5 0 0 1-5.5 5.5A5.5 5.5 0 0 1 8 17.5v-7.38A1.12 1.12 0 0 1 9.12 9z"
-                                    fill="#7b83eb"
-                                  ></path>
-                                  <circle
-                                    cx="14"
-                                    cy="5"
-                                    r="3.313"
-                                    fill="#7b83eb"
-                                  ></circle>
-                                  <path
-                                    d="M8 10.12v7.38a5.47 5.47 0 0 0 .605 2.5h5A1.5 1.5 0 0 0 15 18.646V9.02L14.72 9h-5.6A1.12 1.12 0 0 0 8 10.12zM13.833 6h-2.976A3.24 3.24 0 0 0 15 8.143v-.976A1.17 1.17 0 0 0 13.833 6z"
-                                    opacity=".5"
-                                  ></path>
-                                  <rect
-                                    y="5"
-                                    width="14"
-                                    height="14"
-                                    rx="1.167"
-                                    ry="1.167"
-                                    fill="#4b53bc"
-                                  ></rect>
-                                  <path
-                                    d="M10.18 9.578H7.793V16h-1.57V9.578H3.819V8h6.362z"
-                                    fill="#fff"
-                                  ></path>
-                                </svg>
-                              </SvgIcon>
-                            </IconButton>
-                          </Box> */}
-
                           {trackData?.speakers?.map((spkr, idx) => {
                             let spkrimg = speaker.find(
                               (s) => s.id == spkr.id
