@@ -66,7 +66,7 @@ const Eventinfostripe = ({ theme }) => {
                   },
                 }}
               >
-                {/* {apiData.sessions} */}
+                {apiData.sessions}
               </Typography>
             </Box>
             <Box>
@@ -109,7 +109,7 @@ const Eventinfostripe = ({ theme }) => {
                   paddingBlock: "1rem",
                 }}
               >
-                {/* {apiData.track} */}
+                {apiData.track}
               </Typography>
             </Box>
             <Box>
@@ -166,7 +166,7 @@ const Eventinfostripe = ({ theme }) => {
                   paddingBlock: "1rem",
                 }}
               >
-                {/* {apiData.speaker} */}
+                {apiData.speaker}
               </Typography>
             </Box>
             <Box>
@@ -209,7 +209,7 @@ const Eventinfostripe = ({ theme }) => {
                   paddingBlock: "1rem",
                 }}
               >
-                {/* {apiData.sponsor} */}
+                {apiData.sponsor}
               </Typography>
             </Box>
             <Box>
