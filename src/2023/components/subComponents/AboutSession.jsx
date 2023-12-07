@@ -25,7 +25,7 @@ const AboutSession = ({
   data,
   sessionSpeaker,
   speaker,
-  sessions
+  sessions,
 }) => {
   const handleSessionModalClose = () => {
     close(false);
@@ -33,7 +33,6 @@ const AboutSession = ({
 
   const [speakerModal, setSpeakerModal] = React.useState(false);
   const [speakerModalData, setSpeakerModalData] = useState({});
-
   // const [sessionModal, setSessionModal] = React.useState(false);
   // const [sessionModalData, setSessionModalData] = useState({});
 
@@ -52,13 +51,28 @@ const AboutSession = ({
       >
         <Box className="d-flex scroll-dialog-head align-items-center">
           <DialogTitle className="scroll-dialog-title text-uppercase text-start">
-            {moment
-              .utc(data.startsAt, null)
-              .tz("Asia/Kolkata")
-              .format("hh:mm A")}{" "}
-            -{" "}
-            {moment.utc(data.endsAt, null).tz("Asia/Kolkata").format("hh:mm A")}{" "}
-            {"IST"}
+            {data.startsAt != undefined &&
+              moment(data.startsAt.split("T")[1].split(":")[0], "hh")
+                .format("LT")
+                .split(":")[0] +
+                ":" +
+                data.startsAt.split("T")[1].split(":")[1] +
+                " " +
+                moment(data.startsAt.split("T")[1].split(":")[0], "hh")
+                  .format("LT")
+                  .split(" ")[1] +
+                " - " +
+                moment(data.endsAt.split("T")[1].split(":")[0], "hh")
+                  .format("LT")
+                  .split(":")[0] +
+                ":" +
+                data.endsAt.split("T")[1].split(":")[1] +
+                " " +
+                moment(data.endsAt.split("T")[1].split(":")[0], "hh")
+                  .format("LT")
+                  .split(" ")[1] +
+                " " +
+                " IST"}
           </DialogTitle>
           <IconButton
             sx={{
