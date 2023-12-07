@@ -25,7 +25,7 @@ const AboutSession = ({
   data,
   sessionSpeaker,
   speaker,
-  sessions
+  sessions,
 }) => {
   const handleSessionModalClose = () => {
     close(false);
@@ -38,6 +38,26 @@ const AboutSession = ({
   // const [sessionModalData, setSessionModalData] = useState({});
 
   // const [modalSessionSpeaker, setModalSessionSpeaker] = useState();
+  let timezone = moment(data.startsAt.split("T")[1].split(":")[0], "hh")
+    .format("LT")
+    .split(" ")[1];
+  let timezone2 = moment(data.endsAt.split("T")[1].split(":")[0], "hh")
+    .format("LT")
+    .split(" ")[1];
+
+  // let starttime = data.startsAt.split("T")[1].split(":")[0]+":"+data.startsAt.split("T")[1].split(":")[1];
+  let starttime =
+    moment(data.startsAt.split("T")[1].split(":")[0], "hh")
+      .format("LT")
+      .split(":")[0] +
+    ":" +
+    data.startsAt.split("T")[1].split(":")[1];
+  let endtime =
+    moment(data.endsAt.split("T")[1].split(":")[0], "hh")
+      .format("LT")
+      .split(":")[0] +
+    ":" +
+    data.endsAt.split("T")[1].split(":")[1];
   return (
     <div>
       <Dialog
@@ -52,13 +72,9 @@ const AboutSession = ({
       >
         <Box className="d-flex scroll-dialog-head align-items-center">
           <DialogTitle className="scroll-dialog-title text-uppercase text-start">
-            {moment
-              .utc(data.startsAt, null)
-              .tz("Asia/Kolkata")
-              .format("hh:mm A")}{" "}
-            -{" "}
-            {moment.utc(data.endsAt, null).tz("Asia/Kolkata").format("hh:mm A")}{" "}
-            {"IST"}
+            {starttime + " " + timezone + " "}-
+            {" " + endtime + " " + timezone2 + " "}
+            {" IST"}
           </DialogTitle>
           <IconButton
             sx={{
