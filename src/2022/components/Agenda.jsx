@@ -22,10 +22,8 @@ import keynoteSpeaker from "../assets/speakers/hammad_rajjoub.jpg";
 import Tushar from "../assets/organizers/TusharKumar.jpg";
 import Shrusti from "../assets/speakers/ShrustiShah.jpg";
 import VivaExplorer from "../assets/logoIcons/VivaExplorersHeader-Image.png";
-import { Col } from "reactstrap";
 
-import trackdetails from "../store/oct2022/tracksdetails.json";
-import { screen } from "@testing-library/react";
+import trackdetails from "../store/oct2022/tracksdetails.json"
 
 export const staticContributorData = [
   // {
@@ -642,9 +640,8 @@ const Agenda = ({ theme, speaker, session }) => {
                   {trackDetailsState.map((data) => {
                     console.log(data);
                     return (
-                      <Col
-                        xs="4"
-                        className="dec2022-tracks"
+                      <div
+                        className="dec2022-tracks col-4"
                         key={data.trackId}
                         onClick={() => trackfunc(data.trackId)}
                       >
@@ -681,7 +678,7 @@ const Agenda = ({ theme, speaker, session }) => {
                             </span>
                           </div>
                         )}
-                      </Col>
+                      </div>
                     );
                   })}
                 </div>

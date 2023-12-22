@@ -40,7 +40,7 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
                 }
                 setTimeout(() => {
                   setShowData(true);
-                }, 1000);
+                }, 3000);
                 return !showData ? (
                   <Stack key={idx} spacing={1}>
                     {/* For variant="text", adjust the height via font-size */}

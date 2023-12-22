@@ -8,7 +8,6 @@ import AboutSession from "./subComponents/AboutSession";
 import AgendaSessions from "../store/aug2021/sessions.json";
 import trackdetails from "../store/aug2021/TrackDetails.json";
 import speakersdata from "../store/aug2021/speakers.json";
-import { Col } from "reactstrap";
 
 const Agenda = ({ theme }) => {
   const trackfunc = (trackValue) => {
@@ -26,7 +25,7 @@ const Agenda = ({ theme }) => {
     }
     setTrackDetails(temptrack);
     setselecteditem(tempselectedRoomId);
-    console.log("selectedprevioustrack", track)
+    console.log("selectedprevioustrack", track);
   };
 
   const [track, setTrack] = useState("1");
@@ -42,7 +41,6 @@ const Agenda = ({ theme }) => {
   const [sessionModalData, setSessionModalData] = useState({});
 
   const [modalSessionSpeaker, setModalSessionSpeaker] = useState();
-
 
   return (
     <>
@@ -66,7 +64,6 @@ const Agenda = ({ theme }) => {
                 className="agenda-head"
                 aria-label="outlined primary button group"
               >
-
                 <Box
                   sx={{
                     background: theme.colors.bg.button,
@@ -96,10 +93,9 @@ const Agenda = ({ theme }) => {
                   {trackDetailsState.map((data) => {
                     console.log(data);
                     return (
-                      <Col
-                        xs="4"
-                        className="dec2022-tracks"
-                        key={data.trackId}
+                      <div
+                        className="dec2022-tracks col-4"
+                        key={data.trackId}s
                         onClick={() => trackfunc(data.trackId)}
                       >
                         {data.isActive === true ? (
@@ -134,197 +130,198 @@ const Agenda = ({ theme }) => {
                             </span>
                           </div>
                         )}
-                      </Col>
+                      </div>
                     );
                   })}
                 </div>
               </div>
               <Box className="agenda-sessions-container">
-                {AgendaSessions?.filter(
-                  (data) => data.trackId === track
-                ).map((trackData, idx) => {
-                  return (
-                    <Paper key={idx} elevation={3} className="session-tile">
-                      <Box className="session-data-container">
-                        <Box
-                          onClick={() => {
-                            setSessionModal(true);
-                            setSessionModalData(trackData);
-                            setModalSessionSpeaker(trackData.speakers);
-                            // console.log("TrackData", trackData);
-                            // console.log("speakerright now", trackData.speakers)
-                          }}
-                          className="responsive-wrapper pointer"
-                        >
-                          <Box className="d-flex session-time">
-                            <Typography
-                              className="session-time-text"
-                              sx={{
-                                color: "#606060",
-                                fontSize: { xs: "1.8rem", mmb: "2.2rem" },
-                                marginLeft: "1rem",
-                              }}
-                            >
-                              {trackData.sessionTime} {"IST"}
-                            </Typography>
+                {AgendaSessions?.filter((data) => data.trackId === track).map(
+                  (trackData, idx) => {
+                    return (
+                      <Paper key={idx} elevation={3} className="session-tile">
+                        <Box className="session-data-container">
+                          <Box
+                            onClick={() => {
+                              setSessionModal(true);
+                              setSessionModalData(trackData);
+                              setModalSessionSpeaker(trackData.speakers);
+                              // console.log("TrackData", trackData);
+                              // console.log("speakerright now", trackData.speakers)
+                            }}
+                            className="responsive-wrapper pointer"
+                          >
+                            <Box className="d-flex session-time">
+                              <Typography
+                                className="session-time-text"
+                                sx={{
+                                  color: "#606060",
+                                  fontSize: { xs: "1.8rem", mmb: "2.2rem" },
+                                  marginLeft: "1rem",
+                                }}
+                              >
+                                {trackData.sessionTime} {"IST"}
+                              </Typography>
+                            </Box>
+                            <Box className="session-title-container">
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xs: "2rem",
+                                    mmb: theme.fontSize.aboutSubheadingText,
+                                  },
+                                }}
+                                className="session-title text-left"
+                              >
+                                {trackData.sessionTitle}
+                              </Typography>
+                            </Box>
                           </Box>
-                          <Box className="session-title-container">
-                            <Typography
-                              sx={{
-                                fontSize: {
-                                  xs: "2rem",
-                                  mmb: theme.fontSize.aboutSubheadingText,
-                                },
-                              }}
-                              className="session-title text-left"
-                            >
-                              {trackData.sessionTitle}
-                            </Typography>
-                          </Box>
-                        </Box>
-                        <Box className="speaker-container">
-                          {/* speakers images code from here */}
-                          {trackData.speaker1Id != null ? (
-                            <Box key={idx} className="session-speakers">
-                              <a
-                                onClick={() => {
-                                  setSpeakerModal(true);
-                                  setSpeakerModalData(
+                          <Box className="speaker-container">
+                            {/* speakers images code from here */}
+                            {trackData.speaker1Id != null ? (
+                              <Box key={idx} className="session-speakers">
+                                <a
+                                  onClick={() => {
+                                    setSpeakerModal(true);
+                                    setSpeakerModalData(
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker1Id
+                                      )[0]
+                                    );
+                                  }}
+                                >
+                                  <Avatar
+                                    className="pointer"
+                                    src={
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker1Id
+                                      )[0].speakerImage
+                                    }
+                                    sx={{
+                                      width: 80,
+                                      height: 80,
+                                      marginBottom: "1rem",
+                                    }}
+                                  />
+                                </a>
+                                <Typography
+                                  className="text-center speaker-name"
+                                  sx={{
+                                    color: theme.colors.text.bodyGrey,
+                                    fontSize: {
+                                      xs: "1.5rem",
+                                      mmb: theme.fontSize.footerSubTxt,
+                                    },
+                                  }}
+                                >
+                                  {
                                     speakersdata.filter(
                                       (s) =>
                                         s.speakerId === trackData.speaker1Id
-                                    )[0]
-                                  );
-                                }}
-                              >
-                                <Avatar
-                                  className="pointer"
-                                  src={
-                                    speakersdata.filter(
-                                      (s) =>
-                                        s.speakerId === trackData.speaker1Id
-                                    )[0].speakerImage
+                                    )[0].speakerName
                                   }
-                                  sx={{
-                                    width: 80,
-                                    height: 80,
-                                    marginBottom: "1rem",
+                                </Typography>
+                              </Box>
+                            ) : null}
+                            {trackData.speaker2Id != null ? (
+                              <Box className="session-speakers">
+                                <a
+                                  onClick={() => {
+                                    setSpeakerModal(true);
+                                    setSpeakerModalData(
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker2Id
+                                      )[0]
+                                    );
                                   }}
-                                />
-                              </a>
-                              <Typography
-                                className="text-center speaker-name"
-                                sx={{
-                                  color: theme.colors.text.bodyGrey,
-                                  fontSize: {
-                                    xs: "1.5rem",
-                                    mmb: theme.fontSize.footerSubTxt,
-                                  },
-                                }}
-                              >
-                                {
-                                  speakersdata.filter(
-                                    (s) => s.speakerId === trackData.speaker1Id
-                                  )[0].speakerName
-                                }
-                              </Typography>
-                            </Box>
-                          ) : null}
-                          {trackData.speaker2Id != null ? (
-                            <Box className="session-speakers">
-                              <a
-                                onClick={() => {
-                                  setSpeakerModal(true);
-                                  setSpeakerModalData(
+                                >
+                                  <Avatar
+                                    className="pointer"
+                                    src={
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker2Id
+                                      )[0].speakerImage
+                                    }
+                                    sx={{
+                                      width: 80,
+                                      height: 80,
+                                      marginBottom: "1rem",
+                                    }}
+                                  />
+                                </a>
+                                <Typography
+                                  className="text-center speaker-name"
+                                  sx={{
+                                    color: theme.colors.text.bodyGrey,
+                                    fontSize: {
+                                      xs: "1.5rem",
+                                      mmb: theme.fontSize.footerSubTxt,
+                                    },
+                                  }}
+                                >
+                                  {
                                     speakersdata.filter(
                                       (s) =>
                                         s.speakerId === trackData.speaker2Id
-                                    )[0]
-                                  );
-                                }}
-                              >
-                                <Avatar
-                                  className="pointer"
-                                  src={
-                                    speakersdata.filter(
-                                      (s) =>
-                                        s.speakerId === trackData.speaker2Id
-                                    )[0].speakerImage
+                                    )[0].speakerName
                                   }
-                                  sx={{
-                                    width: 80,
-                                    height: 80,
-                                    marginBottom: "1rem",
+                                </Typography>
+                              </Box>
+                            ) : null}
+                            {trackData.speaker3Id != null ? (
+                              <Box key={idx} className="session-speakers">
+                                <a
+                                  onClick={() => {
+                                    setSpeakerModal(true);
+                                    setSpeakerModalData(
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker3Id
+                                      )[0]
+                                    );
                                   }}
-                                  
-                                />
-                              </a>
-                              <Typography
-                                className="text-center speaker-name"
-                                sx={{
-                                  color: theme.colors.text.bodyGrey,
-                                  fontSize: {
-                                    xs: "1.5rem",
-                                    mmb: theme.fontSize.footerSubTxt,
-                                  },
-                                }}
-                              >
-                                {
-                                  speakersdata.filter(
-                                    (s) => s.speakerId === trackData.speaker2Id
-                                  )[0].speakerName
-                                }
-                              </Typography>
-                            </Box>
-                          ) : null}
-                          {trackData.speaker3Id != null ? (
-                            <Box key={idx} className="session-speakers">
-                              <a
-                                onClick={() => {
-                                  setSpeakerModal(true);
-                                  setSpeakerModalData(
+                                >
+                                  <Avatar
+                                    className="pointer"
+                                    src={
+                                      speakersdata.filter(
+                                        (s) =>
+                                          s.speakerId === trackData.speaker3Id
+                                      )[0].speakerImage
+                                    }
+                                    sx={{
+                                      width: 80,
+                                      height: 80,
+                                      marginBottom: "1rem",
+                                    }}
+                                  />
+                                </a>
+                                <Typography
+                                  className="text-center speaker-name"
+                                  sx={{
+                                    color: theme.colors.text.bodyGrey,
+                                    fontSize: {
+                                      xs: "1.5rem",
+                                      mmb: theme.fontSize.footerSubTxt,
+                                    },
+                                  }}
+                                >
+                                  {
                                     speakersdata.filter(
                                       (s) =>
                                         s.speakerId === trackData.speaker3Id
-                                    )[0]
-                                  );
-                                }}
-                              >
-                                <Avatar
-                                  className="pointer"
-                                  src={
-                                    speakersdata.filter(
-                                      (s) =>
-                                        s.speakerId === trackData.speaker3Id
-                                    )[0].speakerImage
+                                    )[0].speakerName
                                   }
-                                  sx={{
-                                    width: 80,
-                                    height: 80,
-                                    marginBottom: "1rem",
-                                  }}
-                                />
-                              </a>
-                              <Typography
-                                className="text-center speaker-name"
-                                sx={{
-                                  color: theme.colors.text.bodyGrey,
-                                  fontSize: {
-                                    xs: "1.5rem",
-                                    mmb: theme.fontSize.footerSubTxt,
-                                  },
-                                }}
-                              >
-                                {
-                                  speakersdata.filter(
-                                    (s) => s.speakerId === trackData.speaker3Id
-                                  )[0].speakerName
-                                }
-                              </Typography>
-                            </Box>
-                          ) : null}
+                                </Typography>
+                              </Box>
+                            ) : null}
 
-                          {/* {speakersdata?.map((spkr, idx) => {
+                            {/* {speakersdata?.map((spkr, idx) => {
                             let spkrimg = speakersdata.find(
                               (s) => s.speakerId == spkr.speakerId
                             ).speakerImage;
@@ -370,18 +367,12 @@ const Agenda = ({ theme }) => {
                             );
                           })} */}
 
-
-
-
-                          {/* till here */}
+                            {/* till here */}
+                          </Box>
                         </Box>
-                      </Box>
-                    </Paper>
-                  );
-                }
-                
-                
-
+                      </Paper>
+                    );
+                  }
                 )}
               </Box>
             </Paper>
@@ -392,7 +383,6 @@ const Agenda = ({ theme }) => {
             sessionOpen={sessionModal}
             close={setSpeakerModal}
             speakerdata={speakerModalData}
-
           />
           <AboutSession
             theme={theme}

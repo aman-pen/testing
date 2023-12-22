@@ -15,7 +15,7 @@ import mslogo from "../../assets/logoIcons/ms.png";
 import mvpLogo from "../../assets/logoIcons/mvp.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import moment from "moment";
+import moment from "moment-timezone";
 
 const AboutSpeaker = ({ theme, open, close, data, sessions, isKeynote }) => {
   // console.info("SpeakerModalData from Card", data);

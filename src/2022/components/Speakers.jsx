@@ -44,7 +44,7 @@ const Speakers = ({ theme, speakerData, sessionData }) => {
                 .map((speakerData, idx) => {
                   setTimeout(() => {
                     setShowData(true);
-                  }, 1000);
+                  }, 3000);
                   return !showData ? (
                     
                     <Stack key={idx} spacing={1}>
