@@ -34,7 +34,7 @@ const Organizers = ({ theme }) => {
               Organizers
             </Typography>
           </Box>
-          <Box className="marginTop5" sx={{ paddingTop: "1.5rem" }} />
+          <Box className="mt-5" sx={{ paddingTop: "1.5rem" }} />
           <Box className="d-flex justify-content-around flex-wrap align-items-center organizersCard">
             {organizersData
               .filter(
@@ -63,7 +63,7 @@ const Organizers = ({ theme }) => {
               Co-Organizers
             </Typography>
           </Box>
-          <Box className="marginTop5" sx={{ paddingTop: "1.5rem" }} />
+          <Box className="mt-5" sx={{ paddingTop: "1.5rem" }} />
           <Box className="d-flex justify-content-evenly flex-wrap align-items-center organizersCard">
             {organizersData
               .filter((org) => org.isCoOrganizer === "true")
@@ -89,7 +89,7 @@ const Organizers = ({ theme }) => {
               Volunteers
             </Typography>
           </Box>
-          <Box className="marginTop5" sx={{ paddingTop: "1.5rem" }} />
+          <Box className="mt-5" sx={{ paddingTop: "1.5rem" }} />
           <Box className="d-flex justify-content-evenly flex-wrap align-items-center organizersCard">
             {organizersData
               .filter((org) => org.isVolunteer === "true")

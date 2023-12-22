@@ -18,6 +18,7 @@ import PreviousEvents from "./PreviousEvents";
 import { Box } from "@mui/material";
 import "../style/global.scss";
 import { SpeakersAndSessionsCompleteData } from "../services/EventData";
+import VideoPlayer from "./VideoPlayer";
 
 const Parent2023 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
@@ -54,6 +55,7 @@ const Parent2023 = ({ theme }) => {
       <Box id="about" />
       <About theme={theme} />
       <Eventinfostripe theme={theme} />
+      {/* <VideoPlayer /> */}
       <ErrorBoundary>
         <Box id="speakers" />
         {KeynoteSpeakerData != null && KeynoteSpeakerData != undefined ? (
