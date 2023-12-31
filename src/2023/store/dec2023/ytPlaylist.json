@@ -1,0 +1,261 @@
+[
+    {
+        "Title": "Welcome Note",
+        "VideoID": "pe5XZgyOQQQ",
+        "VideoOrder": 1,
+        "VideoURL": "https://www.youtube.com/embed/pe5XZgyOQQQ",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/pe5XZgyOQQQ/2.webp"
+    },
+    {
+        "Title": "India Cloud Security Summit 2023 - Opening Keynote",
+        "VideoID": "8jYgUxke3RU",
+        "VideoOrder": 2,
+        "VideoURL": "https://www.youtube.com/embed/8jYgUxke3RU",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/8jYgUxke3RU/2.webp"
+    },
+    {
+        "Title": "Power Platform / D365 - Securing data with Customer LockBox",
+        "VideoID": "1qBiKbxPQQs",
+        "VideoOrder": 3,
+        "VideoURL": "https://www.youtube.com/embed/1qBiKbxPQQs",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/1qBiKbxPQQs/2.webp"
+    },
+    {
+        "Title": "Security Myths around Co-Pilot in Power Platform",
+        "VideoID": "HmN7KQg5o4E",
+        "VideoOrder": 4,
+        "VideoURL": "https://www.youtube.com/embed/HmN7KQg5o4E",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/HmN7KQg5o4E/2.webp"
+    },
+    {
+        "Title": "Empowering Defense: Unveiling the Latest in Microsoft Defender for Endpoint",
+        "VideoID": "tF0fUrpNpak",
+        "VideoOrder": 5,
+        "VideoURL": "https://www.youtube.com/embed/tF0fUrpNpak",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/tF0fUrpNpak/2.webp"
+    },
+    {
+        "Title": "Empowering Organizational Efficiency: A Deep Dive into Power Platform Governance and Security",
+        "VideoID": "ncW0SQknizw",
+        "VideoOrder": 6,
+        "VideoURL": "https://www.youtube.com/embed/ncW0SQknizw",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/ncW0SQknizw/2.webp"
+    },
+    {
+        "Title": "Enhancing Security with Windows 11: Leveraging Intune and Defender for Ongoing Protection",
+        "VideoID": "he01HuPSHr4",
+        "VideoOrder": 7,
+        "VideoURL": "https://www.youtube.com/embed/he01HuPSHr4",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/he01HuPSHr4/2.webp"
+    },
+    {
+        "Title": "Harness the power of Microsoft Defender when triaging and responding to user reported Phish",
+        "VideoID": "A5gWXgmUT8E",
+        "VideoOrder": 8,
+        "VideoURL": "https://www.youtube.com/embed/A5gWXgmUT8E",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/A5gWXgmUT8E/2.webp"
+    },
+    {
+        "Title": "Better together: Microsoft Defender for Endpoint, Defender for Cloud Apps & Microsoft Sentinel",
+        "VideoID": "X3ZAwGYMa8w",
+        "VideoOrder": 9,
+        "VideoURL": "https://www.youtube.com/embed/X3ZAwGYMa8w",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/X3ZAwGYMa8w/2.webp"
+    },
+    {
+        "Title": "Best practices and recommendations for creating and managing DLP policies in Power Platform",
+        "VideoID": "EictTzdaWHc",
+        "VideoOrder": 10,
+        "VideoURL": "https://www.youtube.com/embed/EictTzdaWHc",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/EictTzdaWHc/2.webp"
+    },
+    {
+        "Title": "5 tips to secure your Power Platform ecosystem",
+        "VideoID": "VBx_p69m2AU",
+        "VideoOrder": 11,
+        "VideoURL": "https://www.youtube.com/embed/VBx_p69m2AU",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/VBx_p69m2AU/2.webp"
+    },
+    {
+        "Title": "Latest Security Enhancement for Intune Managed Devices",
+        "VideoID": "Zc9-flpXOO0",
+        "VideoOrder": 12,
+        "VideoURL": "https://www.youtube.com/embed/Zc9-flpXOO0",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/Zc9-flpXOO0/2.webp"
+    },
+    {
+        "Title": "Get to optimal configuration and design phish simulation training using MDO",
+        "VideoID": "8z5AWeNvbtk",
+        "VideoOrder": 13,
+        "VideoURL": "https://www.youtube.com/embed/8z5AWeNvbtk",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/8z5AWeNvbtk/2.webp"
+    },
+    {
+        "Title": "Getting started with Microsoft 365 Governance and Compliance",
+        "VideoID": "DIkUsIyuWMY",
+        "VideoOrder": 14,
+        "VideoURL": "https://www.youtube.com/embed/DIkUsIyuWMY",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/DIkUsIyuWMY/2.webp"
+    },
+    {
+        "Title": "The Essential Guide to Securing Your Microsoft Teams Meetings",
+        "VideoID": "InztcEaH6zM",
+        "VideoOrder": 15,
+        "VideoURL": "https://www.youtube.com/embed/InztcEaH6zM",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/InztcEaH6zM/2.webp"
+    },
+    {
+        "Title": "Don't get lost in the jungle of guests on Microsoft 365",
+        "VideoID": "1xwSBWWNxPY",
+        "VideoOrder": 16,
+        "VideoURL": "https://www.youtube.com/embed/1xwSBWWNxPY",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/1xwSBWWNxPY/2.webp"
+    },
+    {
+        "Title": "Messaging Security: Deep dive into EOP, MDO and other Messaging Security Features",
+        "VideoID": "SBpqZ5dClSY",
+        "VideoOrder": 17,
+        "VideoURL": "https://www.youtube.com/embed/SBpqZ5dClSY",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/SBpqZ5dClSY/2.webp"
+    },
+    {
+        "Title": "Notes from the field: Best practices for Information Protection & DLP rollouts",
+        "VideoID": "QdZ3L-OE4o8",
+        "VideoOrder": 18,
+        "VideoURL": "https://www.youtube.com/embed/QdZ3L-OE4o8",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/QdZ3L-OE4o8/2.webp"
+    },
+    {
+        "Title": "How to Winter-Proof Your M365 Tenant: Save costs, Reduce data leaks and Automate Governance tasks",
+        "VideoID": "KxiMBx5Gnkk",
+        "VideoOrder": 19,
+        "VideoURL": "https://www.youtube.com/embed/KxiMBx5Gnkk",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/KxiMBx5Gnkk/2.webp"
+    },
+    {
+        "Title": "Navigating Legal Landscapes with Microsoft Purview eDiscovery Solutions",
+        "VideoID": "bR7Fek86JDw",
+        "VideoOrder": 20,
+        "VideoURL": "https://www.youtube.com/embed/bR7Fek86JDw",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/bR7Fek86JDw/2.webp"
+    },
+    {
+        "Title": "Data Security & Privacy: Protecting Your Data with DLP, Compliance and Privacy",
+        "VideoID": "ISCOucrRj98",
+        "VideoOrder": 21,
+        "VideoURL": "https://www.youtube.com/embed/ISCOucrRj98",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/ISCOucrRj98/2.webp"
+    },
+    {
+        "Title": "Defense in depth in dual-use configuration using Microsoft Defender for Office 365",
+        "VideoID": "1olotwWgcXE",
+        "VideoOrder": 22,
+        "VideoURL": "https://www.youtube.com/embed/1olotwWgcXE",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/1olotwWgcXE/2.webp"
+    },
+    {
+        "Title": "Operationalize new response capabilities for SecOps using Microsoft Defender for Office 365",
+        "VideoID": "2rZ1WNYdjcw",
+        "VideoOrder": 23,
+        "VideoURL": "https://www.youtube.com/embed/2rZ1WNYdjcw",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/2rZ1WNYdjcw/2.webp"
+    },
+    {
+        "Title": "Secure your data while it's in data pipelines and Azure Data factory on the move and transit.",
+        "VideoID": "ZcjotQ-LVEc",
+        "VideoOrder": 24,
+        "VideoURL": "https://www.youtube.com/embed/ZcjotQ-LVEc",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/ZcjotQ-LVEc/2.webp"
+    },
+    {
+        "Title": "Microsoft Sentinel the modern SIEM system",
+        "VideoID": "-iro69xoedc",
+        "VideoOrder": 25,
+        "VideoURL": "https://www.youtube.com/embed/-iro69xoedc",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/-iro69xoedc/2.webp"
+    },
+    {
+        "Title": "Architecting a Zero Trust Framework in Azure",
+        "VideoID": "mysFP2CbvGg",
+        "VideoOrder": 26,
+        "VideoURL": "https://www.youtube.com/embed/mysFP2CbvGg",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/mysFP2CbvGg/2.webp"
+    },
+    {
+        "Title": "Securing Containers and Kubernetes in Azure: Best Practices and Strategies",
+        "VideoID": "7B1ife4Qigs",
+        "VideoOrder": 27,
+        "VideoURL": "https://www.youtube.com/embed/7B1ife4Qigs",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/7B1ife4Qigs/2.webp"
+    },
+    {
+        "Title": "Deep dive into the Zero Trust journey : Securing your MS Entra ID with our Zero Trust Approach !",
+        "VideoID": "WsoABP_AW9E",
+        "VideoOrder": 28,
+        "VideoURL": "https://www.youtube.com/embed/WsoABP_AW9E",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/WsoABP_AW9E/2.webp"
+    },
+    {
+        "Title": "Cloud Fortress : Entra Global Secure Access",
+        "VideoID": "kduEu8gbn3E",
+        "VideoOrder": 29,
+        "VideoURL": "https://www.youtube.com/embed/kduEu8gbn3E",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/kduEu8gbn3E/2.webp"
+    },
+    {
+        "Title": "Secure your critical Azure service resources with Azure Private Link",
+        "VideoID": "qYsvsBp9_pA",
+        "VideoOrder": 30,
+        "VideoURL": "https://www.youtube.com/embed/qYsvsBp9_pA",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/qYsvsBp9_pA/2.webp"
+    },
+    {
+        "Title": "Do's and don't with tiering of cloud and AD: Real-life experience using Enterprise Access Model",
+        "VideoID": "606NTZFuxjc",
+        "VideoOrder": 31,
+        "VideoURL": "https://www.youtube.com/embed/606NTZFuxjc",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/606NTZFuxjc/2.webp"
+    },
+    {
+        "Title": "The Control and Security of Cloud Resources: How to Be (or Not to Be) Cloud Confident",
+        "VideoID": "9m6_k4_rEWg",
+        "VideoOrder": 32,
+        "VideoURL": "https://www.youtube.com/embed/9m6_k4_rEWg",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/9m6_k4_rEWg/2.webp"
+    },
+    {
+        "Title": "Azure Blueprints provision for Data Analytics and AI Platform",
+        "VideoID": "JqE6T7M8y_o",
+        "VideoOrder": 33,
+        "VideoURL": "https://www.youtube.com/embed/JqE6T7M8y_o",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/JqE6T7M8y_o/2.webp"
+    },
+    {
+        "Title": "Enhancing Cloud Security: What's New in Microsoft Defender for Cloud",
+        "VideoID": "5wJKbVFEQaI",
+        "VideoOrder": 34,
+        "VideoURL": "https://www.youtube.com/embed/5wJKbVFEQaI",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/5wJKbVFEQaI/2.webp"
+    },
+    {
+        "Title": "Managing Cloud Resources Effectively with Microsoft Azure Security, Compliance, and Governance",
+        "VideoID": "ezNb-G3gu7Y",
+        "VideoOrder": 35,
+        "VideoURL": "https://www.youtube.com/embed/ezNb-G3gu7Y",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/ezNb-G3gu7Y/2.webp"
+    },
+    {
+        "Title": "ICSS 2023- Microsoft Defender for Cloud - Improve your Security Posture",
+        "VideoID": "dLNCX5hNISE",
+        "VideoOrder": 36,
+        "VideoURL": "https://www.youtube.com/embed/dLNCX5hNISE",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/dLNCX5hNISE/2.webp"
+    },
+    {
+        "Title": "Career in cyber security, where to start?",
+        "VideoID": "Dm-MIc8GaGw",
+        "VideoOrder": 37,
+        "VideoURL": "https://www.youtube.com/embed/Dm-MIc8GaGw",
+        "VideoThumbnail": "https://i.ytimg.com/vi_webp/Dm-MIc8GaGw/2.webp"
+    }
+]

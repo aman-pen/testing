@@ -1,17 +1,51 @@
+.card-component {
+  max-height: 34rem;
+}
+
 .video-iframe {
   padding-block: 2rem;
   padding-left: 2rem;
-  aspect-ratio: 560/315;
+  aspect-ratio: 16/9;
   width: 60rem;
+}
+.video-thumbnail {
+  max-width: 10rem;
+  width: 10rem;
+  height: auto;
+}
+
+.video-number {
+  font-size: 1.2rem !important;
+}
+.video-title {
+  font-size: 1.4rem !important;
+  line-height: 2rem !important;
+  font-weight: 500 !important;
+  height: 4rem;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 .iframe-props {
   width: 100%;
   height: 100%;
 }
+.playlist-heading {
+  font-size: 2rem !important;
+  font-weight: 600;
+  height: 4rem;
+}
 .playlist-details {
   padding-block: 2rem;
   padding-right: 2rem;
+  max-width: 38rem;
 }
-.playlist-padding {
-  padding-top: 0 !important;
+.list-component {
+  padding-block: 0 !important;
+  overflow: auto;
+  height: 90%;
 }

@@ -5,9 +5,7 @@ import Parent2023 from "./2023/components/Parent2023";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
   Route,
-  Link,
   Routes,
-  useParams,
   BrowserRouter,
 } from "react-router-dom";
 import { theme2021 } from "./2021/style/theme/theme2021";
