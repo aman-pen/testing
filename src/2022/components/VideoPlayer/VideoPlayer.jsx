@@ -9,16 +9,17 @@ import {
   ListItemIcon,
   Typography,
 } from "@mui/material";
-import "../style/videoPlayer.scss";
-import "../style/global.scss";
-import YTPlaylistData from "../store/dec2023/ytPlaylist.json";
+import "./videoPlayer.scss";
+import "../../style/global.scss";
+import YTPlaylistData from "./ytPlaylist.json";
 
 const VideoPlayer = ({ theme }) => {
   const [currentYoutubeVideo, setCurrentYoutubeVideo] = useState(
-    "https://www.youtube.com/embed/pe5XZgyOQQQ?rel=0"
+    "https://www.youtube.com/embed/ZGB_uKnfJ3k?rel=0"
   );
   const componentHeading =
-    "Watch our all India Cloud Security Summit 2023 Sessions here";
+    "Watch our all India Cloud Security Summit 2022 Sessions here";
+  const listHeading = "India Cloud Security Summit 2022";
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <>
@@ -65,9 +66,7 @@ const VideoPlayer = ({ theme }) => {
             ></iframe>
           </Box>
           <Box className="playlist-details">
-            <Box className="playlist-heading">
-              India Cloud Security Summit 2023
-            </Box>
+            <Box className="playlist-heading">{listHeading}</Box>
             <List
               className="list-component"
               sx={{

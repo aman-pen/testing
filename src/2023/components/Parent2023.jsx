@@ -18,7 +18,7 @@ import PreviousEvents from "./PreviousEvents";
 import { Box } from "@mui/material";
 import "../style/global.scss";
 import { SpeakersAndSessionsCompleteData } from "../services/EventData";
-import VideoPlayer from "./VideoPlayer";
+import VideoPlayer from "./VideoPlayer/VideoPlayer";
 
 const Parent2023 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);

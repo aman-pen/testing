@@ -18,11 +18,11 @@ import PreviousEvents from "./PreviousEvents";
 import { Box } from "@mui/material";
 import "../style/global.scss";
 import { speakerApi, sessionApi } from "../services/EventData";
+import VideoPlayer from "./VideoPlayer/VideoPlayer";
 
 const Parent2022 = ({ theme }) => {
   const [speakerData, setSpeakerData] = useState([]);
   const [sessionData, setSessionData] = useState([]);
-
 
   useEffect(() => {
     document.title = "ICSS 2022";
@@ -51,6 +51,8 @@ const Parent2022 = ({ theme }) => {
       <Box id="about" />
       <About theme={theme} />
       <Eventinfostripe theme={theme} />
+      <Box id="Playlist" />
+      <VideoPlayer theme={theme} />
       <ErrorBoundary>
         <Box id="speakers" />
         {/* <KeynoteSpeaker theme={theme} /> */}
