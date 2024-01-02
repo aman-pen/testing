@@ -173,7 +173,7 @@ const Home = ({ theme }) => {
             <Button
               className="eventButton"
               href={homeData.eventRegLink}
-              target="_blank"
+              target={homeData.eventRegLink[0] == "#" ? "_self" : "_blank"}
               sx={{
                 color: theme.colors.text.primary,
                 fontSize: theme.fontSize.eventButton,
@@ -184,14 +184,14 @@ const Home = ({ theme }) => {
                 },
                 ":hover": {
                   color: theme.colors.text.primary,
+                  cursor: "pointer",
                 },
               }}
               variant="contained"
               alt="Register Now"
               aria-label="Register Now"
             >
-              {/* {homeData.eventButton} */}
-              Register Now
+              {homeData.eventButton}
             </Button>
           </Box>
         </Box>

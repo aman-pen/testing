@@ -155,7 +155,7 @@ const Sponsors = ({ theme }) => {
               </Box>
             </Box>
           </Box>
-          <Box sx={{
+          {/* <Box sx={{
               paddingBlock: "3rem",
             }}>
             <Typography
@@ -166,7 +166,7 @@ const Sponsors = ({ theme }) => {
             >
               Gold
             </Typography>
-          </Box>
+          </Box> */}
         </Box>
         <Box className="sectionMaxWidth" sx={{ paddingBlockEnd: "3rem" }}>
           {/* <Box className="sponsorsHeadingBox">

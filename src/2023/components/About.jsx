@@ -2,6 +2,7 @@ import { Typography, Box, Button } from "@mui/material";
 import "../style/about.scss";
 import "../style/global.scss";
 import aboutData from "../store/dec2023/about.json";
+import homeData from "../store/dec2023/home.json";
 
 const About = ({ theme }) => {
   return (
@@ -122,8 +123,8 @@ const About = ({ theme }) => {
       >
         <Button
           className="aboutButton"
-          href={aboutData.eventRegLink}
-          target="_blank"
+          href={homeData.eventRegLink}
+          target={homeData.eventRegLink[0] == "#" ? "_self" : "_blank"}
           sx={{
             color: "#fff",
             fontSize: theme.fontSize.eventButton,
@@ -137,7 +138,7 @@ const About = ({ theme }) => {
           aria-label="Register Now"
           variant="contained"
         >
-          Register Now
+          {homeData.eventButton}
         </Button>
       </Box>
     </>

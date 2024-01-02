@@ -1,3 +1,6 @@
+.card-parent {
+  padding-top: min(15%, 8rem);
+}
 .card-component {
   max-height: 34rem;
 }
@@ -6,7 +9,7 @@
   padding-block: 2rem;
   padding-left: 2rem;
   aspect-ratio: 16/9;
-  width: 60rem;
+  width: 55rem;
 }
 .video-thumbnail {
   max-width: 10rem;
@@ -48,4 +51,48 @@
   padding-block: 0 !important;
   overflow: auto;
   height: 90%;
+  overflow-x: hidden;
+}
+
+.videoPlayer {
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: auto;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #cfd8dc;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #90a4ae;
+    border: 0.1rem solid #cfd8dc;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-component {
+    width: clamp(60rem, calc(60rem + ((1vw - 0.98rem) * 44.1176)), 30rem);
+    max-width: 90%;
+    max-height: 100%;
+  }
+  .video-iframe {
+    width: 100%;
+  }
+  .list-component {
+    max-height: 30rem;
+  }
+  .playlist-details {
+    max-width: 100%;
+    padding-right: 0rem;
+  }
+  .playlist-heading {
+    padding-bottom: 5rem;
+  }
 }
