@@ -147,8 +147,8 @@ const About = ({ theme }) => {
       >
         <Button
           className="aboutButton"
-          href={"https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"}
-          target="_blank"
+          href={"#Playlist"}
+          // target="_blank"
           sx={{
             color: "#fff",
             fontSize: theme.fontSize.eventButton,

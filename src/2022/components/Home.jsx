@@ -173,9 +173,9 @@ const Home = ({ theme }) => {
             <Button
               className="eventButton"
               href={
-                "https://www.youtube.com/playlist?list=PLhLCvUkszoFqL91bWWNiUyVkuX1Vc2Adh"
+                "#Playlist"
               }
-              target="_blank"
+              // target="_blank"
               sx={{
                 color: theme.colors.text.primary,
                 fontSize: theme.fontSize.eventButton,

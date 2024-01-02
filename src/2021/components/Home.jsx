@@ -171,8 +171,8 @@ const Home = ({ theme }) => {
             >
               <Button
                 className="eventButton"
-                href="https://www.youtube.com/playlist?list=PLhLCvUkszoFohvLy7iLiZK6uKGASNs4En"
-                target="_blank"
+                href="#Playlist"
+                // target="_blank"
                 sx={{
                   // color: "#431282",
                   color: "#479cda!important",

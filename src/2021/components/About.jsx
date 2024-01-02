@@ -98,7 +98,7 @@ const About = ({ theme }) => {
         <Button
           className="aboutButton"
           // href={aboutData.eventRegLink}
-          href="https://www.youtube.com/playlist?list=PLhLCvUkszoFohvLy7iLiZK6uKGASNs4En"
+          href="#Playlist"
           // target="_blank"
           sx={{
             color: theme.colors.text.primary,
