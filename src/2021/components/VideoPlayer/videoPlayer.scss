@@ -1,0 +1,98 @@
+.card-parent {
+  padding-top: min(15%, 8rem);
+}
+.card-component {
+  max-height: 34rem;
+}
+
+.video-iframe {
+  padding-block: 2rem;
+  padding-left: 2rem;
+  aspect-ratio: 16/9;
+  width: 55rem;
+}
+.video-thumbnail {
+  max-width: 10rem;
+  width: 10rem;
+  height: auto;
+}
+
+.video-number {
+  font-size: 1.2rem !important;
+}
+.video-title {
+  font-size: 1.4rem !important;
+  line-height: 2rem !important;
+  font-weight: 500 !important;
+  height: 4rem;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.iframe-props {
+  width: 100%;
+  height: 100%;
+}
+.playlist-heading {
+  font-size: 2rem !important;
+  font-weight: 600;
+  height: 4rem;
+}
+.playlist-details {
+  padding-block: 2rem;
+  padding-right: 2rem;
+  max-width: 38rem;
+}
+.list-component {
+  padding-block: 0 !important;
+  overflow: auto;
+  height: 90%;
+  overflow-x: hidden;
+}
+
+.videoPlayer {
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: auto;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #cfd8dc;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #90a4ae;
+    border: 0.1rem solid #cfd8dc;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-component {
+    width: clamp(60rem, calc(60rem + ((1vw - 0.98rem) * 44.1176)), 30rem);
+    max-width: 90%;
+    max-height: 100%;
+  }
+  .video-iframe {
+    width: 100%;
+  }
+  .list-component {
+    max-height: 30rem;
+  }
+  .playlist-details {
+    max-width: 100%;
+    padding-right: 0rem;
+  }
+  .playlist-heading {
+    padding-bottom: 5rem;
+  }
+}

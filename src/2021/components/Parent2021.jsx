@@ -11,7 +11,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Organizers from "./Organizers";
 import Keynote from "./Keynote";
 import Support from "./Support";
-
+import VideoPlayer from "./VideoPlayer/VideoPlayer";
 
 import { Box } from "@mui/material";
 import "../style/global.scss";

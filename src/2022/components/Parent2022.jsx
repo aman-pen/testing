@@ -80,7 +80,7 @@ const Parent2022 = ({ theme }) => {
       <Sponsors theme={theme} />
       <Box id="eventTeam" />
       <Organizers theme={theme} />
-      {/* <PreviousEvents theme={theme} /> */}
+      <PreviousEvents theme={theme} />
       <Box id="contactUS" />
       <Footer theme={theme} />
     </Box>
