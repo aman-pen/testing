@@ -27,6 +27,8 @@ const Parent2021 = ({ theme }) => {
       <CountdownTimer />
       <Box id="about" />
       <About theme={theme} />
+      <Box className="Playlist" />
+      <VideoPlayer theme={theme}/>
       <Box id="agenda" />
       <ErrorBoundary>
         <Agenda theme={theme} />

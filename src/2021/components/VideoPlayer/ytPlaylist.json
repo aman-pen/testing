@@ -1,254 +1,247 @@
 [
     {
-        "VideoOrder": 1,
-        "VideoID": "ZGB_uKnfJ3k",
-        "Title": "India Cloud Security Summit 2022 - Welcome Note and Opening Keynote",
-        "VideoURL": "https://www.youtube.com/embed/ZGB_uKnfJ3k",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/ZGB_uKnfJ3k/2.webp"
+      "VideoOrder": 1,
+      "VideoID": "3M21ARqKS6I",
+      "Title": "Welcome Speech and Keynote of India Cloud Security Summit 2021 Virtual Event",
+      "VideoURL": "https://www.youtube.com/embed/3M21ARqKS6I",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/3M21ARqKS6I/2.webp"
     },
     {
-        "VideoOrder": 2,
-        "VideoID": "jOdzRwRkJFI",
-        "Title": "I find your lack of Azure Governance disturbing!",
-        "VideoURL": "https://www.youtube.com/embed/jOdzRwRkJFI",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/jOdzRwRkJFI/2.webp"
+      "VideoOrder": 2,
+      "VideoID": "56CB28WkjPc",
+      "Title": "Top pitfalls of Microsoft Azure security and how to avoid them",
+      "VideoURL": "https://www.youtube.com/embed/56CB28WkjPc",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/56CB28WkjPc/2.webp"
     },
     {
-        "VideoOrder": 3,
-        "VideoID": "qEVvx-lN3oA",
-        "Title": "Confidential Computing & Data Protection",
-        "VideoURL": "https://www.youtube.com/embed/qEVvx-lN3oA",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/qEVvx-lN3oA/2.webp"
+      "VideoOrder": 3,
+      "VideoID": "5S16WqQUKno",
+      "Title": "Information Barriers in MS Teams",
+      "VideoURL": "https://www.youtube.com/embed/5S16WqQUKno",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/5S16WqQUKno/2.webp"
     },
     {
-        "VideoOrder": 4,
-        "VideoID": "EVqZBkIjpGY",
-        "Title": "Azure security best practices and patterns",
-        "VideoURL": "https://www.youtube.com/embed/EVqZBkIjpGY",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/EVqZBkIjpGY/2.webp"
+      "VideoOrder": 4,
+      "VideoID": "6GiYx205SZE",
+      "Title": "Deep dive into Azure AD B2C custom policies",
+      "VideoURL": "https://www.youtube.com/embed/6GiYx205SZE",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/6GiYx205SZE/2.webp"
     },
     {
-        "VideoOrder": 5,
-        "VideoID": "-g9awtxZZQU",
-        "Title": "Accelerate digital transformation by securing unmanaged devices across the enterprise",
-        "VideoURL": "https://www.youtube.com/embed/-g9awtxZZQU",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/-g9awtxZZQU/2.webp"
+      "VideoOrder": 5,
+      "VideoID": "_7NMlhcmrLg",
+      "Title": "Using the SPF, DKIM and DMARC Frameworks to reduce Spoofing in Office 365",
+      "VideoURL": "https://www.youtube.com/embed/_7NMlhcmrLg",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/_7NMlhcmrLg/2.webp"
     },
     {
-        "VideoOrder": 6,
-        "VideoID": "dq8_6H4lGkU",
-        "Title": "Deep Dive into Power Platform governance and Security",
-        "VideoURL": "https://www.youtube.com/embed/dq8_6H4lGkU",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/dq8_6H4lGkU/2.webp"
+      "VideoOrder": 6,
+      "VideoID": "_pQuJ7nn44M",
+      "Title": "Temporary Access Pass - The key for unlocking Passwordless?",
+      "VideoURL": "https://www.youtube.com/embed/_pQuJ7nn44M",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/_pQuJ7nn44M/2.webp"
     },
     {
-        "VideoOrder": 7,
-        "VideoID": "REr9I6-g6yw",
-        "Title": "Azure AD : Identity Governance - B2B persona lifecycle /workflow management",
-        "VideoURL": "https://www.youtube.com/embed/REr9I6-g6yw",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/REr9I6-g6yw/2.webp"
+      "VideoOrder": 7,
+      "VideoID": "a_vPWvkjU_M",
+      "Title": "CyberSec and Microsoft 365",
+      "VideoURL": "https://www.youtube.com/embed/a_vPWvkjU_M",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/a_vPWvkjU_M/2.webp"
     },
     {
-        "VideoOrder": 8,
-        "VideoID": "gKsdOdvQaL4",
-        "Title": "Setup & Operationalize your Cloud SIEM at Scale",
-        "VideoURL": "https://www.youtube.com/embed/gKsdOdvQaL4",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/gKsdOdvQaL4/2.webp"
+      "VideoOrder": 8,
+      "VideoID": "AiI83EE7tYE",
+      "Title": "A Day in the Life of an Azure Sentinel Analyst",
+      "VideoURL": "https://www.youtube.com/embed/AiI83EE7tYE",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/AiI83EE7tYE/2.webp"
     },
     {
-        "VideoOrder": 9,
-        "VideoID": "f0K3L9_7ZNk",
-        "Title": "Microsoft Defender for Office 365: Manage false positives and false negatives using Submissions",
-        "VideoURL": "https://www.youtube.com/embed/f0K3L9_7ZNk",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/f0K3L9_7ZNk/2.webp"
+      "VideoOrder": 9,
+      "VideoID": "aUfq_9b9Fi8",
+      "Title": "Modern Management with MEM Intune & Security Policies",
+      "VideoURL": "https://www.youtube.com/embed/aUfq_9b9Fi8",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/aUfq_9b9Fi8/2.webp"
     },
     {
-        "VideoOrder": 10,
-        "VideoID": "EQEgYy2mzvM",
-        "Title": "Building an Efficient SOC Using Microsoft Sentinel",
-        "VideoURL": "https://www.youtube.com/embed/EQEgYy2mzvM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/EQEgYy2mzvM/2.webp"
+      "VideoOrder": 10,
+      "VideoID": "bMKcV7ZeqQQ",
+      "Title": "Secure Microsoft 365 collaboration with Microsoft Information Protection  a real life scenario",
+      "VideoURL": "https://www.youtube.com/embed/bMKcV7ZeqQQ",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/bMKcV7ZeqQQ/2.webp"
     },
     {
-        "VideoOrder": 11,
-        "VideoID": "MROB23_ksTM",
-        "Title": "How resilient can you be if your data has only 1 point in time...now?",
-        "VideoURL": "https://www.youtube.com/embed/MROB23_ksTM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/MROB23_ksTM/2.webp"
+      "VideoOrder": 11,
+      "VideoID": "bv4zd-EAtng",
+      "Title": "Privacy Paradox: How can Privacy Enhancing Technology on Azure Enable Improved Data Analysis?",
+      "VideoURL": "https://www.youtube.com/embed/bv4zd-EAtng",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/bv4zd-EAtng/2.webp"
     },
     {
-        "VideoOrder": 12,
-        "VideoID": "_-oE3646Tpw",
-        "Title": "Policy as [versioned] code - you're doing it wrong.",
-        "VideoURL": "https://www.youtube.com/embed/_-oE3646Tpw",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/_-oE3646Tpw/2.webp"
+      "VideoOrder": 12,
+      "VideoID": "Cu444BLbxds",
+      "Title": "KeyNote by Yuri Diogenes | Principal Program Manager at C+AI Security CxE Team at Microsoft",
+      "VideoURL": "https://www.youtube.com/embed/Cu444BLbxds",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/Cu444BLbxds/2.webp"
     },
     {
-        "VideoOrder": 13,
-        "VideoID": "Vtd4QLR_2fU",
-        "Title": "Data Privacy Management in Microsoft 365",
-        "VideoURL": "https://www.youtube.com/embed/Vtd4QLR_2fU",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/Vtd4QLR_2fU/2.webp"
+      "VideoOrder": 13,
+      "VideoID": "ej4oFl618WE",
+      "Title": "You are Doing IT Security Wrong - Understanding the Threat of Modern Cyber-attacks",
+      "VideoURL": "https://www.youtube.com/embed/ej4oFl618WE",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/ej4oFl618WE/2.webp"
     },
     {
-        "VideoOrder": 14,
-        "VideoID": "CAZqBChZRqM",
-        "Title": "What is Insider Risk Management and why should I invest in it",
-        "VideoURL": "https://www.youtube.com/embed/CAZqBChZRqM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/CAZqBChZRqM/2.webp"
+      "VideoOrder": 14,
+      "VideoID": "FN5uqrGaGPY",
+      "Title": "Few Security tips for N Tier app  in Azure",
+      "VideoURL": "https://www.youtube.com/embed/FN5uqrGaGPY",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/FN5uqrGaGPY/2.webp"
     },
     {
-        "VideoOrder": 15,
-        "VideoID": "7rbaVfxZisI",
-        "Title": "Ensuring Security and Compliance in Microsoft Teams",
-        "VideoURL": "https://www.youtube.com/embed/7rbaVfxZisI",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/7rbaVfxZisI/2.webp"
+      "VideoOrder": 15,
+      "VideoID": "Lr6WG6cr7yA",
+      "Title": "Zero Trust for Modern Workplace",
+      "VideoURL": "https://www.youtube.com/embed/Lr6WG6cr7yA",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/Lr6WG6cr7yA/2.webp"
     },
     {
-        "VideoOrder": 16,
-        "VideoID": "asHDRHLghyo",
-        "Title": "Protect and Prevent Data Loss via Microsoft Purview",
-        "VideoURL": "https://www.youtube.com/embed/asHDRHLghyo",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/asHDRHLghyo/2.webp"
+      "VideoOrder": 16,
+      "VideoID": "MVcKU_FuZXE",
+      "Title": "DevSecOps with AzureDevops and responding to real time events with Azure security center",
+      "VideoURL": "https://www.youtube.com/embed/MVcKU_FuZXE",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/MVcKU_FuZXE/2.webp"
     },
     {
-        "VideoOrder": 17,
-        "VideoID": "JZnO16jy2iI",
-        "Title": "Building trust into digital experiences with Entra Verfied ID",
-        "VideoURL": "https://www.youtube.com/embed/JZnO16jy2iI",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/JZnO16jy2iI/2.webp"
+      "VideoOrder": 17,
+      "VideoID": "NkIcKlGIuSY",
+      "Title": "Power Platform CoE Starter Kit - Overview",
+      "VideoURL": "https://www.youtube.com/embed/NkIcKlGIuSY",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/NkIcKlGIuSY/2.webp"
     },
     {
-        "VideoOrder": 18,
-        "VideoID": "byysrGHhiXo",
-        "Title": "Mastering Configuration in Microsoft Defender for Office 365",
-        "VideoURL": "https://www.youtube.com/embed/byysrGHhiXo",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/byysrGHhiXo/2.webp"
+      "VideoOrder": 18,
+      "VideoID": "O19cvvrLO1I",
+      "Title": "Azure Sentinel Hunting with KQL queries",
+      "VideoURL": "https://www.youtube.com/embed/O19cvvrLO1I",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/O19cvvrLO1I/2.webp"
     },
     {
-        "VideoOrder": 19,
-        "VideoID": "tgMYy30k2dc",
-        "Title": "Combat Business email compromise using Microsoft Defender for Office 365",
-        "VideoURL": "https://www.youtube.com/embed/tgMYy30k2dc",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/tgMYy30k2dc/2.webp"
+      "VideoOrder": 19,
+      "VideoID": "o31t0Vx5K7M",
+      "Title": "I find your lack of Azure Governance disturbing!",
+      "VideoURL": "https://www.youtube.com/embed/o31t0Vx5K7M",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/o31t0Vx5K7M/2.webp"
     },
     {
-        "VideoOrder": 20,
-        "VideoID": "MyfkBXLOrnY",
-        "Title": "Deep Dive on Microsoft Defender for Endpoint",
-        "VideoURL": "https://www.youtube.com/embed/MyfkBXLOrnY",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/MyfkBXLOrnY/2.webp"
+      "VideoOrder": 20,
+      "VideoID": "O7Ctxttynyc",
+      "Title": "Manage Security Operations on Microsoft Azure using Azure Monitor",
+      "VideoURL": "https://www.youtube.com/embed/O7Ctxttynyc",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/O7Ctxttynyc/2.webp"
     },
     {
-        "VideoOrder": 21,
-        "VideoID": "6Pk-gBoWjPk",
-        "Title": "Why Low-code/No-code doesn't mean Low/No Security",
-        "VideoURL": "https://www.youtube.com/embed/6Pk-gBoWjPk",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/6Pk-gBoWjPk/2.webp"
+      "VideoOrder": 21,
+      "VideoID": "opnvdMdlBXM",
+      "Title": "Remote Working with Windows Virtual Desktop",
+      "VideoURL": "https://www.youtube.com/embed/opnvdMdlBXM",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/opnvdMdlBXM/2.webp"
     },
     {
-        "VideoOrder": 22,
-        "VideoID": "6fLONRM8Gyc",
-        "Title": "Manage Privileged access assignment to Users and Groups with Azure AD PIM",
-        "VideoURL": "https://www.youtube.com/embed/6fLONRM8Gyc",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/6fLONRM8Gyc/2.webp"
+      "VideoOrder": 22,
+      "VideoID": "pJuUTxEcqB0",
+      "Title": "Build Secure and an efficient cloud landing zone",
+      "VideoURL": "https://www.youtube.com/embed/pJuUTxEcqB0",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/pJuUTxEcqB0/2.webp"
     },
     {
-        "VideoOrder": 23,
-        "VideoID": "lm9XxZk7pwg",
-        "Title": "Do the Right thing, shift Left!",
-        "VideoURL": "https://www.youtube.com/embed/lm9XxZk7pwg",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/lm9XxZk7pwg/2.webp"
+      "VideoOrder": 23,
+      "VideoID": "ROxQD5NDtSU",
+      "Title": "Azure AD Verifiable Credentials - verify once, use everywhere",
+      "VideoURL": "https://www.youtube.com/embed/ROxQD5NDtSU",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/ROxQD5NDtSU/2.webp"
     },
     {
-        "VideoOrder": 24,
-        "VideoID": "SuY3lyjYhow",
-        "Title": "Secure your corporate endpoints using Defender for Cloud Apps",
-        "VideoURL": "https://www.youtube.com/embed/SuY3lyjYhow",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/SuY3lyjYhow/2.webp"
+      "VideoOrder": 24,
+      "VideoID": "rquDojTRNPs",
+      "Title": "M365 Security and Monitoring with Graph API",
+      "VideoURL": "https://www.youtube.com/embed/rquDojTRNPs",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/rquDojTRNPs/2.webp"
     },
     {
-        "VideoOrder": 25,
-        "VideoID": "X64YhPodJfM",
-        "Title": "Securely access your desktop applications from almost anywhere using Azure Virtual Desktop",
-        "VideoURL": "https://www.youtube.com/embed/X64YhPodJfM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/X64YhPodJfM/2.webp"
+      "VideoOrder": 25,
+      "VideoID": "rwe0UsufDgY",
+      "Title": "Secure Infrastructure with Microsoft Defender for Identity",
+      "VideoURL": "https://www.youtube.com/embed/rwe0UsufDgY",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/rwe0UsufDgY/2.webp"
     },
     {
-        "VideoOrder": 26,
-        "VideoID": "Fs8pX2hUWQo",
-        "Title": "How to Secure Endpoint Devices using Cloud Policies",
-        "VideoURL": "https://www.youtube.com/embed/Fs8pX2hUWQo",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/Fs8pX2hUWQo/2.webp"
+      "VideoOrder": 26,
+      "VideoID": "srHx1qzfct8",
+      "Title": "How to build secure B2C Applications with Azure AD Identities",
+      "VideoURL": "https://www.youtube.com/embed/srHx1qzfct8",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/srHx1qzfct8/2.webp"
     },
     {
-        "VideoOrder": 27,
-        "VideoID": "syj_bco1yow",
-        "Title": "Cyber Threats' detections and investigations in Azure",
-        "VideoURL": "https://www.youtube.com/embed/syj_bco1yow",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/syj_bco1yow/2.webp"
+      "VideoOrder": 27,
+      "VideoID": "SZqTmD-Zv_k",
+      "Title": "Introduction to Office 365 Security:  Configure, Manage and Monitor",
+      "VideoURL": "https://www.youtube.com/embed/SZqTmD-Zv_k",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/SZqTmD-Zv_k/2.webp"
     },
     {
-        "VideoOrder": 28,
-        "VideoID": "CTlYC4_pQXE",
-        "Title": "Secure your SQL data with the power of Blockchain",
-        "VideoURL": "https://www.youtube.com/embed/CTlYC4_pQXE",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/CTlYC4_pQXE/2.webp"
+      "VideoOrder": 28,
+      "VideoID": "tI700yjKmBI",
+      "Title": "Hackers Won't Pass - Microsoft 365 Defender in action",
+      "VideoURL": "https://www.youtube.com/embed/tI700yjKmBI",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/tI700yjKmBI/2.webp"
     },
     {
-        "VideoOrder": 29,
-        "VideoID": "fsbRonbLMv4",
-        "Title": "Azure SQL Database Security Capabilities",
-        "VideoURL": "https://www.youtube.com/embed/fsbRonbLMv4",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/fsbRonbLMv4/2.webp"
+      "VideoOrder": 29,
+      "VideoID": "UxpGJvOLnd4",
+      "Title": "Microsoft 365 Virtual Marathon Teams Bombing and Lessons Learned",
+      "VideoURL": "https://www.youtube.com/embed/UxpGJvOLnd4",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/UxpGJvOLnd4/2.webp"
     },
     {
-        "VideoOrder": 30,
-        "VideoID": "pRsQBcsOhlM",
-        "Title": "Build your hybrid and multicloud identity, access control, and security foundation with Azure Arc",
-        "VideoURL": "https://www.youtube.com/embed/pRsQBcsOhlM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/pRsQBcsOhlM/2.webp"
+      "VideoOrder": 30,
+      "VideoID": "wG9GxvfbTik",
+      "Title": "Kubernetes Security",
+      "VideoURL": "https://www.youtube.com/embed/wG9GxvfbTik",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/wG9GxvfbTik/2.webp"
     },
     {
-        "VideoOrder": 31,
-        "VideoID": "JxHgOqkLijM",
-        "Title": "Security Challenges In Software Development Company",
-        "VideoURL": "https://www.youtube.com/embed/JxHgOqkLijM",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/JxHgOqkLijM/2.webp"
+      "VideoOrder": 31,
+      "VideoID": "wqDH40_ofnI",
+      "Title": "Secure your Data   All About Power Platform Data Loss Prevention",
+      "VideoURL": "https://www.youtube.com/embed/wqDH40_ofnI",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/wqDH40_ofnI/2.webp"
     },
     {
-        "VideoOrder": 32,
-        "VideoID": "W2XQLQ8Irn4",
-        "Title": "Deep dive into Azure network security",
-        "VideoURL": "https://www.youtube.com/embed/W2XQLQ8Irn4",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/W2XQLQ8Irn4/2.webp"
+      "VideoOrder": 32,
+      "VideoID": "xZA4CYpbmks",
+      "Title": "Microsoft Identity Platform and OAuth 2.0 for beginners",
+      "VideoURL": "https://www.youtube.com/embed/xZA4CYpbmks",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/xZA4CYpbmks/2.webp"
     },
     {
-        "VideoOrder": 33,
-        "VideoID": "Psq8DnCAzd4",
-        "Title": "Windows 365 Architecture, Security and Compliance",
-        "VideoURL": "https://www.youtube.com/embed/Psq8DnCAzd4",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/Psq8DnCAzd4/2.webp"
+      "VideoOrder": 33,
+      "VideoID": "Y6ZKhbFWuSM",
+      "Title": "Audit VMs with Azure Guest Configuration Policy",
+      "VideoURL": "https://www.youtube.com/embed/Y6ZKhbFWuSM",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/Y6ZKhbFWuSM/2.webp"
     },
     {
-        "VideoOrder": 34,
-        "VideoID": "J7mbedBXMkw",
-        "Title": "Microsoft Threat Intelligence",
-        "VideoURL": "https://www.youtube.com/embed/J7mbedBXMkw",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/J7mbedBXMkw/2.webp"
+      "VideoOrder": 34,
+      "VideoID": "ypfeqnDFB9s",
+      "Title": "Microsoft Defender  Stop attacks and reduce security operations workload with XDR",
+      "VideoURL": "https://www.youtube.com/embed/ypfeqnDFB9s",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/ypfeqnDFB9s/2.webp"
     },
     {
-        "VideoOrder": 35,
-        "VideoID": "fj3EkAr8adc",
-        "Title": "Microsoft Entra permission management for Multi Cloud environment",
-        "VideoURL": "https://www.youtube.com/embed/fj3EkAr8adc",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/fj3EkAr8adc/2.webp"
-    },
-    {
-        "VideoOrder": 36,
-        "VideoID": "y1ynl58Kdak",
-        "Title": "Security and Compliance: Deploying A Secure Azure Environment with Zero Trust Security Model.",
-        "VideoURL": "https://www.youtube.com/embed/y1ynl58Kdak",
-        "VideoThumbnail": "https://i.ytimg.com/vi_webp/y1ynl58Kdak/2.webp"
+      "VideoOrder": 35,
+      "VideoID": "ZPljfob7zYw",
+      "Title": "Azure ML Security and Its Significance",
+      "VideoURL": "https://www.youtube.com/embed/ZPljfob7zYw",
+      "VideoThumbnail": "https://i.ytimg.com/vi_webp/ZPljfob7zYw/2.webp"
     }
-]
+  ]

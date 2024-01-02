@@ -15,11 +15,11 @@ import YTPlaylistData from "./ytPlaylist.json";
 
 const VideoPlayer = ({ theme }) => {
   const [currentYoutubeVideo, setCurrentYoutubeVideo] = useState(
-    "https://www.youtube.com/embed/ZGB_uKnfJ3k?rel=0"
+    "https://www.youtube.com/embed/3M21ARqKS6I?rel=0"
   );
   const componentHeading =
-    "Watch our all India Cloud Security Summit 2022 Sessions here";
-  const listHeading = "India Cloud Security Summit 2022";
+    "Watch our all India Cloud Security Summit 2021 Sessions here";
+  const listHeading = "India Cloud Security Summit 2021";
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <>
