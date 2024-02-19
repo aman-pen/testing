@@ -1,5 +1,3 @@
-## Official Website: www.indiacloudsecuritysummit.com
-
 ## Dependencies:
 
     "@emotion/react": "^11.10.6",
