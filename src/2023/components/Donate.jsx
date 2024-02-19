@@ -10,7 +10,7 @@ import closedQuotes from "../assets/closed-quotes.png";
 const Donate = ({ theme }) => {
   return (
     <>
-      <div className="donate">
+      <div className="donate val">
         <Box
           className="sectionMaxWidth"
           sx={{
